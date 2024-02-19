@@ -1,4 +1,4 @@
-import Architecture from "./components/Architecure";
+import Architecture from "./components/Architecture";
 import Features from "./components/Features";
 import { Roadmap } from "./components/Roadmap";
 import SecurityCards from "./components/SecurityCards";
@@ -222,11 +222,11 @@ export default function App() {
           </ul>
         </nav>
       </header>
-      <main className="">
+      <main>
         <section>
           <div className="mx-auto max-w-5xl px-4 py-32 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-7xl font-bold">
+              <h1 className="text-5xl font-bold md:text-7xl">
                 The Future of Open-Source Data Management.
               </h1>
               <p className="mt-8 text-xl font-bold opacity-80">
@@ -244,43 +244,41 @@ export default function App() {
         <section>
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="py-8">
-              <h2 className="text-6xl font-bold">Your Security First</h2>
+              <h2 className="text-4xl font-bold md:text-5xl">
+                Your Security First
+              </h2>
               <div className="mt-10">
                 <SecurityCards cards={cards} />
               </div>
             </div>
-            <div className="pb-36 pt-16">
-              <div className="grid gap-10 rounded-xl border border-white px-14 py-10 text-xl font-bold md:grid-cols-2">
+            <div className="py-10 md:pb-32 md:pt-10">
+              <div className="grid gap-10 rounded-xl border border-white px-6 py-6 text-xl font-medium md:grid-cols-2 md:px-10 md:py-10">
                 <p>
                   OKDP is an open source and free data stack designed and
-                  implemented for Kubernetes under apache V2 licences.
-                  <br />
-                  Openness and adaptability are key considerations in the design
-                  of the Open Kubenetes Data Platform.
-                  <br />
-                  It offers you a handpicked collection of the top open-source
-                  data technologies, like Apache Spark, Jupyterhub, and Trino
-                  with a native and full Kubernetes integration.
+                  implemented for Kubernetes under apache V2 licences. Openness
+                  and adaptability are key considerations in the design of the
+                  Open Kubenetes Data Platform. It offers you a handpicked
+                  collection of the top open-source data technologies, like
+                  Apache Spark, Jupyterhub, and Trino with a native and full
+                  Kubernetes integration.
                 </p>
                 <p>
                   OKDP has a different strategy than other existing options,
                   which either promote their proprietary solutions or increase
-                  vendor lock-in.
-                  <br />
-                  Every data layer in OKDP is quickly addable or removeable and
-                  can operate everywhere: on-premises or in the private and
-                  public cloud.
+                  vendor lock-in. Every data layer in OKDP is quickly addable or
+                  removeable and can operate everywhere: on-premises or in the
+                  private and public cloud.
                 </p>
               </div>
             </div>
           </div>
         </section>
-        <section className="bg-gris-light py-28">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-5xl font-bold">
+        <section className="bg-gris-light py-10 md:py-28">
+          <div className="mx-auto max-w-5xl px-6 lg:px-8">
+            <h2 className="text-4xl font-bold md:text-5xl">
               TOSIT, The Open-Source I Trust
             </h2>
-            <p className="mt-10 text-xl font-bold">
+            <p className="mt-10 text-xl font-medium">
               TOSIT is an association that promotes community-driven initiatives
               to create truly open-source technologies and platforms. The
               association brings together numerous companies and administrations
@@ -288,29 +286,30 @@ export default function App() {
               (Banque Populaire, Caisse d'Epargne et Natixis), Société Générale,
               among others.
             </p>
-            <p className="mt-6 text-xl font-bold">
+            <p className="mt-6 text-xl font-medium">
               OKDP is currently mainly implemented and managed by DGFiP.
             </p>
-            <p className="mt-6 text-xl font-bold">
+            <p className="mt-6 text-xl font-medium">
               Participation in OKDP is open to all, with the aim of ensuring
               that the technology stack is accessible, efficient, and powerful
               for everyone's.
             </p>
           </div>
         </section>
-        <section id="features" className="py-28">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-5xl font-bold">Features</h2>
+
+        <section id="features" className="py-10 md:py-28">
+          <div className="mx-auto max-w-5xl px-6 lg:px-8">
+            <h2 className="text-4xl font-bold md:text-5xl">Features</h2>
             <div className="mt-12">
               <Features features={features} />
             </div>
           </div>
         </section>
 
-        <section id="architecture" className="bg-gris-light py-28">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-5xl font-bold">Architecture</h2>
-            <p className="text-xl font-bold">
+        <section id="architecture" className="bg-gris-light md:py-28">
+          <div className="mx-auto max-w-5xl px-6 py-10 md:px-8">
+            <h2 className="text-4xl font-bold md:text-5xl">Architecture</h2>
+            <p className="mt-6 text-xl font-medium">
               These tools and platforms form an integral part of the OKDP
               architecture.
             </p>
@@ -319,9 +318,9 @@ export default function App() {
             </div>
           </div>
         </section>
-        <section className="py-28">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-5xl font-bold">Roadmap</h2>
+        <section className="py-10 md:py-28">
+          <div className="mx-auto max-w-5xl px-6 md:px-8">
+            <h2 className="text-4xl font-bold md:text-5xl">Roadmap</h2>
             <div className="mt-12">
               <Roadmap milestones={milestones} />
             </div>

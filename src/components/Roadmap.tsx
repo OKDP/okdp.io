@@ -7,7 +7,7 @@ const Milestone = ({
 }) => (
   <li className="flex flex-col gap-1">
     <h3 className="text-3xl font-bold">{title}</h3>
-    <p className="leading-tight opacity-80">{description}</p>
+    <p className="text-xl leading-tight opacity-80">{description}</p>
   </li>
 );
 
