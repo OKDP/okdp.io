@@ -2,6 +2,9 @@ import Architecture from "./components/Architecture";
 import Features from "./components/Features";
 import { Roadmap } from "./components/Roadmap";
 import SecurityCards from "./components/SecurityCards";
+import GithubLogo from "./components/logos/GithubLogo";
+
+const githubLink = "https://github.com/OKDP/";
 
 const cards = [
   {
@@ -178,7 +181,7 @@ const milestones = [
 export default function App() {
   return (
     <div className="bg-gris-dark text-white">
-      <header className="sticky top-0 z-50 flex items-center justify-between bg-gris-dark px-16 py-4">
+      <header className="sticky top-0 z-50 flex items-center justify-between bg-gris-dark px-4 py-4 lg:px-16">
         <span className="flex items-center gap-3 text-xl font-bold">
           <img
             src="/logos/okdp-notext.svg"
@@ -189,7 +192,7 @@ export default function App() {
           <span className="lg:hidden">OKDP</span>
         </span>
         <nav>
-          <ul className="flex gap-2">
+          <ul className="flex items-center gap-2">
             <li>
               <a
                 href="#features"
@@ -213,10 +216,10 @@ export default function App() {
             </li> */}
             <li>
               <a
-                href="#"
-                className="rounded-full bg-tdp px-5 py-2 hover:bg-tdp-dark"
+                href={githubLink}
+                className="block fill-white px-5 py-2 hover:fill-tdp-light"
               >
-                View on GitHub
+                <GithubLogo className="h-6 w-6" />
               </a>
             </li>
           </ul>
@@ -233,10 +236,10 @@ export default function App() {
                 A free open-source data stack designe for Kubernetes.
               </p>
               <a
-                href="#"
-                className="mt-12 inline-block rounded-full bg-tdp px-7 py-3 hover:bg-tdp-dark"
+                href={githubLink}
+                className="mx-auto mt-12 flex w-fit gap-2 rounded-full bg-tdp px-7 py-3 hover:bg-tdp-dark"
               >
-                View on Github
+                <GithubLogo className="h-6 w-6 fill-white" /> View on Github
               </a>
             </div>
           </div>
