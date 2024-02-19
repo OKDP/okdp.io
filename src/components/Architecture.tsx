@@ -14,7 +14,7 @@ const Components = ({
         {components.map((component) => (
           <li
             key={component.name}
-            className="flex min-h-24 flex-grow items-center justify-center border-gris-dark px-8 py-6 text-center"
+            className="flex min-h-24 flex-grow items-center justify-center border-gris-dark px-8 py-6 text-center hover:bg-gray-400"
           >
             <a
               href={component.link}
