@@ -5,8 +5,10 @@ const Components = ({
   title: string;
   components: { name: string; logo: string; link: string }[];
 }) => {
-  return (
-    <li>
+  const isLogo = components.every((c) => c.logo.endsWith(".svg"));
+
+  const listWithLogos = (
+    <>
       <h4>{title}</h4>
       <ul className="flex divide-x overflow-auto rounded-lg bg-gris-lighter">
         {components.map((component) => (
@@ -29,8 +31,30 @@ const Components = ({
           </li>
         ))}
       </ul>
-    </li>
+    </>
   );
+
+  const listWithoutLogos = (
+    <p className="flex">
+      <h4>{title}:&nbsp;</h4>
+      {components.map((component, i) => (
+        <>
+          <a
+            key={component.name}
+            href={component.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-tdp-light"
+          >
+            {component.name}
+          </a>
+          {i !== components.length - 1 && <span>,&nbsp;</span>}
+        </>
+      ))}
+    </p>
+  );
+
+  return <li>{isLogo ? listWithLogos : listWithoutLogos}</li>;
 };
 
 export default function Architecture({
