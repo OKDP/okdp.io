@@ -231,21 +231,81 @@
           </div>
         </section>
         <section id="roadmap" class="py-10 md:py-28">
-
-
-
-
           <div class="mx-auto max-w-5xl px-6 md:px-8"><h2 class="text-4xl font-bold md:text-5xl">Roadmap</h2>
             <div class="mt-12">
-              <ul class="flex flex-col gap-12">
-                <li class="flex flex-col gap-1"><h3 class="text-3xl font-bold">Existing Features</h3>
-                  <p class="text-xl leading-tight opacity-80">JupyterLab docker build, JupyterLab deployment</p></li>
-                <li class="flex flex-col gap-1"><h3 class="text-3xl font-bold">In the short term T1 2024</h3>
-                  <p class="text-xl leading-tight opacity-80">HDFS integration with jupyterlab, Trino integration, Spark
-                    integration, Sandbox for tests with object and block storage</p></li>
-                <li class="flex flex-col gap-1"><h3 class="text-3xl font-bold">In the medium term T2/T3 2024</h3>
-                  <p class="text-xl leading-tight opacity-80">Airflow, MLOps</p></li>
-              </ul>
+              <ol class="relative border-s">
+                <li class="mb-10 ms-4">
+                  <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                    January 2024
+                  </time>
+                  <h3 class="text-lg mt-1 font-semibold dark:text-white">
+                    JupyterHub: On-Demand Notebooks
+                  </h3>
+                  <ul class="mt-1.5 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                    <li>
+                      Automatic building of JupyterLab images via GitHub Actions.
+                    </li>
+                    <li>
+                      Providing a customized HELM chart based on the Jupyter Community's one.
+                    </li>
+                  </ul>
+                </li>
+                <li class="mb-10 ms-4">
+                  <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                    April 2024
+                  </time>
+                  <h3 class="text-lg mt-1 font-semibold dark:text-white">
+                    Apache Spark : A large-scale data analytics engine
+                  </h3>
+                  <ul class="mt-1.5 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                    <li>
+                      Development of an authentication module for Spark History Server and Spark UI, including its release management to <a href="https://central.sonatype.com/artifact/io.okdp/okdp-spark-auth-filter">Maven Central</a>.
+                    </li>
+                    <li>
+                      Provide a customized HELM chart for the Spark History Server.
+                    </li>
+                    <li>
+                      Provide customized OKDP images.
+                    </li>
+                  </ul>
+                </li>
+                <li class="mb-10 ms-4">
+                  <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                    Q3 2024
+                  </time>
+                  <h3 class="text-lg mt-1 font-semibold dark:text-white">
+                    Trino & Superset
+                  </h3>
+                  <ul class="mt-1.5 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                    <li>
+                      Provide customized HELM chart.
+                    </li>
+                    <li>
+                      Provide OKDP images.
+                    </li>
+                  </ul>
+                </li>
+                <li class="mb-10 ms-4">
+                  <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                    Q4 2024
+                  </time>
+                  <h3 class="text-lg mt-1 font-semibold dark:text-white">
+                    OKDP Sandbox with User Guide
+                  </h3>
+                  <ul class="mt-1.5 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                    <li>
+                      Provide a sandbox to deploy OKDP components locally.
+                    </li>
+                    <li>
+                      Provide a User Guide documentation to deploy OKDP components on a kubernetes cluster.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
             </div>
           </div>
         </section>
