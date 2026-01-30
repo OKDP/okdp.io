@@ -69,6 +69,11 @@
     @apply px-4 py-2 text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors duration-300;
   }
 
+  .nav-link.active,
+  [data-nav-link].active {
+    @apply text-[var(--color-primary)] font-semibold;
+  }
+
   .feature-card {
     @apply card flex flex-col gap-4;
   }
