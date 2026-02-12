@@ -124,13 +124,13 @@
                     "desc": "Integration of Apache Iceberg and Polaris catalog with STS S3 support and RBAC."
                 },
                 {
-                    "icon": "💾",
-                    "title": "SeaweedFS Migration",
+                    "icon": "\uD83D\uDCBB",
+                    "title": "New Frontend & Server",
                     "badge": "Q2-Q3",
                     "badgeColor": "bg-yellow-100",
                     "badgeTextColor": "text-yellow-800",
                     "borderColor": "border-yellow-500",
-                    "desc": "Replace Minio with SeaweedFS for improved object storage performance."
+                    "desc": "Overhaul of the user interface and server for a unified and high-performance experience."
                 },
                 {
                     "icon": "🔄",
@@ -180,8 +180,8 @@
                 },
                 {
                     "time": "Q3 2024 ✓",
-                    "title": "TDP Integration",
-                    "desc": "Delivered integration mechanisms between OKDP and TDP, enabling seamless interoperability."
+                    "title": "Spark & Jupyter Images",
+                    "desc": "Provision and support of official base images for Apache Spark and JupyterLab."
                 },
                 {
                     "time": "Q3 2024 ✓",
