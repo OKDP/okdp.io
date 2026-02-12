@@ -12,8 +12,10 @@
   <link href="src/index.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OKDP - Open Kubernetes Data Platform | 100% Open Source</title>
-  <meta name="description" content="OKDP is a free, open-source, and cloud-native data platform designed for Kubernetes. Built by the community, for the community." />
-  <meta name="keywords" content="Open Kubernetes Data Platform, OKDP, Apache Iceberg, Polaris, Trino, Spark, Airflow, Superset, MLOps, Kubernetes, Data Platform" />
+  <meta name="description"
+    content="OKDP is a free, open-source, and cloud-native data platform designed for Kubernetes. Built by the community, for the community." />
+  <meta name="keywords"
+    content="Open Kubernetes Data Platform, OKDP, Apache Iceberg, Polaris, Trino, Spark, Airflow, Superset, MLOps, Kubernetes, Data Platform" />
 </head>
 
 <body>
@@ -33,10 +35,13 @@
               <li><a href="#architecture" class="nav-link" data-nav-link>Architecture</a></li>
               <li><a href="#roadmap" class="nav-link" data-nav-link>Roadmap</a></li>
               <li><a href="#community" class="nav-link" data-nav-link>Community</a></li>
-                <li><a href="https://github.com/OKDP/" class="nav-link" aria-label="GitHub">
-                <svg class="h-5 w-5 mr-2" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                  <path fill="currentColor" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"></path>
-                </svg>
+              <li><a href="https://github.com/OKDP/" class="nav-link" aria-label="GitHub">
+                  <svg class="h-5 w-5 mr-2" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-hidden="true">
+                    <path fill="currentColor"
+                      d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z">
+                    </path>
+                  </svg>
                 </a></li>
             </ul>
           </nav>
@@ -49,519 +54,535 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
           <ul class="flex flex-col gap-4">
-            <li><a href="#about" class="block py-2 px-4 hover:bg-accent rounded-lg transition-colors" data-nav-link>About</a></li>
-            <li><a href="#architecture" class="block py-2 px-4 hover:bg-accent rounded-lg transition-colors" data-nav-link>Architecture</a></li>
-            <li><a href="#roadmap" class="block py-2 px-4 hover:bg-accent rounded-lg transition-colors" data-nav-link>Roadmap</a></li>
-            <li><a href="#community" class="block py-2 px-4 hover:bg-accent rounded-lg transition-colors" data-nav-link>Community</a></li>
-            <li><a href="https://github.com/OKDP/" class="flex items-center py-2 px-4 hover:bg-accent rounded-lg transition-colors">
-              <svg class="h-5 w-5 mr-2" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"></path>
-              </svg>
-              GitHub
-            </a></li>
+            <li><a href="#about" class="block py-2 px-4 hover:bg-accent rounded-lg transition-colors"
+                data-nav-link>About</a></li>
+            <li><a href="#architecture" class="block py-2 px-4 hover:bg-accent rounded-lg transition-colors"
+                data-nav-link>Architecture</a></li>
+            <li><a href="#roadmap" class="block py-2 px-4 hover:bg-accent rounded-lg transition-colors"
+                data-nav-link>Roadmap</a></li>
+            <li><a href="#community" class="block py-2 px-4 hover:bg-accent rounded-lg transition-colors"
+                data-nav-link>Community</a></li>
+            <li><a href="https://github.com/OKDP/"
+                class="flex items-center py-2 px-4 hover:bg-accent rounded-lg transition-colors">
+                <svg class="h-5 w-5 mr-2" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor"
+                    d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z">
+                  </path>
+                </svg>
+                GitHub
+              </a></li>
           </ul>
         </div>
       </div>
     </header>
 
     <main>
-    <!-- Hero Section -->
-    <section class="pt-48 pb-20 bg-gradient-to-b from-accent to-background">
-      <div class="container">
-        <div class="max-w-3xl mx-auto text-center animate-fade-in">
-          <div class="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
-            <span class="text-sm font-semibold text-primary">100% Open Source • Apache V2 License</span>
-          </div>
-          <h1 class="text-gradient mb-6">Open Kubernetes Data Platform</h1>
-          <p class="text-xl text-text-light mb-8">A free, open-source and cloud-native data platform built on Kubernetes. Modular, sovereign, and community-driven.</p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a href="https://github.com/OKDP/" class="btn btn-primary">
-              Get started
-            </a>
-            <a href="#community" class="btn bg-white hover:bg-gray-50 text-text">
-              Join Community
-            </a>
-          </div>
-          <div class="grid grid-cols-3 gap-8 max-w-md mx-auto">
-            <div class="text-center">
-              <div class="text-3xl font-bold text-primary mb-1">7+</div>
-              <div class="text-sm text-text-light">Contributors</div>
+      <!-- Hero Section -->
+      <section class="pt-48 pb-20 bg-gradient-to-b from-accent to-background">
+        <div class="container">
+          <div class="max-w-3xl mx-auto text-center animate-fade-in">
+            <div class="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
+              <span class="text-sm font-semibold text-primary">100% Open Source • Apache V2 License</span>
             </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-primary mb-1">~20</div>
-              <div class="text-sm text-text-light">Weekly Downloads</div>
+            <h1 class="text-gradient mb-6">Open Kubernetes Data Platform</h1>
+            <p class="text-xl text-text-light mb-8">A free, open-source and cloud-native data platform built on
+              Kubernetes. Modular, sovereign, and community-driven.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a href="https://github.com/OKDP/" class="btn btn-primary">
+                Get started
+              </a>
+              <a href="#community" class="btn bg-white hover:bg-gray-50 text-text">
+                Join Community
+              </a>
             </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-primary mb-1">2024</div>
-              <div class="text-sm text-text-light">Project Started</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section bg-background">
-      <div class="container">
-        <div class="max-w-4xl mx-auto">
-          <!-- What is OKDP -->
-          <div class="text-center mb-16">
-            <h2 class="mb-6">What is OKDP?</h2>
-            <p class="text-lg text-text-light mb-4">
-              <strong class="text-text">OKDP</strong> (Open Kubernetes Data Platform) is a comprehensive data management services platform composed of containerized open source software and products, running on Kubernetes infrastructure.
-            </p>
-            <p class="text-text-light">
-              As a continuation and evolution of the <a href="https://trunkdataplatform.io/" target="_blank"
-                class="text-primary">TDP</a> project, OKDP addresses the complete data lifecycle: collection, storage, processing,
-              analysis, and data exposition. It's modular by design—deploy all components or select only what you need.
-            </p>
-          </div>
-
-          <!-- Why OKDP -->
-          <div class="mb-16">
-            <h3 class="text-2xl font-bold text-center mb-8">Why OKDP?</h3>
-            <div class="grid md:grid-cols-3 gap-6">
-              <div class="card text-center">
-                <div class="text-4xl mb-4">📊</div>
-                <h4 class="font-semibold mb-3">Data Centric</h4>
-                <p class="text-sm text-text-light">Comprehensive platform covering the entire data lifecycle with built-in governance, facilitating data sharing and minimizing duplication.</p>
+            <div class="grid grid-cols-3 gap-8 max-w-md mx-auto">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-primary mb-1">7+</div>
+                <div class="text-sm text-text-light">Contributors</div>
               </div>
-              
-              <div class="card text-center">
-                <div class="text-4xl mb-4">☁️</div>
-                <h4 class="font-semibold mb-3">Cloud Native</h4>
-                <p class="text-sm text-text-light">Kubernetes-native platform designed for modern cloud environments with high availability, scalability, and multi-cloud support.</p>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-primary mb-1">~20</div>
+                <div class="text-sm text-text-light">Weekly Downloads</div>
               </div>
-              
-              <div class="card text-center">
-                <div class="text-4xl mb-4">🔓</div>
-                <h4 class="font-semibold mb-3">True Open Source</h4>
-                <p class="text-sm text-text-light">100% open source with Apache V2 license. Complete control of the technology lifecycle from build to deployment, with no vendor lock-in.</p>
-              </div>
-              
-              <div class="card text-center">
-                <div class="text-4xl mb-4">🏛️</div>
-                <h4 class="font-semibold mb-3">Sovereignty & Cost Control</h4>
-                <p class="text-sm text-text-light">Maintain full autonomy over your data infrastructure while eliminating licensing costs. Free to use, modify, and deploy at any scale.</p>
-              </div>
-              
-              <div class="card text-center">
-                <div class="text-4xl mb-4">🎛️</div>
-                <h4 class="font-semibold mb-3">Modular & Future-Proof</h4>
-                <p class="text-sm text-text-light">Flexible architecture adapts to your needs. Built on Kubernetes to prevent technical debt, ensuring sustainability and continuous modernization.</p>
-              </div>
-              
-              <div class="card text-center">
-                <div class="text-4xl mb-4">🌍</div>
-                <h4 class="font-semibold mb-3">Community-Driven</h4>
-                <p class="text-sm text-text-light">Built by the community, for the community. Open collaboration from public and private organizations with a growing ecosystem.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Complementing TDP -->
-          <div class="bg-accent rounded-lg p-8">
-            <h3 class="text-xl font-semibold mb-4 text-center">Complementing TDP Architecture</h3>
-            <p class="text-text-light mb-6 text-center">OKDP extends the TDP-based Datalake with powerful new capabilities:</p>
-            <div class="grid md:grid-cols-2 gap-4">
-              <div class="flex items-start gap-2">
-                <svg class="h-5 w-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <div>
-                  <strong class="text-text">Scalability:</strong>
-                  <span class="text-text-light text-sm"> Horizontal scaling and elastic resource management</span>
-                </div>
-              </div>
-              <div class="flex items-start gap-2">
-                <svg class="h-5 w-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <div>
-                  <strong class="text-text">DataViz:</strong>
-                  <span class="text-text-light text-sm"> Interactive visualization with Apache Superset</span>
-                </div>
-              </div>
-              <div class="flex items-start gap-2">
-                <svg class="h-5 w-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <div>
-                  <strong class="text-text">Interactive Query:</strong>
-                  <span class="text-text-light text-sm"> Free-form querying with Trino</span>
-                </div>
-              </div>
-              <div class="flex items-start gap-2">
-                <svg class="h-5 w-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <div>
-                  <strong class="text-text">MLOps:</strong>
-                  <span class="text-text-light text-sm"> Complete ML, AI, and Generative AI workflows</span>
-                </div>
-              </div>
-              <div class="flex items-start gap-2">
-                <svg class="h-5 w-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <div>
-                  <strong class="text-text">On-Demand Experiments:</strong>
-                  <span class="text-text-light text-sm"> Self-service data science environments</span>
-                </div>
-              </div>
-              <div class="flex items-start gap-2">
-                <svg class="h-5 w-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <div>
-                  <strong class="text-text">Observability:</strong>
-                  <span class="text-text-light text-sm"> Comprehensive monitoring and capacity planning</span>
-                </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-primary mb-1">2024</div>
+                <div class="text-sm text-text-light">Project Started</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Architecture Section -->
-    <section class="modular-architecture section bg-[var(--color-background-alt)]" id="architecture">
-      <div class="container">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Modular Architecture</h2>
-        <p class="text-center text-[var(--color-text-light)] max-w-2xl mx-auto mb-12">OKDP offers a modular architecture that allows you to select and deploy only the components you need for your specific use case.</p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Query Engine -->
-          <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[var(--color-accent)] h-full">
-            <h3 class="text-xl font-semibold mb-4 text-[var(--color-text)]">Query Engine</h3>
-            <p class="text-center text-[var(--color-text-light)] mb-6 text-sm">
-              High-performance SQL query engines for distributed data.
-            </p>
-            <div class="grid grid-cols-1 gap-4 w-full mt-auto">
-              <a href="https://trino.io/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
-                <img src="/logos/trino.svg" alt="Trino" class="max-h-10 max-w-[90%] w-auto object-contain">
-              </a>
+      <!-- About -->
+      <section id="about" class="section bg-background">
+        <div class="container">
+          <div class="max-w-4xl mx-auto">
+            <!-- What is OKDP -->
+            <div class="text-center mb-16">
+              <h2 class="mb-6">What is OKDP?</h2>
+              <p class="text-lg text-text-light mb-4">
+                <strong class="text-text">OKDP</strong> (Open Kubernetes Data Platform) is a comprehensive data
+                management services platform composed of containerized open source software and products, running on
+                Kubernetes infrastructure.
+              </p>
+              <p class="text-text-light">
+                OKDP addresses the complete data lifecycle: collection, storage, processing,
+                analysis, and data exposition. It's modular by design—deploy all components or select only what you
+                need.
+              </p>
             </div>
-          </div>
 
-          <!-- ML/AI -->
-          <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[var(--color-accent)] h-full">
-            <h3 class="text-xl font-semibold mb-4 text-[var(--color-text)]">ML/AI</h3>
-            <p class="text-center text-[var(--color-text-light)] mb-6 text-sm">
-              Complete MLOps platform for data science workflows.
-            </p>
-            <div class="grid grid-cols-3 gap-4 w-full mt-auto">
-              <a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
-                <img src="/logos/jupyter.svg" alt="Jupyter" class="max-h-10 max-w-[90%] w-auto object-contain">
-              </a>
-              <a href="https://kubeflow.org/" target="_blank" rel="noopener noreferrer" class="relative flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
-                <img src="/logos/kubeflow.svg" alt="Kubeflow" class="max-h-10 max-w-[90%] w-auto object-contain">
-                <span class="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">2026</span>
-              </a>
-              <a href="https://mlflow.org/" target="_blank" rel="noopener noreferrer" class="relative flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
-                <img src="/logos/mlflow.svg" alt="MLflow" class="max-h-10 max-w-[90%] w-auto object-contain">
-                <span class="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">2026</span>
-              </a>
-            </div>
-          </div>
+            <!-- Why OKDP -->
+            <div class="mb-16">
+              <h3 class="text-2xl font-bold text-center mb-8">Why OKDP?</h3>
+              <div class="grid md:grid-cols-3 gap-6">
+                <div class="card text-center">
+                  <div class="text-4xl mb-4">📊</div>
+                  <h4 class="font-semibold mb-3">Data Centric</h4>
+                  <p class="text-sm text-text-light">Comprehensive platform covering the entire data lifecycle with
+                    built-in governance, facilitating data sharing and minimizing duplication.</p>
+                </div>
 
-          <!-- Processing & Orchestration -->
-          <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[var(--color-accent)] h-full">
-            <h3 class="text-xl font-semibold mb-4 text-[var(--color-text)]">Processing & Orchestration</h3>
-            <p class="text-center text-[var(--color-text-light)] mb-6 text-sm">
-              Data processing engines and workflow orchestration.
-            </p>
-            <div class="grid grid-cols-2 gap-4 w-full mt-auto">
-              <a href="https://spark.apache.org/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
-                <img src="/logos/spark.svg" alt="Spark" class="max-h-10 max-w-[90%] w-auto object-contain">
-              </a>
-              <a href="https://airflow.apache.org/" target="_blank" rel="noopener noreferrer" class="relative flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
-                <img src="/logos/airflow.svg" alt="Airflow" class="max-h-10 max-w-[90%] w-auto object-contain">
-                <span class="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">2026</span>
-              </a>
-            </div>
-          </div>
+                <div class="card text-center">
+                  <div class="text-4xl mb-4">☁️</div>
+                  <h4 class="font-semibold mb-3">Cloud Native</h4>
+                  <p class="text-sm text-text-light">Kubernetes-native platform designed for modern cloud environments
+                    with high availability, scalability, and multi-cloud support.</p>
+                </div>
 
-          <!-- Storage & Catalog -->
-          <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[var(--color-accent)] h-full">
-            <h3 class="text-xl font-semibold mb-4 text-[var(--color-text)]">Storage & Catalog</h3>
-            <p class="text-center text-[var(--color-text-light)] mb-6 text-sm">
-              Modern lakehouse with transactional tables and metadata management.
-            </p>
-            <div class="grid grid-cols-3 gap-4 w-full mt-auto">
-              <a href="https://iceberg.apache.org/" target="_blank" rel="noopener noreferrer" class="relative flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
-                <img src="/logos/iceberg.svg" alt="Iceberg" class="max-h-10 max-w-[90%] w-auto object-contain">
-                <span class="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">2026</span>
-              </a>
-              <a href="https://polaris.apache.org/" target="_blank" rel="noopener noreferrer"
-                class="relative flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
-                <img src="/logos/polaris.svg" alt="Polaris" class="max-h-10 max-w-[90%] w-auto object-contain bg-[#34587a]">
-                <span class="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">2026</span>
-              </a>
-              <a href="https://hive.apache.org/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
-                <img src="/logos/hive.svg" alt="Hive" class="max-h-10 max-w-[90%] w-auto object-contain">
-              </a>
+                <div class="card text-center">
+                  <div class="text-4xl mb-4">🔓</div>
+                  <h4 class="font-semibold mb-3">True Open Source</h4>
+                  <p class="text-sm text-text-light">100% open source with Apache V2 license. Complete control of the
+                    technology lifecycle from build to deployment, with no vendor lock-in.</p>
+                </div>
+
+                <div class="card text-center">
+                  <div class="text-4xl mb-4">🏛️</div>
+                  <h4 class="font-semibold mb-3">Sovereignty & Cost Control</h4>
+                  <p class="text-sm text-text-light">Maintain full autonomy over your data infrastructure while
+                    eliminating licensing costs. Free to use, modify, and deploy at any scale.</p>
+                </div>
+
+                <div class="card text-center">
+                  <div class="text-4xl mb-4">🎛️</div>
+                  <h4 class="font-semibold mb-3">Modular & Future-Proof</h4>
+                  <p class="text-sm text-text-light">Flexible architecture adapts to your needs. Built on Kubernetes to
+                    prevent technical debt, ensuring sustainability and continuous modernization.</p>
+                </div>
+
+                <div class="card text-center">
+                  <div class="text-4xl mb-4">🌍</div>
+                  <h4 class="font-semibold mb-3">Community-Driven</h4>
+                  <p class="text-sm text-text-light">Built by the community, for the community. Open collaboration from
+                    public and private organizations with a growing ecosystem.</p>
+                </div>
+              </div>
             </div>
+
+
           </div>
         </div>
-        
-        <!-- Visualization & Database -->
-        <div class="mt-12 max-w-3xl mx-auto bg-white rounded-lg p-8 shadow-sm">
-          <h3 class="text-xl font-semibold mb-6 text-center">Visualization & Database</h3>
-          <div class="flex flex-wrap justify-center gap-12 items-center">
-            <a href="https://superset.apache.org/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 group">
-              <div class="h-16 flex items-center">
-                <img src="/logos/superset.svg" alt="Superset" class="h-12 w-auto group-hover:scale-105 transition-transform">
-              </div>
-              <span class="text-sm text-text-light">Apache Superset</span>
-            </a>
-            <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 group">
-              <div class="h-16 flex items-center">
-                <img src="/logos/postgresql.svg" alt="PostgreSQL" class="h-12 w-auto group-hover:scale-105 transition-transform">
-              </div>
-              <span class="text-sm text-text-light">PostgreSQL</span>
-            </a>
-          </div>
-        </div>
-        
-        <!-- Kubernetes Foundation -->
-        <div class="mt-12 bg-primary/5 rounded-lg p-8">
-          <h3 class="text-xl font-semibold mb-4 text-center">Built on Kubernetes</h3>
-          <p class="text-center text-text-light mb-6">
-            Running on any Kubernetes distribution (RKE, EKS, AKS, GKE) with comprehensive security, observability, and resource management.
+      </section>
+
+      <!-- Architecture Section -->
+      <section class="modular-architecture section bg-[var(--color-background-alt)]" id="architecture">
+        <div class="container">
+          <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Modular Architecture</h2>
+          <p class="text-center text-[var(--color-text-light)] max-w-2xl mx-auto mb-12">OKDP offers a modular
+            architecture that allows you to select and deploy only the components you need for your specific use case.
           </p>
-          <div class="flex flex-wrap justify-center gap-3">
-            <span class="px-4 py-2 bg-white rounded-full text-sm">Security & RBAC</span>
-            <span class="px-4 py-2 bg-white rounded-full text-sm">TLS/Certificates</span>
-            <span class="px-4 py-2 bg-white rounded-full text-sm">SSO & LDAP</span>
-            <span class="px-4 py-2 bg-white rounded-full text-sm">Monitoring</span>
-            <span class="px-4 py-2 bg-white rounded-full text-sm">Backup & DRP</span>
-            <span class="px-4 py-2 bg-white rounded-full text-sm">Load Balancing</span>
-            <span class="px-4 py-2 bg-white rounded-full text-sm">Ingress Control</span>
-            <span class="px-4 py-2 bg-white rounded-full text-sm">Resource Scheduling</span>
-          </div>
-        </div>
-        
-        <p class="text-center text-[var(--color-text-light)] mt-8">Each component can be deployed independently, allowing you to build a customized data platform that meets your specific needs.</p>
-      </div>
-    </section>
 
-    <!-- Roadmap Section -->
-    <section id="roadmap" class="section bg-accent">
-      <div class="container">
-      <div class="text-center mb-16">
-        <h2 class="mb-4">Roadmap</h2>
-      </div>
-
-      <div class="max-w-4xl mx-auto">
-        <!-- 2026 Roadmap -->
-        <div class="bg-white rounded-lg p-8 shadow-sm mb-8">
-        <h3 class="text-2xl font-bold mb-6">2026: Evolution & Scale</h3>
-
-        <div class="grid md:grid-cols-2 gap-6 mb-8">
-          <div class="border-l-4 border-blue-500 pl-6 py-2">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="text-2xl">🔨</span>
-            <h4 class="font-semibold">Technology Builds</h4>
-            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Ongoing</span>
-          </div>
-          <p class="text-sm text-text-light">Continuous building of source code and Docker images for all platform technologies.</p>
-          </div>
-
-          <div class="border-l-4 border-yellow-500 pl-6 py-2">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="text-2xl">🧊</span>
-            <h4 class="font-semibold">Apache Polaris & Iceberg</h4>
-            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">Q1-Q2</span>
-          </div>
-          <p class="text-sm text-text-light">Integration of Apache Iceberg and Polaris catalog with STS S3 support and RBAC.</p>
-          </div>
-
-          <div class="border-l-4 border-yellow-500 pl-6 py-2">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="text-2xl">💾</span>
-            <h4 class="font-semibold">SeaweedFS Migration</h4>
-            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">Q2-Q3</span>
-          </div>
-          <p class="text-sm text-text-light">Replace Minio with SeaweedFS for improved object storage performance.</p>
-          </div>
-
-          <div class="border-l-4 border-yellow-500 pl-6 py-2">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="text-2xl">🔄</span>
-            <h4 class="font-semibold">Apache Airflow</h4>
-            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">Q3-Q4</span>
-          </div>
-          <p class="text-sm text-text-light">Implementation of Apache Airflow for workflow automation and orchestration.</p>
-          </div>
-        </div>
-
-        <!-- Cross-Cutting Themes -->
-        <div class="pt-6 border-t border-gray-200">
-          <h4 class="text-lg font-semibold mb-4 text-center">Cross-Cutting Themes</h4>
-          <div class="grid md:grid-cols-4 gap-4">
-          <div class="text-center p-4 bg-accent rounded-lg">
-            <div class="text-3xl mb-2">🔒</div>
-            <h5 class="font-semibold text-sm mb-1">Security</h5>
-            <p class="text-xs text-text-light">End-to-end OIDC authentication</p>
-          </div>
-
-          <div class="text-center p-4 bg-accent rounded-lg">
-            <div class="text-3xl mb-2">⚖️</div>
-            <h5 class="font-semibold text-sm mb-1">Resources</h5>
-            <p class="text-xs text-text-light">Queue management system</p>
-          </div>
-
-          <div class="text-center p-4 bg-accent rounded-lg">
-            <div class="text-3xl mb-2">🤖</div>
-            <h5 class="font-semibold text-sm mb-1">MLOps</h5>
-            <p class="text-xs text-text-light">Kubeflow & MLflow</p>
-          </div>
-
-          <div class="text-center p-4 bg-accent rounded-lg">
-            <div class="text-3xl mb-2">📊</div>
-            <h5 class="font-semibold text-sm mb-1">Observability</h5>
-            <p class="text-xs text-text-light">Logs, monitoring, audit</p>
-          </div>
-          </div>
-        </div>
-        </div>
-
-        <!-- 2024 Completed (hidden by default) -->
-        <details class="bg-white rounded-lg p-8 shadow-sm" aria-label="2024 Roadmap">
-        <summary class="flex items-center justify-between cursor-pointer select-none">
-          <div class="flex items-center gap-2 text-2xl font-bold">
-          <span class="text-base md:text-2xl">2024-25: Foundation (Completed)</span>
-          <svg class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-          </svg>
-          </div>
-          <span class="text-sm text-text-light">Expand milestones</span>
-        </summary>
-
-        <div class="mt-6 space-y-6">
-          <div class="timeline-item border-l-2 border-green-500 pl-6">
-          <time class="text-sm text-text-light">Q1-Q2 2024 ✓</time>
-          <h4 class="font-semibold mt-1">Initial Data Technologies</h4>
-          <p class="mt-2 text-text-light text-sm">Successfully integrated core data technologies: JupyterHub, Apache Spark, Trino, Hive Metastore, and Superset.</p>
-          </div>
-
-          <div class="timeline-item border-l-2 border-green-500 pl-6">
-          <time class="text-sm text-text-light">Q3 2024 ✓</time>
-          <h4 class="font-semibold mt-1">TDP Integration</h4>
-          <p class="mt-2 text-text-light text-sm">Delivered integration mechanisms between OKDP and TDP, enabling seamless interoperability.</p>
-          </div>
-
-          <div class="timeline-item border-l-2 border-green-500 pl-6">
-          <time class="text-sm text-text-light">Q3 2024 ✓</time>
-          <h4 class="font-semibold mt-1">OKDP Server/UI</h4>
-          <p class="mt-2 text-text-light text-sm">Published the first version of OKDP Server and user interface for platform management.</p>
-          </div>
-
-          <div class="timeline-item border-l-2 border-green-500 pl-6">
-          <time class="text-sm text-text-light">Q4 2024 ✓</time>
-          <h4 class="font-semibold mt-1">Sandbox & Documentation</h4>
-          <p class="mt-2 text-text-light text-sm">Released comprehensive sandbox environment with user guide and end-to-end test application.</p>
-          </div>
-        </div>
-        </details>
-      </div>
-      </div>
-    </section>
-
-    <!-- Community -->
-    <section id="community" class="section bg-background">
-      <div class="container">
-        <div class="text-center mb-16">
-          <h2 class="mb-4">Join Our Community</h2>
-          <p class="text-text-light max-w-2xl mx-auto">OKDP is built by the community, for the community. Join us in shaping the future of open-source data platforms.</p>
-        </div>
-        
-        <!-- Weekly Meeting Highlight -->
-        <div class="max-w-2xl mx-auto mb-12 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-8 border-2 border-primary/20">
-          <div class="flex items-start gap-4">
-            <div class="flex-shrink-0">
-              <div class="flex items-center justify-center bg-primary rounded-full h-12 w-12">
-          <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-          </svg>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Query Engine -->
+            <div
+              class="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[var(--color-accent)] h-full">
+              <h3 class="text-xl font-semibold mb-4 text-[var(--color-text)]">Query Engine</h3>
+              <p class="text-center text-[var(--color-text-light)] mb-6 text-sm">
+                High-performance SQL query engines for distributed data.
+              </p>
+              <div class="grid grid-cols-1 gap-4 w-full mt-auto">
+                <a href="https://trino.io/" target="_blank" rel="noopener noreferrer"
+                  class="flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
+                  <img src="/logos/trino.svg" alt="Trino" class="max-h-10 max-w-[90%] w-auto object-contain">
+                </a>
               </div>
             </div>
-            <div class="flex-1">
-              <h3 class="text-xl font-semibold mb-2">Weekly Technical Meeting</h3>
-              <p class="text-text-light mb-4">Every Wednesday at 10:00 AM (CET) - Contact us to receive the meeting details.</p>
-              <a href="https://github.com/orgs/OKDP/discussions" class="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-medium">
-          Contact Us to Join
-          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-          </svg>
+
+            <!-- ML/AI -->
+            <div
+              class="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[var(--color-accent)] h-full">
+              <h3 class="text-xl font-semibold mb-4 text-[var(--color-text)]">ML/AI</h3>
+              <p class="text-center text-[var(--color-text-light)] mb-6 text-sm">
+                Complete MLOps platform for data science workflows.
+              </p>
+              <div class="grid grid-cols-3 gap-4 w-full mt-auto">
+                <a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer"
+                  class="flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
+                  <img src="/logos/jupyter.svg" alt="Jupyter" class="max-h-10 max-w-[90%] w-auto object-contain">
+                </a>
+                <a href="https://kubeflow.org/" target="_blank" rel="noopener noreferrer"
+                  class="relative flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
+                  <img src="/logos/kubeflow.svg" alt="Kubeflow" class="max-h-10 max-w-[90%] w-auto object-contain">
+                  <span
+                    class="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">2026</span>
+                </a>
+                <a href="https://mlflow.org/" target="_blank" rel="noopener noreferrer"
+                  class="relative flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
+                  <img src="/logos/mlflow.svg" alt="MLflow" class="max-h-10 max-w-[90%] w-auto object-contain">
+                  <span
+                    class="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">2026</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Processing & Orchestration -->
+            <div
+              class="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[var(--color-accent)] h-full">
+              <h3 class="text-xl font-semibold mb-4 text-[var(--color-text)]">Processing & Orchestration</h3>
+              <p class="text-center text-[var(--color-text-light)] mb-6 text-sm">
+                Data processing engines and workflow orchestration.
+              </p>
+              <div class="grid grid-cols-2 gap-4 w-full mt-auto">
+                <a href="https://spark.apache.org/" target="_blank" rel="noopener noreferrer"
+                  class="flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
+                  <img src="/logos/spark.svg" alt="Spark" class="max-h-10 max-w-[90%] w-auto object-contain">
+                </a>
+                <a href="https://airflow.apache.org/" target="_blank" rel="noopener noreferrer"
+                  class="relative flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
+                  <img src="/logos/airflow.svg" alt="Airflow" class="max-h-10 max-w-[90%] w-auto object-contain">
+                  <span
+                    class="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">2026</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Storage & Catalog -->
+            <div
+              class="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[var(--color-accent)] h-full">
+              <h3 class="text-xl font-semibold mb-4 text-[var(--color-text)]">Storage & Catalog</h3>
+              <p class="text-center text-[var(--color-text-light)] mb-6 text-sm">
+                Modern lakehouse with transactional tables and metadata management.
+              </p>
+              <div class="grid grid-cols-3 gap-4 w-full mt-auto">
+                <a href="https://iceberg.apache.org/" target="_blank" rel="noopener noreferrer"
+                  class="relative flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
+                  <img src="/logos/iceberg.svg" alt="Iceberg" class="max-h-10 max-w-[90%] w-auto object-contain">
+                  <span
+                    class="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">2026</span>
+                </a>
+                <a href="https://polaris.apache.org/" target="_blank" rel="noopener noreferrer"
+                  class="relative flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
+                  <img src="/logos/polaris.svg" alt="Polaris"
+                    class="max-h-10 max-w-[90%] w-auto object-contain bg-[#34587a]">
+                  <span
+                    class="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">2026</span>
+                </a>
+                <a href="https://hive.apache.org/" target="_blank" rel="noopener noreferrer"
+                  class="flex items-center justify-center p-3 bg-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent-alt)] transition-colors h-16">
+                  <img src="/logos/hive.svg" alt="Hive" class="max-h-10 max-w-[90%] w-auto object-contain">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visualization & Database -->
+          <div class="mt-12 max-w-3xl mx-auto bg-white rounded-lg p-8 shadow-sm">
+            <h3 class="text-xl font-semibold mb-6 text-center">Visualization & Database</h3>
+            <div class="flex flex-wrap justify-center gap-12 items-center">
+              <a href="https://superset.apache.org/" target="_blank" rel="noopener noreferrer"
+                class="flex flex-col items-center gap-2 group">
+                <div class="h-16 flex items-center">
+                  <img src="/logos/superset.svg" alt="Superset"
+                    class="h-12 w-auto group-hover:scale-105 transition-transform">
+                </div>
+                <span class="text-sm text-text-light">Apache Superset</span>
+              </a>
+              <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer"
+                class="flex flex-col items-center gap-2 group">
+                <div class="h-16 flex items-center">
+                  <img src="/logos/postgresql.svg" alt="PostgreSQL"
+                    class="h-12 w-auto group-hover:scale-105 transition-transform">
+                </div>
+                <span class="text-sm text-text-light">PostgreSQL</span>
               </a>
             </div>
           </div>
+
+          <!-- Kubernetes Foundation -->
+          <div class="mt-12 bg-primary/5 rounded-lg p-8">
+            <h3 class="text-xl font-semibold mb-4 text-center">Built on Kubernetes</h3>
+            <p class="text-center text-text-light mb-6">
+              Running on any Kubernetes distribution (RKE, EKS, AKS, GKE) with comprehensive security, observability,
+              and resource management.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+              <span class="px-4 py-2 bg-white rounded-full text-sm">Security & RBAC</span>
+              <span class="px-4 py-2 bg-white rounded-full text-sm">TLS/Certificates</span>
+              <span class="px-4 py-2 bg-white rounded-full text-sm">SSO & LDAP</span>
+              <span class="px-4 py-2 bg-white rounded-full text-sm">Monitoring</span>
+              <span class="px-4 py-2 bg-white rounded-full text-sm">Backup & DRP</span>
+              <span class="px-4 py-2 bg-white rounded-full text-sm">Load Balancing</span>
+              <span class="px-4 py-2 bg-white rounded-full text-sm">Ingress Control</span>
+              <span class="px-4 py-2 bg-white rounded-full text-sm">Resource Scheduling</span>
+            </div>
+          </div>
+
+          <p class="text-center text-[var(--color-text-light)] mt-8">Each component can be deployed independently,
+            allowing you to build a customized data platform that meets your specific needs.</p>
         </div>
-        
-        <!-- Community Links -->
-        <div class="flex flex-wrap md:flex-nowrap justify-center gap-3 max-w-5xl mx-auto mb-12 text-sm">
-          <a href="https://framateam.org/tosit/channels/okdp" target="_blank" rel="noopener noreferrer" class="card flex items-center gap-2 px-3 py-3 flex-1 min-w-[180px] hover:shadow-md transition-shadow">
-            <div class="flex items-center justify-center bg-[var(--color-primary)]/10 rounded-full h-10 w-10">
-              <svg class="h-5 w-5 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-              </svg>
-            </div>
-            <h3 class="text-sm font-semibold">Mattermost</h3>
-          </a>
+      </section>
 
-          <a href="https://github.com/okdp" target="_blank" rel="noopener noreferrer" class="card flex items-center gap-2 px-3 py-3 flex-1 min-w-[180px] hover:shadow-md transition-shadow">
-            <div class="flex items-center justify-center bg-[var(--color-primary)]/10 rounded-full h-10 w-10">
-              <svg class="h-5 w-5 text-[var(--color-primary)]" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
-          <path fill="currentColor" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"></path>
-              </svg>
-            </div>
-            <h3 class="text-sm font-semibold">GitHub</h3>
-          </a>
+      <!-- Roadmap Section -->
+      <section id="roadmap" class="section bg-accent">
+        <div class="container">
+          <div class="text-center mb-16">
+            <h2 class="mb-4">Roadmap</h2>
+          </div>
 
-          <a href="https://central.sonatype.com/namespace/io.okdp" target="_blank" rel="noopener noreferrer" class="card flex items-center gap-2 px-3 py-3 flex-1 min-w-[180px] hover:shadow-md transition-shadow">
-            <div class="flex items-center justify-center bg-[var(--color-primary)]/10 rounded-full h-10 w-10">
-              <svg class="h-5 w-5 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-              </svg>
-            </div>
-            <h3 class="text-sm font-semibold">Maven Central</h3>
-          </a>
+          <div class="max-w-4xl mx-auto">
+            <!-- 2026 Roadmap -->
+            <div class="bg-white rounded-lg p-8 shadow-sm mb-8">
+              <h3 class="text-2xl font-bold mb-6">2026: Evolution & Scale</h3>
 
-          <a href="https://quay.io/organization/okdp" target="_blank" rel="noopener noreferrer" class="card flex items-center gap-2 px-3 py-3 flex-1 min-w-[180px] hover:shadow-md transition-shadow">
-            <div class="flex items-center justify-center bg-[var(--color-primary)]/10 rounded-full h-10 w-10">
-              <svg class="h-5 w-5 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2M7 7h10"></path>
-              </svg>
+              <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="border-l-4 border-blue-500 pl-6 py-2">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-2xl">🔨</span>
+                    <h4 class="font-semibold">Technology Builds</h4>
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Ongoing</span>
+                  </div>
+                  <p class="text-sm text-text-light">Continuous building of source code and Docker images for all
+                    platform technologies.</p>
+                </div>
+
+                <div class="border-l-4 border-yellow-500 pl-6 py-2">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-2xl">🧊</span>
+                    <h4 class="font-semibold">Apache Polaris & Iceberg</h4>
+                    <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">Q1-Q2</span>
+                  </div>
+                  <p class="text-sm text-text-light">Integration of Apache Iceberg and Polaris catalog with STS S3
+                    support and RBAC.</p>
+                </div>
+
+                <div class="border-l-4 border-yellow-500 pl-6 py-2">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-2xl">💾</span>
+                    <h4 class="font-semibold">SeaweedFS Migration</h4>
+                    <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">Q2-Q3</span>
+                  </div>
+                  <p class="text-sm text-text-light">Replace Minio with SeaweedFS for improved object storage
+                    performance.</p>
+                </div>
+
+                <div class="border-l-4 border-yellow-500 pl-6 py-2">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-2xl">🔄</span>
+                    <h4 class="font-semibold">Apache Airflow</h4>
+                    <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">Q3-Q4</span>
+                  </div>
+                  <p class="text-sm text-text-light">Implementation of Apache Airflow for workflow automation and
+                    orchestration.</p>
+                </div>
+              </div>
+
+              <!-- Cross-Cutting Themes -->
+              <div class="pt-6 border-t border-gray-200">
+                <h4 class="text-lg font-semibold mb-4 text-center">Cross-Cutting Themes</h4>
+                <div class="grid md:grid-cols-4 gap-4">
+                  <div class="text-center p-4 bg-accent rounded-lg">
+                    <div class="text-3xl mb-2">🔒</div>
+                    <h5 class="font-semibold text-sm mb-1">Security</h5>
+                    <p class="text-xs text-text-light">End-to-end OIDC authentication</p>
+                  </div>
+
+                  <div class="text-center p-4 bg-accent rounded-lg">
+                    <div class="text-3xl mb-2">⚖️</div>
+                    <h5 class="font-semibold text-sm mb-1">Resources</h5>
+                    <p class="text-xs text-text-light">Queue management system</p>
+                  </div>
+
+                  <div class="text-center p-4 bg-accent rounded-lg">
+                    <div class="text-3xl mb-2">🤖</div>
+                    <h5 class="font-semibold text-sm mb-1">MLOps</h5>
+                    <p class="text-xs text-text-light">Kubeflow & MLflow</p>
+                  </div>
+
+                  <div class="text-center p-4 bg-accent rounded-lg">
+                    <div class="text-3xl mb-2">📊</div>
+                    <h5 class="font-semibold text-sm mb-1">Observability</h5>
+                    <p class="text-xs text-text-light">Logs, monitoring, audit</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 class="text-sm font-semibold">Container Registry</h3>
-          </a>
-        </div>
-        
-        <!-- Contributors CTA -->
-        <div class="max-w-4xl mx-auto bg-accent rounded-lg p-8 text-center">
-          <h3 class="text-xl font-semibold mb-4">Call for Contributions</h3>
-          <p class="text-text-light mb-6">Help us build the Open Kubernetes Data Platform. Whether you enjoy infrastructure, data engineering, or docs, there is room for you.</p>
-            <a href="https://github.com/orgs/okdp/people" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-sm px-4 py-2">Contribute on GitHub</a>
+
+            <!-- 2024 Completed (hidden by default) -->
+            <details class="bg-white rounded-lg p-8 shadow-sm" aria-label="2024 Roadmap">
+              <summary class="flex items-center justify-between cursor-pointer select-none">
+                <div class="flex items-center gap-2 text-2xl font-bold">
+                  <span class="text-base md:text-2xl">2024-25: Foundation (Completed)</span>
+                  <svg class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-sm text-text-light">Expand milestones</span>
+              </summary>
+
+              <div class="mt-6 space-y-6">
+                <div class="timeline-item border-l-2 border-green-500 pl-6">
+                  <time class="text-sm text-text-light">Q1-Q2 2024 ✓</time>
+                  <h4 class="font-semibold mt-1">Initial Data Technologies</h4>
+                  <p class="mt-2 text-text-light text-sm">Successfully integrated core data technologies: JupyterHub,
+                    Apache Spark, Trino, Hive Metastore, and Superset.</p>
+                </div>
+
+                <div class="timeline-item border-l-2 border-green-500 pl-6">
+                  <time class="text-sm text-text-light">Q3 2024 ✓</time>
+                  <h4 class="font-semibold mt-1">TDP Integration</h4>
+                  <p class="mt-2 text-text-light text-sm">Delivered integration mechanisms between OKDP and TDP,
+                    enabling seamless interoperability.</p>
+                </div>
+
+                <div class="timeline-item border-l-2 border-green-500 pl-6">
+                  <time class="text-sm text-text-light">Q3 2024 ✓</time>
+                  <h4 class="font-semibold mt-1">OKDP Server/UI</h4>
+                  <p class="mt-2 text-text-light text-sm">Published the first version of OKDP Server and user interface
+                    for platform management.</p>
+                </div>
+
+                <div class="timeline-item border-l-2 border-green-500 pl-6">
+                  <time class="text-sm text-text-light">Q4 2024 ✓</time>
+                  <h4 class="font-semibold mt-1">Sandbox & Documentation</h4>
+                  <p class="mt-2 text-text-light text-sm">Released comprehensive sandbox environment with user guide and
+                    end-to-end test application.</p>
+                </div>
+              </div>
+            </details>
           </div>
         </div>
-            </div>
-          </section>
+      </section>
 
-          <!-- TOSIT Section -->
-          <section id="tosit" class="section bg-background-alt">
-            <div class="container">
-        <div class="max-w-3xl mx-auto text-center">
-          <h2 class="mb-4">About TOSIT</h2>
-          <p class="text-text-light mb-6"><a href="https://tosit.io/" target="_blank" class="text-primary">TOSIT</a> is an
-            association that promotes community-driven initiatives to create truly open-source technologies and platforms. The
-            association brings together numerous companies and administrations including DGFiP (Direction Générale des Finances
-            Publiques), BPCE (Banque Populaire, Caisse d'Epargne et Natixis), Société Générale, among others.</p>
-          <p class="text-text-light">Participation in TOSIT projects is open to all, with the aim of ensuring that the technology stack is accessible, efficient, and powerful for everyone.</p>
-        </div>
+      <!-- Community -->
+      <section id="community" class="section bg-background">
+        <div class="container">
+          <div class="text-center mb-16">
+            <h2 class="mb-4">Join Our Community</h2>
+            <p class="text-text-light max-w-2xl mx-auto">OKDP is built by the community, for the community. Join us in
+              shaping the future of open-source data platforms.</p>
+          </div>
+
+          <!-- Weekly Meeting Highlight -->
+          <div
+            class="max-w-2xl mx-auto mb-12 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-8 border-2 border-primary/20">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center bg-primary rounded-full h-12 w-12">
+                  <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Weekly Technical Meeting</h3>
+                <p class="text-text-light mb-4">Every Wednesday at 10:00 AM (CET) - Contact us to receive the meeting
+                  details.</p>
+                <a href="https://github.com/orgs/OKDP/discussions"
+                  class="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-medium">
+                  Contact Us to Join
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    </path>
+                  </svg>
+                </a>
+              </div>
             </div>
-          </section>
+          </div>
+
+          <!-- Community Links -->
+          <div class="flex flex-wrap md:flex-nowrap justify-center gap-3 max-w-5xl mx-auto mb-12 text-sm">
+            <a href="https://framateam.org/tosit/channels/okdp" target="_blank" rel="noopener noreferrer"
+              class="card flex items-center gap-2 px-3 py-3 flex-1 min-w-[180px] hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-center bg-[var(--color-primary)]/10 rounded-full h-10 w-10">
+                <svg class="h-5 w-5 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="text-sm font-semibold">Mattermost</h3>
+            </a>
+
+            <a href="https://github.com/okdp" target="_blank" rel="noopener noreferrer"
+              class="card flex items-center gap-2 px-3 py-3 flex-1 min-w-[180px] hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-center bg-[var(--color-primary)]/10 rounded-full h-10 w-10">
+                <svg class="h-5 w-5 text-[var(--color-primary)]" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor"
+                    d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="text-sm font-semibold">GitHub</h3>
+            </a>
+
+            <a href="https://central.sonatype.com/namespace/io.okdp" target="_blank" rel="noopener noreferrer"
+              class="card flex items-center gap-2 px-3 py-3 flex-1 min-w-[180px] hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-center bg-[var(--color-primary)]/10 rounded-full h-10 w-10">
+                <svg class="h-5 w-5 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                </svg>
+              </div>
+              <h3 class="text-sm font-semibold">Maven Central</h3>
+            </a>
+
+            <a href="https://quay.io/organization/okdp" target="_blank" rel="noopener noreferrer"
+              class="card flex items-center gap-2 px-3 py-3 flex-1 min-w-[180px] hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-center bg-[var(--color-primary)]/10 rounded-full h-10 w-10">
+                <svg class="h-5 w-5 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2M7 7h10">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="text-sm font-semibold">Container Registry</h3>
+            </a>
+          </div>
+
+          <!-- Contributors CTA -->
+          <div class="max-w-4xl mx-auto bg-accent rounded-lg p-8 text-center">
+            <h3 class="text-xl font-semibold mb-4">Call for Contributions</h3>
+            <p class="text-text-light mb-6">Help us build the Open Kubernetes Data Platform. Whether you enjoy
+              infrastructure, data engineering, or docs, there is room for you.</p>
+            <a href="https://github.com/orgs/okdp/people" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary text-sm px-4 py-2">Contribute on GitHub</a>
+          </div>
+        </div>
+  </div>
+  </section>
+
+  <!-- TOSIT Section -->
+  <section id="tosit" class="section bg-background-alt">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="mb-4">About TOSIT</h2>
+        <p class="text-text-light mb-6"><a href="https://tosit.io/" target="_blank" class="text-primary">TOSIT</a> is an
+          association that promotes community-driven initiatives to create truly open-source technologies and platforms.
+          It hosts the <a href="https://trunkdataplatform.io/" target="_blank" class="text-primary">TDP</a> project,
+          which was initiated by <strong>DGFiP</strong> and <strong>EDF</strong>.</p>
+        <p class="text-text-light mb-6">Since January 2024, <strong>DGFiP</strong> started the OKDP adventure, which was
+          later joined by <strong>Orange</strong>. The association brings together numerous companies and
+          administrations including BPCE (Banque Populaire, Caisse d'Epargne et Natixis), Société Générale, among
+          others.</p>
+        <p class="text-text-light">Participation in TOSIT projects is open to all, with the aim of ensuring that the
+          technology stack is accessible, efficient, and powerful for everyone.</p>
+      </div>
+    </div>
+  </section>
   </main>
 
   <!-- Footer -->
@@ -576,84 +597,84 @@
       </div>
     </div>
   </footer>
-</div>
+  </div>
 
-<script>
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuButton = document.getElementById('mobile-menu-button');
-  const header = document.querySelector('header');
-  const navLinks = document.querySelectorAll('[data-nav-link][href^="#"]');
-  const linkedSections = Array.from(navLinks)
-    .map(link => document.querySelector(link.getAttribute('href')))
-    .filter(Boolean);
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuButton = document.getElementById('mobile-menu-button');
+    const header = document.querySelector('header');
+    const navLinks = document.querySelectorAll('[data-nav-link][href^="#"]');
+    const linkedSections = Array.from(navLinks)
+      .map(link => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
 
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-        mobileMenu?.classList.add('hidden');
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          mobileMenu?.classList.add('hidden');
+        }
+      });
+    });
+
+    // Mobile menu toggle
+    if (menuButton) {
+      menuButton.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+      });
+    }
+
+    // Scroll spy to highlight nav links of the visible section
+    const setActiveNavLink = (sectionId) => {
+      navLinks.forEach(link => {
+        const linkTarget = link.getAttribute('href');
+        if (linkTarget === `#${sectionId}`) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    };
+
+    const handleScrollSpy = () => {
+      if (!linkedSections.length) {
+        return;
       }
-    });
-  });
 
-  // Mobile menu toggle
-  if (menuButton) {
-    menuButton.addEventListener('click', () => {
-      mobileMenu?.classList.toggle('hidden');
-    });
-  }
+      const headerOffset = (header?.offsetHeight || 0) + 8;
+      const viewportPosition = window.scrollY + headerOffset;
+      let activeSectionId = null;
 
-  // Scroll spy to highlight nav links of the visible section
-  const setActiveNavLink = (sectionId) => {
-    navLinks.forEach(link => {
-      const linkTarget = link.getAttribute('href');
-      if (linkTarget === `#${sectionId}`) {
-        link.classList.add('active');
+      for (const section of linkedSections) {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        if (viewportPosition >= sectionTop && viewportPosition < sectionBottom) {
+          activeSectionId = section.id;
+          break;
+        }
+      }
+
+      if (!activeSectionId && window.scrollY + window.innerHeight >= document.body.offsetHeight - 2) {
+        activeSectionId = linkedSections[linkedSections.length - 1]?.id || null;
+      }
+
+      if (activeSectionId) {
+        setActiveNavLink(activeSectionId);
       } else {
-        link.classList.remove('active');
+        navLinks.forEach(link => link.classList.remove('active'));
       }
-    });
-  };
+    };
 
-  const handleScrollSpy = () => {
-    if (!linkedSections.length) {
-      return;
-    }
-
-    const headerOffset = (header?.offsetHeight || 0) + 8;
-    const viewportPosition = window.scrollY + headerOffset;
-    let activeSectionId = null;
-
-    for (const section of linkedSections) {
-      const sectionTop = section.offsetTop;
-      const sectionBottom = sectionTop + section.offsetHeight;
-      if (viewportPosition >= sectionTop && viewportPosition < sectionBottom) {
-        activeSectionId = section.id;
-        break;
-      }
-    }
-
-    if (!activeSectionId && window.scrollY + window.innerHeight >= document.body.offsetHeight - 2) {
-      activeSectionId = linkedSections[linkedSections.length - 1]?.id || null;
-    }
-
-    if (activeSectionId) {
-      setActiveNavLink(activeSectionId);
-    } else {
-      navLinks.forEach(link => link.classList.remove('active'));
-    }
-  };
-
-  window.addEventListener('scroll', handleScrollSpy, { passive: true });
-  window.addEventListener('resize', handleScrollSpy);
-  window.addEventListener('load', handleScrollSpy);
-</script>
+    window.addEventListener('scroll', handleScrollSpy, { passive: true });
+    window.addEventListener('resize', handleScrollSpy);
+    window.addEventListener('load', handleScrollSpy);
+  </script>
 </body>
 
 </html>
