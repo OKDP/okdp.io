@@ -1,0 +1,223 @@
+{
+    "meta": {
+        "title": "OKDP - Open Kubernetes Data Platform | 100% Open Source",
+        "description": "OKDP is a free, open-source, and cloud-native data platform designed for Kubernetes. Built by the community, for the community.",
+        "keywords": "Open Kubernetes Data Platform, OKDP, Apache Iceberg, Polaris, Trino, Spark, Airflow, Superset, MLOps, Kubernetes, Data Platform"
+    },
+    "nav": {
+        "about": "About",
+        "architecture": "Architecture",
+        "roadmap": "Roadmap",
+        "community": "Community"
+    },
+    "hero": {
+        "badge": "100% Open Source • Apache V2 License",
+        "title": "Open Kubernetes Data Platform",
+        "subtitle": "A free, open-source and cloud-native data platform built on Kubernetes. Modular, sovereign, and community-driven.",
+        "ctaPrimary": "Get started",
+        "ctaSecondary": "Join Community"
+    },
+    "stats": {
+        "contributors": "Contributors",
+        "downloads": "Weekly Downloads",
+        "started": "Project Started"
+    },
+    "about": {
+        "title": "What is OKDP?",
+        "description1": "<strong class=\"text-text\">OKDP</strong> (Open Kubernetes Data Platform) is a comprehensive data management services platform composed of containerized open source software and products, running on Kubernetes infrastructure.",
+        "description2": "OKDP addresses the complete data lifecycle: collection, storage, processing, analysis, and data exposition. It's modular by design—deploy all components or select only what you need."
+    },
+    "why": {
+        "title": "Why OKDP?",
+        "cards": [
+            {
+                "icon": "📊",
+                "title": "Data Centric",
+                "description": "Comprehensive platform covering the entire data lifecycle with built-in governance, facilitating data sharing and minimizing duplication."
+            },
+            {
+                "icon": "☁️",
+                "title": "Cloud Native",
+                "description": "Kubernetes-native platform designed for modern cloud environments with high availability, scalability, and multi-cloud support."
+            },
+            {
+                "icon": "🔓",
+                "title": "True Open Source",
+                "description": "100% open source with Apache V2 license. Complete control of the technology lifecycle from build to deployment, with no vendor lock-in."
+            },
+            {
+                "icon": "🏛️",
+                "title": "Sovereignty & Cost Control",
+                "description": "Maintain full autonomy over your data infrastructure while eliminating licensing costs. Free to use, modify, and deploy at any scale."
+            },
+            {
+                "icon": "🎛️",
+                "title": "Modular & Future-Proof",
+                "description": "Flexible architecture adapts to your needs. Built on Kubernetes to prevent technical debt, ensuring sustainability and continuous modernization."
+            },
+            {
+                "icon": "🌍",
+                "title": "Community-Driven",
+                "description": "Built by the community, for the community. Open collaboration from public and private organizations with a growing ecosystem."
+            }
+        ]
+    },
+    "architecture": {
+        "title": "Modular Architecture",
+        "subtitle": "OKDP offers a modular architecture that allows you to select and deploy only the components you need for your specific use case.",
+        "query": {
+            "title": "Query Engine",
+            "desc": "High-performance SQL query engines for distributed data."
+        },
+        "ml": {
+            "title": "ML/AI",
+            "desc": "Complete MLOps platform for data science workflows."
+        },
+        "processing": {
+            "title": "Processing & Orchestration",
+            "desc": "Data processing engines and workflow orchestration."
+        },
+        "storage": {
+            "title": "Storage & Catalog",
+            "desc": "Modern lakehouse with transactional tables and metadata management."
+        },
+        "viz": {
+            "title": "Visualization & Database"
+        },
+        "k8s": {
+            "title": "Built on Kubernetes",
+            "desc": "Running on any Kubernetes distribution (RKE, EKS, AKS, GKE) with comprehensive security, observability, and resource management.",
+            "features": [
+                "Security & RBAC",
+                "TLS/Certificates",
+                "SSO & LDAP",
+                "Monitoring",
+                "Backup & DRP",
+                "Load Balancing",
+                "Ingress Control",
+                "Resource Scheduling"
+            ]
+        },
+        "outro": "Each component can be deployed independently, allowing you to build a customized data platform that meets your specific needs."
+    },
+    "roadmap": {
+        "title": "Roadmap",
+        "y2026": {
+            "title": "2026: Evolution & Scale",
+            "items": [
+                {
+                    "icon": "🔨",
+                    "title": "Technology Builds",
+                    "badge": "Ongoing",
+                    "badgeColor": "bg-blue-100",
+                    "badgeTextColor": "text-blue-800",
+                    "borderColor": "border-blue-500",
+                    "desc": "Continuous building of source code and Docker images for all platform technologies."
+                },
+                {
+                    "icon": "🧊",
+                    "title": "Apache Polaris & Iceberg",
+                    "badge": "Q1-Q2",
+                    "badgeColor": "bg-yellow-100",
+                    "badgeTextColor": "text-yellow-800",
+                    "borderColor": "border-yellow-500",
+                    "desc": "Integration of Apache Iceberg and Polaris catalog with STS S3 support and RBAC."
+                },
+                {
+                    "icon": "💾",
+                    "title": "SeaweedFS Migration",
+                    "badge": "Q2-Q3",
+                    "badgeColor": "bg-yellow-100",
+                    "badgeTextColor": "text-yellow-800",
+                    "borderColor": "border-yellow-500",
+                    "desc": "Replace Minio with SeaweedFS for improved object storage performance."
+                },
+                {
+                    "icon": "🔄",
+                    "title": "Apache Airflow",
+                    "badge": "Q3-Q4",
+                    "badgeColor": "bg-yellow-100",
+                    "badgeTextColor": "text-yellow-800",
+                    "borderColor": "border-yellow-500",
+                    "desc": "Implementation of Apache Airflow for workflow automation and orchestration."
+                }
+            ]
+        },
+        "themes": {
+            "title": "Cross-Cutting Themes",
+            "items": [
+                {
+                    "icon": "🔒",
+                    "title": "Security",
+                    "desc": "End-to-end OIDC authentication"
+                },
+                {
+                    "icon": "⚖️",
+                    "title": "Resources",
+                    "desc": "Queue management system"
+                },
+                {
+                    "icon": "🤖",
+                    "title": "MLOps",
+                    "desc": "Kubeflow & MLflow"
+                },
+                {
+                    "icon": "📊",
+                    "title": "Observability",
+                    "desc": "Logs, monitoring, audit"
+                }
+            ]
+        },
+        "previous": {
+            "title": "2024-25: Foundation",
+            "label": "2024 Roadmap",
+            "expand": "View previous milestones",
+            "items": [
+                {
+                    "time": "Q1-Q2 2024 ✓",
+                    "title": "Initial Data Technologies",
+                    "desc": "Successfully integrated core data technologies: JupyterHub, Apache Spark, Trino, Hive Metastore, and Superset."
+                },
+                {
+                    "time": "Q3 2024 ✓",
+                    "title": "TDP Integration",
+                    "desc": "Delivered integration mechanisms between OKDP and TDP, enabling seamless interoperability."
+                },
+                {
+                    "time": "Q3 2024 ✓",
+                    "title": "OKDP Server/UI",
+                    "desc": "Published the first version of OKDP Server and user interface for platform management."
+                },
+                {
+                    "time": "Q4 2024 ✓",
+                    "title": "Sandbox & Documentation",
+                    "desc": "Released comprehensive sandbox environment with user guide and end-to-end test application."
+                }
+            ]
+        }
+    },
+    "community": {
+        "title": "Join Our Community",
+        "subtitle": "OKDP is built by the community, for the community. Join us in shaping the future of open-source data platforms.",
+        "meeting": {
+            "title": "Weekly Technical Meeting",
+            "desc": "Every Wednesday at 10:00 AM (CET) - Contact us to receive the meeting details.",
+            "cta": "Contact Us to Join"
+        },
+        "contribute": {
+            "title": "Call for Contributions",
+            "desc": "Help us build the Open Kubernetes Data Platform. Whether you enjoy infrastructure, data engineering, or docs, there is room for you.",
+            "cta": "Contribute on GitHub"
+        }
+    },
+    "tosit": {
+        "title": "About TOSIT",
+        "desc1": "<a href=\"https://tosit.io/\" target=\"_blank\" class=\"text-primary\">TOSIT</a> is an association that promotes community-driven initiatives to create truly open-source technologies and platforms. It hosts the <a href=\"https://trunkdataplatform.io/\" target=\"_blank\" class=\"text-primary\">TDP</a> project, which was initiated by <strong>DGFiP</strong> and <strong>EDF</strong>.",
+        "desc2": "Since January 2024, <strong>DGFiP</strong> started the OKDP adventure, which was later joined by <strong>Orange</strong>. The association brings together numerous companies and administrations including BPCE (Banque Populaire, Caisse d'Epargne et Natixis), Société Générale, among others.",
+        "desc3": "Participation in TOSIT projects is open to all, with the aim of ensuring that the technology stack is accessible, efficient, and powerful for everyone."
+    },
+    "footer": {
+        "copyright": "© 2026 TOSIT — The Open Source I Trust.",
+        "license": "Crafted by the community • Licensed under Apache License v2.0"
+    }
+}
