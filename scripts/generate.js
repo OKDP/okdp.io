@@ -18,18 +18,18 @@ const languages = [
 
 languages.forEach(lang => {
   const content = JSON.parse(fs.readFileSync(path.join(localesDir, `${lang.code}.json`), 'utf8'));
-  
+
   // Add metadata for language switching and paths
   const context = {
     ...content,
     lang: lang.code,
     relativePrefix: lang.isDefault ? './' : '../',
-    otherLangUrl: lang.isDefault ? '/en/' : '/',
+    otherLangUrl: lang.isDefault ? 'en/' : '../',
     otherLangLabel: lang.isDefault ? 'EN' : 'FR'
   };
-  
+
   const html = template(context);
-  
+
   let outputPath;
   if (lang.isDefault) {
     outputPath = path.join(__dirname, '../index.html');
@@ -41,7 +41,7 @@ languages.forEach(lang => {
     }
     outputPath = path.join(langDir, 'index.html');
   }
-  
+
   fs.writeFileSync(outputPath, html);
   console.log(`Generated ${lang.code} site at ${outputPath}`);
 });
