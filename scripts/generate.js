@@ -11,6 +11,14 @@ console.log('Generating sites...');
 const templateSource = fs.readFileSync(templatePath, 'utf8');
 const template = Handlebars.compile(templateSource);
 
+Handlebars.registerHelper('eq', function (a, b) {
+  return a === b;
+});
+
+Handlebars.registerHelper('neq', function (a, b) {
+  return a !== b;
+});
+
 const languages = [
   { code: 'fr', isDefault: true },
   { code: 'en', isDefault: false }
@@ -22,8 +30,11 @@ languages.forEach(lang => {
   // Add metadata for language switching and paths
   const context = {
     ...content,
-    lang: lang.code,
+    currentLang: lang.code,
+    frUrl: lang.code === 'fr' ? '#' : '../',
+    enUrl: lang.code === 'en' ? '#' : (lang.isDefault ? 'en/' : '../en/'),
     relativePrefix: lang.isDefault ? './' : '../',
+    // otherLangUrl kept for backward compatibility if needed, but we'll use specific URLs
     otherLangUrl: lang.isDefault ? 'en/' : '../',
     otherLangLabel: lang.isDefault ? 'EN' : 'FR'
   };
