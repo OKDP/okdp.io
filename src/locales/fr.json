@@ -73,9 +73,9 @@
                 "title": "Ingestion & Streaming",
                 "desc": "Connectivité, ingestion ETL et traitement temps réel.",
                 "tools": [
-                    { "name": "Apache NiFi", "logo": "/logos/nifi.svg", "url": "https://nifi.apache.org/" },
-                    { "name": "Apache Kafka", "logo": "/logos/kafka.svg", "url": "https://kafka.apache.org/" },
-                    { "name": "Apache Flink", "logo": "/logos/flink.svg", "url": "https://flink.apache.org/" }
+                    { "name": "Apache NiFi", "logo": "logos/nifi.svg", "url": "https://nifi.apache.org/" },
+                    { "name": "Apache Kafka", "logo": "logos/kafka.svg", "url": "https://kafka.apache.org/" },
+                    { "name": "Apache Flink", "logo": "logos/flink.svg", "url": "https://flink.apache.org/" }
                 ],
                 "future": true
             },
@@ -84,9 +84,9 @@
                 "title": "Lakehouse & Analytics",
                 "desc": "Moteurs SQL haute performance et lakehouse moderne.",
                 "tools": [
-                    { "name": "Apache Spark", "logo": "/logos/spark.svg", "url": "https://spark.apache.org/" },
-                    { "name": "Trino", "logo": "/logos/trino.svg", "url": "https://trino.io/" },
-                    { "name": "Polaris Catalog", "logo": "/logos/polaris.svg", "url": "https://polaris.apache.org/", "invertLogo": true }
+                    { "name": "Apache Spark", "logo": "logos/spark.svg", "url": "https://spark.apache.org/" },
+                    { "name": "Trino", "logo": "logos/trino.svg", "url": "https://trino.io/" },
+                    { "name": "Polaris Catalog", "logo": "logos/polaris.svg", "url": "https://polaris.apache.org/", "invertLogo": true }
                 ],
                 "future": false
             },
@@ -95,7 +95,7 @@
                 "title": "Data Science",
                 "desc": "Environnements interactifs pour l'exploration et l'analyse.",
                 "tools": [
-                    { "name": "JupyterLab", "logo": "/logos/jupyter.svg", "url": "https://jupyter.org/" }
+                    { "name": "JupyterLab", "logo": "logos/jupyter.svg", "url": "https://jupyter.org/" }
                 ],
                 "future": false
             },
@@ -104,8 +104,8 @@
                 "title": "IA & MLOps",
                 "desc": "Plateforme MLOps et inférence de modèles de langage.",
                 "tools": [
-                    { "name": "Kubeflow", "logo": "/logos/kubeflow.svg", "url": "https://kubeflow.org/" },
-                    { "name": "MLflow", "logo": "/logos/mlflow.svg", "url": "https://mlflow.org/" },
+                    { "name": "Kubeflow", "logo": "logos/kubeflow.svg", "url": "https://kubeflow.org/" },
+                    { "name": "MLflow", "logo": "logos/mlflow.svg", "url": "https://mlflow.org/" },
                     { "name": "LLM Serving", "logo": "", "url": "" }
                 ],
                 "future": true
@@ -115,7 +115,7 @@
                 "title": "Visualisation & BI",
                 "desc": "Tableaux de bord et exploration visuelle des données.",
                 "tools": [
-                    { "name": "Apache Superset", "logo": "/logos/superset.svg", "url": "https://superset.apache.org/" }
+                    { "name": "Apache Superset", "logo": "logos/superset.svg", "url": "https://superset.apache.org/" }
                 ],
                 "future": false
             },
@@ -124,7 +124,7 @@
                 "title": "Orchestration & Gouvernance",
                 "desc": "Automatisation des workflows et catalogage des métadonnées.",
                 "tools": [
-                    { "name": "Apache Airflow", "logo": "/logos/airflow.svg", "url": "https://airflow.apache.org/" },
+                    { "name": "Apache Airflow", "logo": "logos/airflow.svg", "url": "https://airflow.apache.org/" },
                     { "name": "OpenMetadata", "logo": "", "url": "https://open-metadata.org/" }
                 ],
                 "future": false

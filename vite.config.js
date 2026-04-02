@@ -2,6 +2,7 @@ const { resolve } = require('path')
 const { defineConfig } = require('vite')
 
 module.exports = defineConfig({
+    base: '/okdp.io/',
     build: {
         rollupOptions: {
             input: {
