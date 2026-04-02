@@ -347,16 +347,11 @@
                     ]
                 },
                 {
-                    "title": "Ingestion & Streaming",
+                    "title": "Ingestion, Streaming & Governance",
                     "features": [
                         { "text": "Apache NiFi — Connectivity & ETL Ingestion", "status": "todo" },
                         { "text": "Apache Kafka — Messaging & Event Streaming", "status": "todo" },
-                        { "text": "Apache Flink — Real-time Processing", "status": "todo" }
-                    ]
-                },
-                {
-                    "title": "Orchestration & Governance",
-                    "features": [
+                        { "text": "Apache Flink — Real-time Processing", "status": "todo" },
                         { "text": "OpenMetadata — Discovery & Global Cataloging", "status": "todo" }
                     ]
                 }
@@ -374,14 +369,9 @@
                     ]
                 },
                 {
-                    "title": "Observability",
+                    "title": "Observability & Deployment",
                     "features": [
-                        { "text": "Platform Health — Centralized module metrics & logs collection", "status": "todo" }
-                    ]
-                },
-                {
-                    "title": "Deployment",
-                    "features": [
+                        { "text": "Platform Health — Centralized module metrics & logs collection", "status": "todo" },
                         { "text": "Full GitOps Mode — Support for full GitOps deployment mode", "status": "todo" }
                     ]
                 }

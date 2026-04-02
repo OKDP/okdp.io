@@ -289,7 +289,7 @@
                     ]
                 }
             ],
-            "controlPlaneTitle": "Control Plane / Platform",
+            "controlPlaneTitle": "Control Plane / Plateforme",
             "controlPlaneSubtitle": "La couche d'automatisation d'OKDP : orchestration, isolation multi-tenant et expérience utilisateur (DX) pour une utilisation clé en main de toute la stack.",
             "controlPlane": [
                 {
@@ -347,16 +347,11 @@
                     ]
                 },
                 {
-                    "title": "Ingestion & Streaming",
+                    "title": "Ingestion, Streaming & Gouvernance",
                     "features": [
                         { "text": "Apache NiFi — Connectivité & Ingestion ETL", "status": "todo" },
                         { "text": "Apache Kafka — Messaging & Event Streaming", "status": "todo" },
-                        { "text": "Apache Flink — Real-time Processing", "status": "todo" }
-                    ]
-                },
-                {
-                    "title": "Orchestration & Gouvernance",
-                    "features": [
+                        { "text": "Apache Flink — Real-time Processing", "status": "todo" },
                         { "text": "OpenMetadata — Discovery & Cataloging global", "status": "todo" }
                     ]
                 }
@@ -374,14 +369,9 @@
                     ]
                 },
                 {
-                    "title": "Observabilité",
+                    "title": "Observabilité & Déploiement",
                     "features": [
-                        { "text": "Platform Health — Collecte centralisée des métriques & logs des modules", "status": "todo" }
-                    ]
-                },
-                {
-                    "title": "Déploiement",
-                    "features": [
+                        { "text": "Platform Health — Collecte centralisée des métriques & logs des modules", "status": "todo" },
                         { "text": "Full GitOps Mode — Support du mode de déploiement full GitOps", "status": "todo" }
                     ]
                 }

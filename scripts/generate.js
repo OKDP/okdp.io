@@ -27,6 +27,15 @@ Handlebars.registerHelper('neq', function (a, b) {
   return a !== b;
 });
 
+Handlebars.registerHelper('computeStatus', function (features) {
+  if (!features || !features.length) return 'todo';
+  const allComplete = features.every(f => f.status === 'complete');
+  const allTodo = features.every(f => f.status === 'todo');
+  if (allComplete) return 'complete';
+  if (allTodo) return 'todo';
+  return 'inProgress';
+});
+
 const mainTemplate = Handlebars.compile(fs.readFileSync(templatePath, 'utf8'));
 const roadmapTemplate = Handlebars.compile(fs.readFileSync(roadmapTemplatePath, 'utf8'));
 
