@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roadmap — OKDP | Open Kubernetes Data Platform</title>
     <meta name="description" content="Suivi du contenu, des priorités et de l&#x27;avancement de la plateforme OKDP par version." />
-  <link rel="stylesheet" crossorigin href="../assets/index-B3qfOY6o.css">
+  <link rel="stylesheet" crossorigin href="../assets/index-BSPWaZWy.css">
 </head>
 
 <body>
@@ -111,32 +111,24 @@
         </header>
 
         <main>
-            <!-- Hero -->
-            <section class="pt-40 pb-16 bg-gradient-to-b from-accent to-background">
+            <!-- Hero + Legend compact -->
+            <section class="pt-36 pb-8 bg-gradient-to-b from-accent to-background">
                 <div class="container">
                     <div class="max-w-3xl mx-auto text-center">
-                        <h1 class="text-gradient mb-4">Roadmap OKDP</h1>
-                        <p class="text-lg text-text-light">Suivi du contenu, des priorités et de l&#x27;avancement par version.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Legend -->
-            <section class="py-8 bg-background">
-                <div class="container">
-                    <div class="max-w-4xl mx-auto">
-                        <div class="flex flex-wrap justify-center gap-6 text-sm">
-                            <div class="flex items-center gap-2">
-                                <span class="inline-block w-3 h-3 rounded-full bg-green-500"></span>
-                                <span class="text-text-light">Complet — livré, testé et utilisable</span>
+                        <h1 class="text-gradient mb-3">Roadmap OKDP</h1>
+                        <p class="text-text-light mb-6">Suivi du contenu, des priorités et de l&#x27;avancement par version.</p>
+                        <div class="flex flex-wrap justify-center gap-5 text-xs text-text-light">
+                            <div class="flex items-center gap-1.5">
+                                <span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                                Complet — livré, testé et utilisable
                             </div>
-                            <div class="flex items-center gap-2">
-                                <span class="inline-block w-3 h-3 rounded-full bg-blue-500"></span>
-                                <span class="text-text-light">En cours — développement ou intégration active</span>
+                            <div class="flex items-center gap-1.5">
+                                <span class="inline-block w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+                                En cours — développement ou intégration active
                             </div>
-                            <div class="flex items-center gap-2">
-                                <span class="inline-block w-3 h-3 rounded-full bg-gray-300"></span>
-                                <span class="text-text-light">À faire — identifié, mais non démarré pour cette version</span>
+                            <div class="flex items-center gap-1.5">
+                                <span class="inline-block w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+                                À faire — identifié, mais non démarré pour cette version
                             </div>
                         </div>
                     </div>
@@ -147,167 +139,167 @@
             <section class="section bg-background">
                 <div class="container">
                     <div class="max-w-5xl mx-auto">
-                        <div class="flex items-center gap-4 mb-12">
+                        <div class="flex items-center gap-4 mb-10">
                             <h2 class="text-3xl font-bold">v1.0.0</h2>
                             <span class="px-4 py-1.5 bg-primary/10 text-primary font-semibold rounded-full text-sm">Juin 2026</span>
                         </div>
 
                         <!-- Modules Data & IA -->
-                        <div class="mb-16">
+                        <div class="mb-14">
                             <h3 class="text-2xl font-bold mb-2">Modules Data &amp; IA</h3>
-                            <p class="text-sm text-text-light mb-8">Un catalogue d&#x27;outils open source de référence. Utilisables unitairement ou combinés, sans dépendre du Control Plane OKDP (UI/Server).</p>
+                            <p class="text-sm text-text-light mb-6">Un catalogue d&#x27;outils open source de référence. Utilisables unitairement ou combinés, sans dépendre du Control Plane OKDP (UI/Server).</p>
 
-                            <div class="mb-10">
-                                <h4 class="text-lg font-semibold mb-4 text-primary">Lakehouse &amp; Analytics</h4>
-                                <div class="mb-6 bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="flex items-center gap-3 px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h5 class="font-semibold">Apache Spark</h5>
-                                        <span class="ml-auto px-3 py-0.5 bg-green-100 text-green-700 text-xs font-medium rounded-full">✅</span>
+                            <div class="mb-8">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">Lakehouse &amp; Analytics</h4>
+                                <div class="mb-4 bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h5 class="font-semibold text-sm">Apache Spark</h5>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-green-500"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Fourniture d&#x27;une chart Helm propre pour le Spark History Server</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Plugin d&#x27;authentification dédié (Spark Auth Proxy)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Extension Spark Web Proxy (accès UI jobs en temps réel)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Images Docker Spark avec usine de build automatisée</span>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="mb-6 bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="flex items-center gap-3 px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h5 class="font-semibold">Trino</h5>
-                                        <span class="ml-auto px-3 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">🔄</span>
+                                <div class="mb-4 bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h5 class="font-semibold text-sm">Trino</h5>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-blue-500"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Utilisation des Images &amp; Charts Helm communautaires</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Authentification OIDC</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs mt-0.5">↻</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
                                             <span class="text-text-light">Intégration à Polaris Catalog (Lakehouse connectivity)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs mt-0.5">↻</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
                                             <span class="text-text-light">Autorisation fine via OPA (Open Policy Agent)</span>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="mb-6 bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="flex items-center gap-3 px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h5 class="font-semibold">Polaris Catalog (Apache Iceberg)</h5>
-                                        <span class="ml-auto px-3 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">🔄</span>
+                                <div class="mb-4 bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h5 class="font-semibold text-sm">Polaris Catalog (Apache Iceberg)</h5>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-blue-500"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Utilisation des Images &amp; Charts Helm communautaires</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Intégration complète avec Trino</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Authentification OIDC native</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Intégration &amp; Connectivité S3 (STS)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs mt-0.5">↻</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
                                             <span class="text-text-light">Propagation d&#x27;identité depuis Trino vers Polaris</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs mt-0.5">↻</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
                                             <span class="text-text-light">Intégration fine avec OPA (Open Policy Agent)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Rendre le support STS optionnel (flexibilité infrastructure)</span>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="mb-10">
-                                <h4 class="text-lg font-semibold mb-4 text-primary">Visualisation &amp; BI</h4>
-                                <div class="mb-6 bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="flex items-center gap-3 px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h5 class="font-semibold">Apache Superset</h5>
-                                        <span class="ml-auto px-3 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">🔄</span>
+                            <div class="mb-8">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">Visualisation &amp; BI</h4>
+                                <div class="mb-4 bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h5 class="font-semibold text-sm">Apache Superset</h5>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-blue-500"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Utilisation des Images &amp; Charts Helm communautaires</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Authentification OIDC</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs mt-0.5">↻</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
                                             <span class="text-text-light">Propagation de token JWT ou Impersonification (Trino Auth)</span>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="mb-10">
-                                <h4 class="text-lg font-semibold mb-4 text-primary">Orchestration &amp; Gouvernance</h4>
-                                <div class="mb-6 bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="flex items-center gap-3 px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h5 class="font-semibold">Apache Airflow</h5>
-                                        <span class="ml-auto px-3 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">🔄</span>
+                            <div class="mb-8">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">Orchestration &amp; Gouvernance</h4>
+                                <div class="mb-4 bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h5 class="font-semibold text-sm">Apache Airflow</h5>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-blue-500"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Utilisation des Images &amp; Charts Helm communautaires</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs mt-0.5">↻</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
                                             <span class="text-text-light">Authentification OIDC</span>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="mb-10">
-                                <h4 class="text-lg font-semibold mb-4 text-primary">Data Science</h4>
-                                <div class="mb-6 bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="flex items-center gap-3 px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h5 class="font-semibold">JupyterHub / JupyterLab</h5>
-                                        <span class="ml-auto px-3 py-0.5 bg-green-100 text-green-700 text-xs font-medium rounded-full">✅</span>
+                            <div class="mb-8">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">Data Science</h4>
+                                <div class="mb-4 bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h5 class="font-semibold text-sm">JupyterHub / JupyterLab</h5>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-green-500"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Utilisation des Images &amp; Charts Helm communautaires</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Tuning des Helm Values</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Images Docker OKDP optimisées pour les environnements JupyterLab</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Images communautaires (Hub, Proxy, Culler)</span>
                                         </li>
                                     </ul>
@@ -316,115 +308,119 @@
                         </div>
 
                         <!-- Control Plane -->
-                        <div class="mb-16">
-                            <h3 class="text-2xl font-bold mb-2">Control Plane / Platform</h3>
-                            <p class="text-sm text-text-light mb-8">La couche d&#x27;automatisation d&#x27;OKDP : orchestration, isolation multi-tenant et expérience utilisateur (DX) pour une utilisation clé en main de toute la stack.</p>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Control Plane / Plateforme</h3>
+                            <p class="text-sm text-text-light mb-6">La couche d&#x27;automatisation d&#x27;OKDP : orchestration, isolation multi-tenant et expérience utilisateur (DX) pour une utilisation clé en main de toute la stack.</p>
 
-                            <div class="grid md:grid-cols-2 gap-6">
+                            <div class="grid md:grid-cols-2 gap-4">
                                 <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h4 class="font-semibold">Admin Console</h4>
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h4 class="font-semibold text-sm">Admin Console</h4>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-blue-500"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Gestion globale des projets (UI/Backend)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Configuration des clusters Kubernetes &quot;target&quot;</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Gestion des utilisateurs et groupes locaux (via Kubauth)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs mt-0.5">↻</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
                                             <span class="text-text-light">Gestion du membership des projets</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h4 class="font-semibold">Project Console</h4>
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h4 class="font-semibold text-sm">Project Console</h4>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-blue-500"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Création d&#x27;espaces isolés via CRD Project (RBAC de base)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Instanciation d&#x27;environnements JupyterHub</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Déploiement d&#x27;instances Spark History Server</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Gestion des Secrets projets (Vault via token seulement)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs mt-0.5">↻</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
                                             <span class="text-text-light">Soumission d&#x27;applications via Spark Operator (UI et kubectl)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Listing et monitoring des jobs en cours d&#x27;exécution</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Intégration Control Plane : Trino, Superset, Polaris et Airflow</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h4 class="font-semibold">Test Sandbox</h4>
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h4 class="font-semibold text-sm">Test Sandbox</h4>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-blue-500"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Sandbox locale (Kind + Flux) avec composants legacy</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Sandbox Object Storage (SeaweedFS)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs mt-0.5">↻</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
                                             <span class="text-text-light">Migration Ingress / API Gateway</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Nouvelles versions okdp-server &amp; okdp-ui</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Nouveau composant okdp-operator</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h4 class="font-semibold">Installation &amp; Guides</h4>
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h4 class="font-semibold text-sm">Installation &amp; Guides</h4>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-blue-500"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs mt-0.5">✓</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
                                             <span class="text-text-light">Application Démo : Cas d&#x27;usage de bout en bout (Ingestion, Spark &amp; Airflow)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Chart Helm d&#x27;installation du Control Plane (okdp-platform)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Admin Guide : Déploiement &amp; Configuration plateforme</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">User Guide : Utilisation des modules &amp; services via la console</span>
                                         </li>
                                     </ul>
@@ -435,63 +431,61 @@
                 </div>
             </section>
 
+            <!-- Separator -->
+            <div class="container"><hr class="border-gray-200 max-w-5xl mx-auto"></div>
+
             <!-- Future Evolutions -->
             <section class="section bg-[var(--color-background-alt)]">
                 <div class="container">
                     <div class="max-w-5xl mx-auto">
                         <h2 class="text-3xl font-bold mb-2">Évolutions futures</h2>
-                        <p class="text-text-light mb-12">Thématiques et modules identifiés pour enrichir la plateforme après la sortie de la v1.0.0.</p>
+                        <p class="text-text-light mb-10">Thématiques et modules identifiés pour enrichir la plateforme après la sortie de la v1.0.0.</p>
 
                         <!-- Modules Data & IA -->
-                        <div class="mb-16">
-                            <h3 class="text-2xl font-bold mb-8">Modules Data &amp; IA</h3>
+                        <div class="mb-14">
+                            <h3 class="text-2xl font-bold mb-6">Modules Data &amp; IA</h3>
 
-                            <div class="grid md:grid-cols-2 gap-6">
+                            <div class="grid md:grid-cols-2 gap-4">
                                 <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h4 class="font-semibold">IA &amp; MLOps</h4>
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h4 class="font-semibold text-sm">IA &amp; MLOps</h4>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-blue-500"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs mt-0.5">↻</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
                                             <span class="text-text-light">Kubeflow — Intégration initiale (Core components)</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">MLflow — Lifecycle &amp; Experiment Tracking</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">LLM Serving — Inférence de modèles de langage (vLLM, TGI)</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h4 class="font-semibold">Ingestion &amp; Streaming</h4>
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h4 class="font-semibold text-sm">Ingestion, Streaming &amp; Gouvernance</h4>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-gray-300"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Apache NiFi — Connectivité &amp; Ingestion ETL</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Apache Kafka — Messaging &amp; Event Streaming</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Apache Flink — Real-time Processing</span>
                                         </li>
-                                    </ul>
-                                </div>
-                                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h4 class="font-semibold">Orchestration &amp; Gouvernance</h4>
-                                    </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">OpenMetadata — Discovery &amp; Cataloging global</span>
                                         </li>
                                     </ul>
@@ -500,51 +494,46 @@
                         </div>
 
                         <!-- Control Plane -->
-                        <div class="mb-16">
-                            <h3 class="text-2xl font-bold mb-8">Control Plane / Plateforme</h3>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6">Control Plane / Plateforme</h3>
 
-                            <div class="grid md:grid-cols-2 gap-6">
+                            <div class="grid md:grid-cols-2 gap-4">
                                 <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h4 class="font-semibold">Plateforme</h4>
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h4 class="font-semibold text-sm">Plateforme</h4>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-gray-300"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">RBAC Plateforme — Gestion fine des permissions</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Catalogue de services générique — Interface self-service pour déployer des services extra personnalisés</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Quota Management — Pilotage fin des ressources Kubernetes</span>
                                         </li>
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Marketplace — Possibilité d&#x27;exposer des modules ou composants personnalisés</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h4 class="font-semibold">Observabilité</h4>
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h4 class="font-semibold text-sm">Observabilité &amp; Déploiement</h4>
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-gray-300"></span>
                                     </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Platform Health — Collecte centralisée des métriques &amp; logs des modules</span>
                                         </li>
-                                    </ul>
-                                </div>
-                                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                                    <div class="px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                        <h4 class="font-semibold">Déploiement</h4>
-                                    </div>
-                                    <ul class="px-6 py-4 space-y-2">
-                                        <li class="flex items-start gap-3 text-sm">
-                                            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs mt-0.5">○</span>
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
                                             <span class="text-text-light">Full GitOps Mode — Support du mode de déploiement full GitOps</span>
                                         </li>
                                     </ul>
@@ -554,6 +543,7 @@
                     </div>
                 </div>
             </section>
+
         </main>
 
         <!-- Footer -->
