@@ -4,13 +4,21 @@ const path = require('path');
 
 const srcDir = path.join(__dirname, '../src');
 const localesDir = path.join(srcDir, 'locales');
+const partialsDir = path.join(srcDir, 'partials');
 const templatePath = path.join(srcDir, 'template.html');
+const roadmapTemplatePath = path.join(srcDir, 'roadmap-template.html');
 
 console.log('Generating sites...');
 
-const templateSource = fs.readFileSync(templatePath, 'utf8');
-const template = Handlebars.compile(templateSource);
+// Register partials
+const partialFiles = fs.readdirSync(partialsDir).filter(f => f.endsWith('.html'));
+partialFiles.forEach(file => {
+  const name = path.basename(file, '.html');
+  const content = fs.readFileSync(path.join(partialsDir, file), 'utf8');
+  Handlebars.registerPartial(name, content);
+});
 
+// Register helpers
 Handlebars.registerHelper('eq', function (a, b) {
   return a === b;
 });
@@ -19,42 +27,67 @@ Handlebars.registerHelper('neq', function (a, b) {
   return a !== b;
 });
 
+const mainTemplate = Handlebars.compile(fs.readFileSync(templatePath, 'utf8'));
+const roadmapTemplate = Handlebars.compile(fs.readFileSync(roadmapTemplatePath, 'utf8'));
+
 const languages = [
   { code: 'fr', isDefault: true },
   { code: 'en', isDefault: false }
 ];
 
+function ensureDir(dirPath) {
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+  }
+}
+
 languages.forEach(lang => {
   const content = JSON.parse(fs.readFileSync(path.join(localesDir, `${lang.code}.json`), 'utf8'));
 
-  // Add metadata for language switching and paths
+  const relativePrefix = lang.isDefault ? './' : '../';
+
   const context = {
     ...content,
     currentLang: lang.code,
     frUrl: lang.code === 'fr' ? '#' : '../',
     enUrl: lang.code === 'en' ? '#' : (lang.isDefault ? 'en/' : '../en/'),
-    relativePrefix: lang.isDefault ? './' : '../',
-    // otherLangUrl kept for backward compatibility if needed, but we'll use specific URLs
-    otherLangUrl: lang.isDefault ? 'en/' : '../',
-    otherLangLabel: lang.isDefault ? 'EN' : 'FR'
+    relativePrefix,
+    roadmapUrl: lang.isDefault ? 'roadmap/' : (lang.code === 'en' ? 'roadmap/' : '../en/roadmap/'),
   };
 
-  const html = template(context);
-
-  let outputPath;
+  // Generate main page
+  const mainHtml = mainTemplate(context);
+  let mainOutputPath;
   if (lang.isDefault) {
-    outputPath = path.join(__dirname, '../index.html');
+    mainOutputPath = path.join(__dirname, '../index.html');
   } else {
-    // Ensure 'en' directory exists
     const langDir = path.join(__dirname, `../${lang.code}`);
-    if (!fs.existsSync(langDir)) {
-      fs.mkdirSync(langDir);
-    }
-    outputPath = path.join(langDir, 'index.html');
+    ensureDir(langDir);
+    mainOutputPath = path.join(langDir, 'index.html');
   }
+  fs.writeFileSync(mainOutputPath, mainHtml);
+  console.log(`Generated ${lang.code} main page at ${mainOutputPath}`);
 
-  fs.writeFileSync(outputPath, html);
-  console.log(`Generated ${lang.code} site at ${outputPath}`);
+  // Generate roadmap page
+  const roadmapContext = {
+    ...context,
+    frUrl: lang.code === 'fr' ? '#' : '../../roadmap/',
+    enUrl: lang.code === 'en' ? '#' : '../en/roadmap/',
+    relativePrefix: lang.isDefault ? '../' : '../../',
+    roadmapUrl: '#',
+  };
+
+  const roadmapHtml = roadmapTemplate(roadmapContext);
+  let roadmapDir;
+  if (lang.isDefault) {
+    roadmapDir = path.join(__dirname, '../roadmap');
+  } else {
+    roadmapDir = path.join(__dirname, `../${lang.code}/roadmap`);
+  }
+  ensureDir(roadmapDir);
+  const roadmapOutputPath = path.join(roadmapDir, 'index.html');
+  fs.writeFileSync(roadmapOutputPath, roadmapHtml);
+  console.log(`Generated ${lang.code} roadmap page at ${roadmapOutputPath}`);
 });
 
 console.log('Done.');

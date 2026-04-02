@@ -64,137 +64,106 @@
     },
     "architecture": {
         "title": "Modular Architecture",
-        "subtitle": "OKDP offers a modular architecture that allows you to select and deploy only the components you need for your specific use case.",
-        "query": {
-            "title": "Query Engine",
-            "desc": "High-performance SQL query engines for distributed data."
-        },
-        "ml": {
-            "title": "ML/AI",
-            "desc": "Complete MLOps platform for data science workflows."
-        },
-        "processing": {
-            "title": "Processing & Orchestration",
-            "desc": "Data processing engines and workflow orchestration."
-        },
-        "storage": {
-            "title": "Storage & Catalog",
-            "desc": "Modern lakehouse with transactional tables and metadata management."
-        },
-        "viz": {
-            "title": "Visualization & Database"
-        },
+        "subtitle": "OKDP's architecture is built around two major layers: an ecosystem of reference Data & AI Modules and a unified Control Plane.",
+        "modulesTitle": "Data & AI Modules",
+        "modulesSubtitle": "A catalog of reference open source tools. Usable individually or combined, without depending on the OKDP Control Plane.",
+        "modules": [
+            {
+                "icon": "⚡",
+                "title": "Ingestion & Streaming",
+                "desc": "Connectivity, ETL ingestion and real-time processing.",
+                "tools": [
+                    { "name": "Apache NiFi", "logo": "/logos/nifi.svg", "url": "https://nifi.apache.org/" },
+                    { "name": "Apache Kafka", "logo": "/logos/kafka.svg", "url": "https://kafka.apache.org/" },
+                    { "name": "Apache Flink", "logo": "/logos/flink.svg", "url": "https://flink.apache.org/" }
+                ],
+                "future": true
+            },
+            {
+                "icon": "🚀",
+                "title": "Lakehouse & Analytics",
+                "desc": "High-performance SQL engines and modern lakehouse.",
+                "tools": [
+                    { "name": "Apache Spark", "logo": "/logos/spark.svg", "url": "https://spark.apache.org/" },
+                    { "name": "Trino", "logo": "/logos/trino.svg", "url": "https://trino.io/" },
+                    { "name": "Polaris Catalog", "logo": "/logos/polaris.svg", "url": "https://polaris.apache.org/", "invertLogo": true }
+                ],
+                "future": false
+            },
+            {
+                "icon": "🧪",
+                "title": "Data Science",
+                "desc": "Interactive environments for exploration and analysis.",
+                "tools": [
+                    { "name": "JupyterLab", "logo": "/logos/jupyter.svg", "url": "https://jupyter.org/" }
+                ],
+                "future": false
+            },
+            {
+                "icon": "🤖",
+                "title": "AI & MLOps",
+                "desc": "MLOps platform and language model inference.",
+                "tools": [
+                    { "name": "Kubeflow", "logo": "/logos/kubeflow.svg", "url": "https://kubeflow.org/" },
+                    { "name": "MLflow", "logo": "/logos/mlflow.svg", "url": "https://mlflow.org/" },
+                    { "name": "LLM Serving", "logo": "", "url": "" }
+                ],
+                "future": true
+            },
+            {
+                "icon": "📊",
+                "title": "Visualization & BI",
+                "desc": "Dashboards and visual data exploration.",
+                "tools": [
+                    { "name": "Apache Superset", "logo": "/logos/superset.svg", "url": "https://superset.apache.org/" }
+                ],
+                "future": false
+            },
+            {
+                "icon": "⚙️",
+                "title": "Orchestration & Governance",
+                "desc": "Workflow automation and metadata cataloging.",
+                "tools": [
+                    { "name": "Apache Airflow", "logo": "/logos/airflow.svg", "url": "https://airflow.apache.org/" },
+                    { "name": "OpenMetadata", "logo": "", "url": "https://open-metadata.org/" }
+                ],
+                "future": false
+            }
+        ],
+        "controlPlaneTitle": "OKDP Control Plane",
+        "controlPlaneSubtitle": "OKDP's automation layer: orchestration, multi-tenant isolation, and governance for a turnkey experience across the entire stack.",
+        "controlPlane": [
+            {
+                "icon": "🖥️",
+                "title": "Server / UI / CLI",
+                "desc": "Unified web portal and interfaces for administrators and users."
+            },
+            {
+                "icon": "🗂️",
+                "title": "Project & Quota Management",
+                "desc": "Secure multi-tenant isolation and per-project resource limit management."
+            },
+            {
+                "icon": "🔒",
+                "title": "Auth & Secrets Management",
+                "desc": "End-to-end OIDC authentication and secure secrets and RBAC management."
+            },
+            {
+                "icon": "📈",
+                "title": "Observability",
+                "desc": "Centralized collection of metrics, logs and traces across the entire platform."
+            }
+        ],
         "k8s": {
-            "title": "Built on Kubernetes",
-            "desc": "Running on any Kubernetes distribution (RKE, EKS, AKS, GKE) with comprehensive security, observability, and resource management.",
-            "features": [
-                "Security & RBAC",
-                "TLS/Certificates",
-                "SSO & LDAP",
-                "Monitoring",
-                "Backup & DRP",
-                "Load Balancing",
-                "Ingress Control",
-                "Resource Scheduling"
-            ]
+            "title": "Kubernetes Foundation",
+            "desc": "Kubernetes cluster required."
         },
-        "outro": "Each component can be deployed independently, allowing you to build a customized data platform that meets your specific needs."
+        "outro": ""
     },
     "roadmap": {
         "title": "Roadmap",
-        "y2026": {
-            "title": "2026: Evolution & Scale",
-            "items": [
-                {
-                    "icon": "🔨",
-                    "title": "Technology Builds",
-                    "badge": "Ongoing",
-                    "badgeColor": "bg-blue-100",
-                    "badgeTextColor": "text-blue-800",
-                    "borderColor": "border-blue-500",
-                    "desc": "Continuous building of source code and Docker images for all platform technologies."
-                },
-                {
-                    "icon": "🧊",
-                    "title": "Apache Polaris & Iceberg",
-                    "badge": "Q1-Q2",
-                    "badgeColor": "bg-yellow-100",
-                    "badgeTextColor": "text-yellow-800",
-                    "borderColor": "border-yellow-500",
-                    "desc": "Integration of Apache Iceberg and Polaris catalog with STS S3 support and RBAC."
-                },
-                {
-                    "icon": "\uD83D\uDCBB",
-                    "title": "New Frontend & Server",
-                    "badge": "Q2-Q3",
-                    "badgeColor": "bg-yellow-100",
-                    "badgeTextColor": "text-yellow-800",
-                    "borderColor": "border-yellow-500",
-                    "desc": "Overhaul of the user interface and server for a unified and high-performance experience."
-                },
-                {
-                    "icon": "🔄",
-                    "title": "Apache Airflow",
-                    "badge": "Q3-Q4",
-                    "badgeColor": "bg-yellow-100",
-                    "badgeTextColor": "text-yellow-800",
-                    "borderColor": "border-yellow-500",
-                    "desc": "Implementation of Apache Airflow for workflow automation and orchestration."
-                }
-            ]
-        },
-        "themes": {
-            "title": "Cross-Cutting Themes",
-            "items": [
-                {
-                    "icon": "🔒",
-                    "title": "Security",
-                    "desc": "End-to-end OIDC authentication"
-                },
-                {
-                    "icon": "⚖️",
-                    "title": "Resources",
-                    "desc": "Queue management system"
-                },
-                {
-                    "icon": "🤖",
-                    "title": "MLOps",
-                    "desc": "Kubeflow & MLflow"
-                },
-                {
-                    "icon": "📊",
-                    "title": "Observability",
-                    "desc": "Logs, monitoring, audit"
-                }
-            ]
-        },
-        "previous": {
-            "title": "2024-25: Foundation",
-            "label": "2024 Roadmap",
-            "expand": "View previous milestones",
-            "items": [
-                {
-                    "time": "Q1-Q2 2024 ✓",
-                    "title": "Initial Data Technologies",
-                    "desc": "Successfully integrated core data technologies: JupyterHub, Apache Spark, Trino, Hive Metastore, and Superset."
-                },
-                {
-                    "time": "Q3 2024 ✓",
-                    "title": "Spark & Jupyter Images",
-                    "desc": "Provision and support of official base images for Apache Spark and JupyterLab."
-                },
-                {
-                    "time": "Q3 2024 ✓",
-                    "title": "OKDP Server/UI",
-                    "desc": "Published the first version of OKDP Server and user interface for platform management."
-                },
-                {
-                    "time": "Q4 2024 ✓",
-                    "title": "Sandbox & Documentation",
-                    "desc": "Released comprehensive sandbox environment with user guide and end-to-end test application."
-                }
-            ]
-        }
+        "teaser": "First release <strong class=\"text-text\">v1.0.0</strong> planned for <strong class=\"text-text\">June 2026</strong>.",
+        "cta": "View the full roadmap"
     },
     "community": {
         "title": "Join Our Community",
@@ -212,12 +181,211 @@
     },
     "tosit": {
         "title": "About TOSIT",
-        "desc1": "<a href=\"https://tosit.io/\" target=\"_blank\" class=\"text-primary\">TOSIT</a> is an association that promotes community-driven initiatives to create truly open-source technologies and platforms. It hosts the <a href=\"https://trunkdataplatform.io/\" target=\"_blank\" class=\"text-primary\">TDP</a> project, which was initiated by <strong>DGFiP</strong> and <strong>EDF</strong>.",
-        "desc2": "Since January 2024, <strong>DGFiP</strong> started the OKDP adventure, which was later joined by <strong>Orange</strong>. The association brings together numerous companies and administrations including BPCE (Banque Populaire, Caisse d'Epargne et Natixis), Société Générale, among others.",
-        "desc3": "Participation in TOSIT projects is open to all, with the aim of ensuring that the technology stack is accessible, efficient, and powerful for everyone."
+        "desc1": "OKDP is a project initiated by <strong>DGFiP</strong>, joined by <strong>Orange</strong> and other organizations, within the <a href=\"https://tosit.io/\" target=\"_blank\" class=\"text-primary\">TOSIT</a> association (The Open Source I Trust). The goal is to provide a sovereign, powerful, and fully open-source data & AI technology stack accessible to all.",
+        "desc2": "The association brings together numerous companies and administrations, including BPCE (Banque Populaire, Caisse d'Epargne et Natixis), Société Générale, among others. It also hosts the <a href=\"https://trunkdataplatform.io/\" target=\"_blank\" class=\"text-primary\">TDP</a> project, initiated by <strong>DGFiP</strong> and <strong>EDF</strong>.",
+        "desc3": "Participation in TOSIT projects is open to all."
     },
     "footer": {
         "copyright": "© 2026 TOSIT — The Open Source I Trust.",
         "license": "Crafted by the community • Licensed under Apache License v2.0"
+    },
+    "roadmapPage": {
+        "meta": {
+            "title": "Roadmap — OKDP | Open Kubernetes Data Platform",
+            "description": "Track the content, priorities and progress of the OKDP platform by version."
+        },
+        "title": "OKDP Roadmap",
+        "subtitle": "Track the content, priorities and progress by version.",
+        "legend": {
+            "title": "Status legend",
+            "complete": "Complete — delivered, tested and usable",
+            "inProgress": "In progress — active development or integration",
+            "todo": "To do — identified, but not started for this version"
+        },
+        "v1": {
+            "title": "v1.0.0",
+            "date": "June 2026",
+            "modulesTitle": "Data & AI Modules",
+            "modulesSubtitle": "A catalog of reference open source tools. Usable individually or combined, without depending on the OKDP Control Plane (UI/Server).",
+            "categories": [
+                {
+                    "title": "Lakehouse & Analytics",
+                    "items": [
+                        {
+                            "name": "Apache Spark",
+                            "status": "complete",
+                            "features": [
+                                { "text": "Dedicated Helm chart for Spark History Server", "status": "complete" },
+                                { "text": "Dedicated authentication plugin (Spark Auth Proxy)", "status": "complete" },
+                                { "text": "Spark Web Proxy extension (real-time job UI access)", "status": "complete" },
+                                { "text": "Spark Docker images with automated build pipeline", "status": "complete" }
+                            ]
+                        },
+                        {
+                            "name": "Trino",
+                            "status": "inProgress",
+                            "features": [
+                                { "text": "Community Images & Helm Charts", "status": "complete" },
+                                { "text": "OIDC Authentication", "status": "complete" },
+                                { "text": "Polaris Catalog integration (Lakehouse connectivity)", "status": "inProgress" },
+                                { "text": "Fine-grained authorization via OPA (Open Policy Agent)", "status": "inProgress" }
+                            ]
+                        },
+                        {
+                            "name": "Polaris Catalog (Apache Iceberg)",
+                            "status": "inProgress",
+                            "features": [
+                                { "text": "Community Images & Helm Charts", "status": "complete" },
+                                { "text": "Full integration with Trino", "status": "complete" },
+                                { "text": "Native OIDC authentication", "status": "complete" },
+                                { "text": "S3 Integration & Connectivity (STS)", "status": "complete" },
+                                { "text": "Identity propagation from Trino to Polaris", "status": "inProgress" },
+                                { "text": "Fine-grained OPA integration (Open Policy Agent)", "status": "inProgress" },
+                                { "text": "Make STS support optional (infrastructure flexibility)", "status": "todo" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Visualization & BI",
+                    "items": [
+                        {
+                            "name": "Apache Superset",
+                            "status": "inProgress",
+                            "features": [
+                                { "text": "Community Images & Helm Charts", "status": "complete" },
+                                { "text": "OIDC Authentication", "status": "complete" },
+                                { "text": "JWT token propagation or Impersonation (Trino Auth)", "status": "inProgress" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Orchestration & Governance",
+                    "items": [
+                        {
+                            "name": "Apache Airflow",
+                            "status": "inProgress",
+                            "features": [
+                                { "text": "Community Images & Helm Charts", "status": "complete" },
+                                { "text": "OIDC Authentication", "status": "inProgress" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Data Science",
+                    "items": [
+                        {
+                            "name": "JupyterHub / JupyterLab",
+                            "status": "complete",
+                            "features": [
+                                { "text": "Community Images & Helm Charts", "status": "complete" },
+                                { "text": "Helm Values tuning", "status": "complete" },
+                                { "text": "OKDP-optimized Docker images for JupyterLab environments", "status": "complete" },
+                                { "text": "Community images (Hub, Proxy, Culler)", "status": "complete" }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "controlPlaneTitle": "Control Plane / Platform",
+            "controlPlaneSubtitle": "OKDP's automation layer: orchestration, multi-tenant isolation, and developer experience (DX) for a turnkey experience across the entire stack.",
+            "controlPlane": [
+                {
+                    "title": "Admin Console",
+                    "features": [
+                        { "text": "Global project management (UI/Backend)", "status": "complete" },
+                        { "text": "Target Kubernetes cluster configuration", "status": "complete" },
+                        { "text": "Local users and groups management (via Kubauth)", "status": "complete" },
+                        { "text": "Project membership management", "status": "inProgress" }
+                    ]
+                },
+                {
+                    "title": "Project Console",
+                    "features": [
+                        { "text": "Isolated spaces creation via Project CRD (basic RBAC)", "status": "complete" },
+                        { "text": "JupyterHub environment provisioning", "status": "complete" },
+                        { "text": "Spark History Server instance deployment", "status": "complete" },
+                        { "text": "Project Secrets management (Vault via token only)", "status": "complete" },
+                        { "text": "Application submission via Spark Operator (UI and kubectl)", "status": "inProgress" },
+                        { "text": "Running jobs listing and monitoring", "status": "todo" },
+                        { "text": "Control Plane integration: Trino, Superset, Polaris and Airflow", "status": "todo" }
+                    ]
+                },
+                {
+                    "title": "Test Sandbox",
+                    "features": [
+                        { "text": "Local sandbox (Kind + Flux) with legacy components", "status": "complete" },
+                        { "text": "Sandbox Object Storage (SeaweedFS)", "status": "complete" },
+                        { "text": "Ingress / API Gateway migration", "status": "inProgress" },
+                        { "text": "New okdp-server & okdp-ui versions", "status": "todo" },
+                        { "text": "New okdp-operator component", "status": "todo" }
+                    ]
+                },
+                {
+                    "title": "Installation & Guides",
+                    "features": [
+                        { "text": "Demo Application: End-to-end use case (Ingestion, Spark & Airflow)", "status": "complete" },
+                        { "text": "Control Plane Helm chart (okdp-platform)", "status": "todo" },
+                        { "text": "Admin Guide: Platform Deployment & Configuration", "status": "todo" },
+                        { "text": "User Guide: Module & service usage via console", "status": "todo" }
+                    ]
+                }
+            ]
+        },
+        "future": {
+            "title": "Future Evolutions",
+            "subtitle": "Themes and modules identified to enrich the platform after the v1.0.0 release.",
+            "modules": [
+                {
+                    "title": "AI & MLOps",
+                    "features": [
+                        { "text": "Kubeflow — Initial integration (Core components)", "status": "inProgress" },
+                        { "text": "MLflow — Lifecycle & Experiment Tracking", "status": "todo" },
+                        { "text": "LLM Serving — Language model inference (vLLM, TGI)", "status": "todo" }
+                    ]
+                },
+                {
+                    "title": "Ingestion & Streaming",
+                    "features": [
+                        { "text": "Apache NiFi — Connectivity & ETL Ingestion", "status": "todo" },
+                        { "text": "Apache Kafka — Messaging & Event Streaming", "status": "todo" },
+                        { "text": "Apache Flink — Real-time Processing", "status": "todo" }
+                    ]
+                },
+                {
+                    "title": "Orchestration & Governance",
+                    "features": [
+                        { "text": "OpenMetadata — Discovery & Global Cataloging", "status": "todo" }
+                    ]
+                }
+            ],
+            "controlPlaneTitle": "Control Plane / Platform",
+            "controlPlaneSubtitle": "",
+            "controlPlane": [
+                {
+                    "title": "Platform",
+                    "features": [
+                        { "text": "Platform RBAC — Fine-grained permission management", "status": "todo" },
+                        { "text": "Generic Service Catalog — Self-service interface for deploying custom extra services", "status": "todo" },
+                        { "text": "Quota Management — Fine-grained Kubernetes resource management", "status": "todo" },
+                        { "text": "Marketplace — Expose custom modules or components", "status": "todo" }
+                    ]
+                },
+                {
+                    "title": "Observability",
+                    "features": [
+                        { "text": "Platform Health — Centralized module metrics & logs collection", "status": "todo" }
+                    ]
+                },
+                {
+                    "title": "Deployment",
+                    "features": [
+                        { "text": "Full GitOps Mode — Support for full GitOps deployment mode", "status": "todo" }
+                    ]
+                }
+            ]
+        }
     }
 }
