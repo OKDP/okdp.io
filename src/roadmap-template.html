@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="{{ lang }}">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="{{ relativePrefix }}logos/okdp-notext.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link href="{{ relativePrefix }}src/index.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ roadmapPage.meta.title }}</title>
+    <meta name="description" content="{{ roadmapPage.meta.description }}" />
+</head>
+
+<body>
+    <div id="root">
+        {{> header }}
+
+        <main>
+            <!-- Hero + Legend compact -->
+            <section class="pt-36 pb-8 bg-gradient-to-b from-accent to-background">
+                <div class="container">
+                    <div class="max-w-3xl mx-auto text-center">
+                        <h1 class="text-gradient mb-3">{{ roadmapPage.title }}</h1>
+                        <p class="text-text-light mb-6">{{ roadmapPage.subtitle }}</p>
+                        <div class="flex flex-wrap justify-center gap-5 text-xs text-text-light">
+                            <div class="flex items-center gap-1.5">
+                                <span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                                {{ roadmapPage.legend.complete }}
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="inline-block w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+                                {{ roadmapPage.legend.inProgress }}
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="inline-block w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+                                {{ roadmapPage.legend.todo }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- v1.0.0 -->
+            <section class="section bg-background">
+                <div class="container">
+                    <div class="max-w-5xl mx-auto">
+                        <div class="flex items-center gap-4 mb-10">
+                            <h2 class="text-3xl font-bold">{{ roadmapPage.v1.title }}</h2>
+                            <span class="px-4 py-1.5 bg-primary/10 text-primary font-semibold rounded-full text-sm">{{ roadmapPage.v1.date }}</span>
+                        </div>
+
+                        <!-- Modules Data & IA -->
+                        <div class="mb-14">
+                            <h3 class="text-2xl font-bold mb-2">{{ roadmapPage.v1.modulesTitle }}</h3>
+                            <p class="text-sm text-text-light mb-6">{{ roadmapPage.v1.modulesSubtitle }}</p>
+
+                            {{#each roadmapPage.v1.categories}}
+                            <div class="mb-8">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">{{ title }}</h4>
+                                {{#each items}}
+                                <div class="mb-4 bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h5 class="font-semibold text-sm">{{ name }}</h5>
+                                        {{#if (eq status 'complete')}}
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-green-500"></span>
+                                        {{/if}}
+                                        {{#if (eq status 'inProgress')}}
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-blue-500"></span>
+                                        {{/if}}
+                                        {{#if (eq status 'todo')}}
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-gray-300"></span>
+                                        {{/if}}
+                                    </div>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        {{#each features}}
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            {{#if (eq status 'complete')}}
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
+                                            {{/if}}
+                                            {{#if (eq status 'inProgress')}}
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
+                                            {{/if}}
+                                            {{#if (eq status 'todo')}}
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
+                                            {{/if}}
+                                            <span class="text-text-light">{{ text }}</span>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                                {{/each}}
+                            </div>
+                            {{/each}}
+                        </div>
+
+                        <!-- Control Plane -->
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">{{ roadmapPage.v1.controlPlaneTitle }}</h3>
+                            <p class="text-sm text-text-light mb-6">{{ roadmapPage.v1.controlPlaneSubtitle }}</p>
+
+                            <div class="grid md:grid-cols-2 gap-4">
+                                {{#each roadmapPage.v1.controlPlane}}
+                                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h4 class="font-semibold text-sm">{{ title }}</h4>
+                                        {{#if (eq (computeStatus features) 'complete')}}
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-green-500"></span>
+                                        {{/if}}
+                                        {{#if (eq (computeStatus features) 'inProgress')}}
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-blue-500"></span>
+                                        {{/if}}
+                                        {{#if (eq (computeStatus features) 'todo')}}
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-gray-300"></span>
+                                        {{/if}}
+                                    </div>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        {{#each features}}
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            {{#if (eq status 'complete')}}
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
+                                            {{/if}}
+                                            {{#if (eq status 'inProgress')}}
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
+                                            {{/if}}
+                                            {{#if (eq status 'todo')}}
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
+                                            {{/if}}
+                                            <span class="text-text-light">{{ text }}</span>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Separator -->
+            <div class="container"><hr class="border-gray-200 max-w-5xl mx-auto"></div>
+
+            <!-- Future Evolutions -->
+            <section class="section bg-[var(--color-background-alt)]">
+                <div class="container">
+                    <div class="max-w-5xl mx-auto">
+                        <h2 class="text-3xl font-bold mb-2">{{ roadmapPage.future.title }}</h2>
+                        <p class="text-text-light mb-10">{{ roadmapPage.future.subtitle }}</p>
+
+                        <!-- Modules Data & IA -->
+                        <div class="mb-14">
+                            <h3 class="text-2xl font-bold mb-6">{{ roadmapPage.v1.modulesTitle }}</h3>
+
+                            <div class="grid md:grid-cols-2 gap-4">
+                                {{#each roadmapPage.future.modules}}
+                                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h4 class="font-semibold text-sm">{{ title }}</h4>
+                                        {{#if (eq (computeStatus features) 'complete')}}
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-green-500"></span>
+                                        {{/if}}
+                                        {{#if (eq (computeStatus features) 'inProgress')}}
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-blue-500"></span>
+                                        {{/if}}
+                                        {{#if (eq (computeStatus features) 'todo')}}
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-gray-300"></span>
+                                        {{/if}}
+                                    </div>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        {{#each features}}
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            {{#if (eq status 'complete')}}
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
+                                            {{/if}}
+                                            {{#if (eq status 'inProgress')}}
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
+                                            {{/if}}
+                                            {{#if (eq status 'todo')}}
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
+                                            {{/if}}
+                                            <span class="text-text-light">{{ text }}</span>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+
+                        <!-- Control Plane -->
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6">{{ roadmapPage.future.controlPlaneTitle }}</h3>
+
+                            <div class="grid md:grid-cols-2 gap-4">
+                                {{#each roadmapPage.future.controlPlane}}
+                                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                                    <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 border-b border-gray-200">
+                                        <h4 class="font-semibold text-sm">{{ title }}</h4>
+                                        {{#if (eq (computeStatus features) 'complete')}}
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-green-500"></span>
+                                        {{/if}}
+                                        {{#if (eq (computeStatus features) 'inProgress')}}
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-blue-500"></span>
+                                        {{/if}}
+                                        {{#if (eq (computeStatus features) 'todo')}}
+                                        <span class="ml-auto w-3 h-3 rounded-full bg-gray-300"></span>
+                                        {{/if}}
+                                    </div>
+                                    <ul class="px-5 py-3 space-y-1.5">
+                                        {{#each features}}
+                                        <li class="flex items-start gap-2.5 text-sm">
+                                            {{#if (eq status 'complete')}}
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[10px] mt-0.5">&#10003;</span>
+                                            {{/if}}
+                                            {{#if (eq status 'inProgress')}}
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] mt-0.5">&#8635;</span>
+                                            {{/if}}
+                                            {{#if (eq status 'todo')}}
+                                            <span class="flex-shrink-0 w-4 h-4 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-[10px] mt-0.5">&#9675;</span>
+                                            {{/if}}
+                                            <span class="text-text-light">{{ text }}</span>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        {{> footer }}
+    </div>
+
+    {{> scripts }}
+</body>
+
+</html>
