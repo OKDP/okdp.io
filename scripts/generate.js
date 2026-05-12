@@ -1,12 +1,14 @@
 const Handlebars = require('handlebars');
 const fs = require('fs');
 const path = require('path');
+const { loadEvents, localizeEvents } = require('./events');
 
 const srcDir = path.join(__dirname, '../src');
 const localesDir = path.join(srcDir, 'locales');
 const partialsDir = path.join(srcDir, 'partials');
 const templatePath = path.join(srcDir, 'template.html');
 const roadmapTemplatePath = path.join(srcDir, 'roadmap-template.html');
+const eventsPath = path.join(srcDir, 'events.yaml');
 
 console.log('Generating sites...');
 
@@ -39,6 +41,9 @@ Handlebars.registerHelper('computeStatus', function (features) {
 const mainTemplate = Handlebars.compile(fs.readFileSync(templatePath, 'utf8'));
 const roadmapTemplate = Handlebars.compile(fs.readFileSync(roadmapTemplatePath, 'utf8'));
 
+// Load events
+const events = loadEvents(eventsPath);
+
 const languages = [
   { code: 'fr', isDefault: true },
   { code: 'en', isDefault: false }
@@ -57,6 +62,7 @@ languages.forEach(lang => {
 
   const context = {
     ...content,
+    eventsList: localizeEvents(events, lang.code),
     currentLang: lang.code,
     frUrl: lang.code === 'fr' ? '#' : '../',
     enUrl: lang.code === 'en' ? '#' : (lang.isDefault ? 'en/' : '../en/'),

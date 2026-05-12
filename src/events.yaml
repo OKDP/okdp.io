@@ -1,0 +1,67 @@
+events:
+  - date:
+      start: "2025-12-10"
+      end: "2025-12-11"
+    title: OSXP (Open Source eXPérience)
+    location: Cité des Sciences et de l'Industrie, Paris
+
+  - date: "2026-02-03"
+    title:
+      fr: Cloud Native Days France 2026
+      en: Cloud Native Days France 2026
+    description:
+      fr: avec stand TOSIT
+      en: with TOSIT booth
+    location: CENTQUATRE-PARIS, Paris
+
+  - date: "2026-02-12"
+    title:
+      fr: Présentation d'OKDP à Wescale (ESN)
+      en: OKDP presentation at Wescale
+    location: remote
+
+  - date: "2026-02-18"
+    title:
+      fr: Présentation d'OKDP à Tasmane / Agirc-Arrco
+      en: OKDP presentation at Tasmane / Agirc-Arrco
+    location: remote
+
+  - date: "2026-03-27"
+    title:
+      fr: Présentation d'OKDP à Kiira
+      en: OKDP presentation at Kiira
+    location: remote
+
+  - date: "2026-04-03"
+    title:
+      fr: Présentation d'OKDP à Arkéa
+      en: OKDP presentation at Arkéa
+    location: remote
+
+  - date: "2026-04-21"
+    title:
+      fr: Présentation d'OKDP à l'INERIS
+      en: OKDP presentation at INERIS
+    location: remote
+
+  - date: "2026-04-22"
+    title:
+      fr: Présentation d'OKDP à Devoxx Paris
+      en: OKDP presentation at Devoxx Paris
+    location: Palais des Congrès, Paris
+
+  - date: "2026-05-05"
+    title:
+      fr: Présentation d'OKDP au Ministère de l'Agriculture, de l'Agro-alimentaire et de la Souveraineté alimentaire
+      en: OKDP presentation at the French Ministry of Agriculture and Food Sovereignty
+    location: remote
+
+  - date: "2026-05-07"
+    title:
+      fr: Présentation d'OKDP à Docaposte
+      en: OKDP presentation at Docaposte
+    location: remote
+
+  - date: "2026-06-04"
+    title: TOSIT-Day
+    location: Caisse des Dépôts et Consignations
