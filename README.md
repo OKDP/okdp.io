@@ -73,4 +73,4 @@ public/
 ### Community
 
 - Organization: [TOSIT Association](https://tosit.fr)
-- Communication:[Github discussion](https://github.com/orgs/OKDP/discussions)
+- Communication: [Github discussion](https://github.com/orgs/OKDP/discussions)
