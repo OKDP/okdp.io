@@ -10,9 +10,6 @@
 
 </div>
 
-**Website for [OKDP](https://okdp.io) (Open Kubernetes Data Platform).**
-A free, open-source, cloud-native data platform built on Kubernetes. Modular, sovereign, and community-driven.
-
 ## About the Site
 
 This repository contains the source of the **okdp.io** marketing website, a bilingual (FR/EN) static site showcasing the OKDP platform, its architecture, modules, and roadmap.

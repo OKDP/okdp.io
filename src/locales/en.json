@@ -8,6 +8,7 @@
         "about": "About",
         "architecture": "Architecture",
         "roadmap": "Roadmap",
+        "events": "Events",
         "community": "Community"
     },
     "hero": {
@@ -184,6 +185,14 @@
         "desc1": "OKDP is a project initiated by <strong>DGFiP</strong>, joined by <strong>Orange</strong> and other organizations, within the <a href=\"https://tosit.io/\" target=\"_blank\" class=\"text-primary\">TOSIT</a> association (The Open Source I Trust). The goal is to provide a sovereign, powerful, and fully open-source data & AI technology stack accessible to all.",
         "desc2": "The association brings together numerous companies and administrations, including BPCE (Banque Populaire, Caisse d'Epargne et Natixis), Société Générale, among others. It also hosts the <a href=\"https://trunkdataplatform.io/\" target=\"_blank\" class=\"text-primary\">TDP</a> project, initiated by <strong>DGFiP</strong> and <strong>EDF</strong>.",
         "desc3": "Participation in TOSIT projects is open to all."
+    },
+    "events": {
+        "title": "Events",
+        "subtitle": "OKDP presentations, conferences, and community gatherings.",
+        "upcoming": "Upcoming",
+        "past": "Past Events",
+        "noUpcoming": "No upcoming events at the moment.",
+        "noEvents": "No events at the moment."
     },
     "footer": {
         "copyright": "© 2026 TOSIT — The Open Source I Trust.",
