@@ -16,7 +16,16 @@
         "title": "Open Kubernetes Data Platform",
         "subtitle": "A free, open-source and cloud-native data platform built on Kubernetes. Modular, sovereign, and community-driven.",
         "ctaPrimary": "Get started",
-        "ctaSecondary": "Join Community"
+        "ctaSecondary": "Join Community",
+        "countdown": {
+            "label": "Release v1.0.0 — 14 September 2026",
+            "days": "Days",
+            "hours": "Hours",
+            "minutes": "Minutes",
+            "seconds": "Seconds",
+            "cta": "Discover the roadmap",
+            "done": "v1.0.0 available 🎉"
+        }
     },
     "stats": {
         "contributors": "Contributors",
@@ -163,7 +172,7 @@
     },
     "roadmap": {
         "title": "Roadmap",
-        "teaser": "First release <strong class=\"text-text\">v1.0.0</strong> planned for <strong class=\"text-text\">June 2026</strong>.",
+        "teaser": "First release <strong class=\"text-text\">v1.0.0</strong> planned for <strong class=\"text-text\">the 14th September 2026</strong>.",
         "cta": "View the full roadmap"
     },
     "community": {
@@ -213,7 +222,7 @@
         },
         "v1": {
             "title": "v1.0.0",
-            "date": "June 2026",
+            "date": "September 2026",
             "modulesTitle": "Data & AI Modules",
             "modulesSubtitle": "A catalog of reference open source tools. Usable individually or combined, without depending on the OKDP Control Plane (UI/Server).",
             "categories": [

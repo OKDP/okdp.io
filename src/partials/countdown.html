@@ -1,0 +1,32 @@
+<script>
+    (function () {
+        const root = document.getElementById('release-countdown');
+        if (!root) return;
+        const target = new Date(root.dataset.release).getTime();
+        const doneMsg = root.dataset.done || '';
+        const out = {
+            days: root.querySelector('[data-cd="days"]'),
+            hours: root.querySelector('[data-cd="hours"]'),
+            minutes: root.querySelector('[data-cd="minutes"]'),
+            seconds: root.querySelector('[data-cd="seconds"]'),
+        };
+        const label = root.querySelector('[data-cd-label]');
+        const pad = n => String(n).padStart(2, '0');
+        function tick() {
+            const diff = target - Date.now();
+            if (diff <= 0) {
+                out.days.textContent = out.hours.textContent = out.minutes.textContent = out.seconds.textContent = '00';
+                if (label && doneMsg) label.textContent = doneMsg;
+                clearInterval(timer);
+                return;
+            }
+            const s = Math.floor(diff / 1000);
+            out.days.textContent = Math.floor(s / 86400);
+            out.hours.textContent = pad(Math.floor((s % 86400) / 3600));
+            out.minutes.textContent = pad(Math.floor((s % 3600) / 60));
+            out.seconds.textContent = pad(s % 60);
+        }
+        tick();
+        const timer = setInterval(tick, 1000);
+    })();
+</script>
