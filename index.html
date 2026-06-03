@@ -13,7 +13,7 @@
     <title>OKDP - Open Kubernetes Data Platform | 100% Open Source</title>
     <meta name="description" content="OKDP est une plateforme de données cloud-native, libre et 100% open source conçue pour Kubernetes. Modulaire, souveraine et propulsée par la communauté." />
     <meta name="keywords" content="Open Kubernetes Data Platform, OKDP, Apache Iceberg, Polaris, Trino, Spark, Airflow, Superset, MLOps, Kubernetes, Plateforme de données" />
-  <link rel="stylesheet" crossorigin href="./assets/index-OeqMBsK0.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-q6d08el1.css">
 </head>
 
 <body>
@@ -132,18 +132,47 @@
                                 Rejoindre la communauté
                             </a>
                         </div>
-                        <div class="grid grid-cols-3 gap-8 max-w-md mx-auto">
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-primary mb-1">7+</div>
-                                <div class="text-sm text-text-light">Contributeurs</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-primary mb-1">~20</div>
-                                <div class="text-sm text-text-light">Téléchargements /sem.</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-primary mb-1">2024</div>
-                                <div class="text-sm text-text-light">Lancement du projet</div>
+
+                        <!-- v1.0.0 Release Countdown -->
+                        <div class="group relative max-w-2xl mx-auto mb-12" id="release-countdown" data-release="2026-09-24T00:00:00" data-done="v1.0.0 disponible 🎉">
+                            <span class="absolute -inset-6 rounded-[2.5rem] bg-[radial-gradient(circle_at_20%_30%,rgba(84,173,170,0.42),transparent_28%),radial-gradient(circle_at_80%_25%,rgba(65,144,141,0.3),transparent_30%),radial-gradient(circle_at_50%_100%,rgba(245,243,255,0.9),transparent_38%),linear-gradient(135deg,rgba(65,144,141,0.22),rgba(84,173,170,0.18),rgba(245,243,255,0.65))] blur-3xl"></span>
+                            <span class="absolute -inset-[2px] rounded-[1.8rem] bg-gradient-to-r from-primary via-primary-light to-primary-dark opacity-95"></span>
+                            <div class="relative overflow-hidden rounded-[1.7rem] bg-white/92 px-5 py-6 shadow-[0_30px_90px_-38px_rgba(65,144,141,0.95)] ring-1 ring-white/90 backdrop-blur sm:px-8 sm:py-7">
+                                <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.92),rgba(255,255,255,0.78)_45%,rgba(240,244,248,0.98))]"></div>
+                                <div class="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-90"></div>
+                                <div class="absolute inset-x-8 -bottom-12 h-20 rounded-full bg-primary/10 blur-2xl"></div>
+                                <div class="relative flex flex-col items-center gap-5">
+                                    <div class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-white/90 px-4 py-2.5 shadow-sm ring-1 ring-white/70">
+                                        <span class="relative inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-primary"></span>
+                                        <span class="text-sm font-bold tracking-[0.01em] text-primary-dark sm:text-[0.95rem]" data-cd-label>Release v1.0.0 — 14 septembre 2026</span>
+                                    </div>
+
+                                    <div class="grid w-full grid-cols-4 gap-2 sm:gap-3">
+                                        <div class="rounded-2xl border border-primary/10 bg-white/80 px-2 py-4 shadow-sm sm:px-3">
+                                            <span class="block text-4xl font-black leading-none tracking-tight text-text tabular-nums sm:text-5xl" data-cd="days">--</span>
+                                            <span class="mt-2 block text-[10px] font-bold uppercase tracking-[0.22em] text-text-light">Jours</span>
+                                        </div>
+                                        <div class="rounded-2xl border border-primary/10 bg-white/80 px-2 py-4 shadow-sm sm:px-3">
+                                            <span class="block text-4xl font-black leading-none tracking-tight text-text tabular-nums sm:text-5xl" data-cd="hours">--</span>
+                                            <span class="mt-2 block text-[10px] font-bold uppercase tracking-[0.22em] text-text-light">Heures</span>
+                                        </div>
+                                        <div class="rounded-2xl border border-primary/10 bg-white/80 px-2 py-4 shadow-sm sm:px-3">
+                                            <span class="block text-4xl font-black leading-none tracking-tight text-text tabular-nums sm:text-5xl" data-cd="minutes">--</span>
+                                            <span class="mt-2 block text-[10px] font-bold uppercase tracking-[0.22em] text-text-light">Minutes</span>
+                                        </div>
+                                        <div class="rounded-2xl border border-primary/10 bg-white/80 px-2 py-4 shadow-sm sm:px-3">
+                                            <span class="block text-4xl font-black leading-none tracking-tight text-primary tabular-nums sm:text-5xl" data-cd="seconds">--</span>
+                                            <span class="mt-2 block text-[10px] font-bold uppercase tracking-[0.22em] text-text-light">Secondes</span>
+                                        </div>
+                                    </div>
+
+                                    <a href="roadmap/" class="group/button inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-5 py-3 text-sm font-bold text-white shadow-md shadow-primary/20 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2" aria-label="Découvrir la roadmap">
+                                        <span>Découvrir la roadmap</span>
+                                        <svg class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1 group-hover/button:translate-x-1 hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -162,6 +191,21 @@
                             <p class="text-text-light">
                                 OKDP couvre l&#x27;intégralité du cycle de vie de la donnée : collecte, stockage, traitement, analyse et exposition. Sa conception modulaire permet de déployer l&#x27;ensemble des composants ou de ne sélectionner que ceux nécessaires à vos besoins.
                             </p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-16 py-8 border-y border-accent">
+                            <div class="text-center">
+                                <div class="text-3xl md:text-4xl font-bold text-primary mb-1">7+</div>
+                                <div class="text-sm text-text-light">Contributeurs</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl md:text-4xl font-bold text-primary mb-1">~20</div>
+                                <div class="text-sm text-text-light">Téléchargements /sem.</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl md:text-4xl font-bold text-primary mb-1">2024</div>
+                                <div class="text-sm text-text-light">Lancement du projet</div>
+                            </div>
                         </div>
 
                         <div class="mb-16">
@@ -343,7 +387,7 @@
                 <div class="container">
                     <div class="max-w-2xl mx-auto text-center">
                         <h2 class="mb-6">Roadmap</h2>
-                        <p class="text-lg text-text-light mb-8">Première release <strong class="text-text">v1.0.0</strong> prévue pour <strong class="text-text">Juin 2026</strong>.</p>
+                        <p class="text-lg text-text-light mb-8">Première release <strong class="text-text">v1.0.0</strong> prévue pour <strong class="text-text">14 Septembre 2026</strong>.</p>
                         <a href="roadmap/" class="btn btn-primary">
                             Consulter la roadmap complète
                             <svg class="inline-block h-4 w-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -661,6 +705,38 @@
         window.addEventListener('scroll', handleScrollSpy, { passive: true });
         window.addEventListener('resize', handleScrollSpy);
         window.addEventListener('load', handleScrollSpy);
+    </script>
+    <script>
+        (function () {
+            const root = document.getElementById('release-countdown');
+            if (!root) return;
+            const target = new Date(root.dataset.release).getTime();
+            const doneMsg = root.dataset.done || '';
+            const out = {
+                days: root.querySelector('[data-cd="days"]'),
+                hours: root.querySelector('[data-cd="hours"]'),
+                minutes: root.querySelector('[data-cd="minutes"]'),
+                seconds: root.querySelector('[data-cd="seconds"]'),
+            };
+            const label = root.querySelector('[data-cd-label]');
+            const pad = n => String(n).padStart(2, '0');
+            function tick() {
+                const diff = target - Date.now();
+                if (diff <= 0) {
+                    out.days.textContent = out.hours.textContent = out.minutes.textContent = out.seconds.textContent = '00';
+                    if (label && doneMsg) label.textContent = doneMsg;
+                    clearInterval(timer);
+                    return;
+                }
+                const s = Math.floor(diff / 1000);
+                out.days.textContent = Math.floor(s / 86400);
+                out.hours.textContent = pad(Math.floor((s % 86400) / 3600));
+                out.minutes.textContent = pad(Math.floor((s % 3600) / 60));
+                out.seconds.textContent = pad(s % 60);
+            }
+            tick();
+            const timer = setInterval(tick, 1000);
+        })();
     </script>
 </body>
 
