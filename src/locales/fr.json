@@ -241,25 +241,25 @@
                         },
                         {
                             "name": "Trino",
-                            "status": "inProgress",
+                            "status": "complete",
                             "features": [
                                 { "text": "Utilisation des Images & Charts Helm communautaires", "status": "complete" },
                                 { "text": "Authentification OIDC", "status": "complete" },
-                                { "text": "Intégration à Polaris Catalog (Lakehouse connectivity)", "status": "inProgress" },
-                                { "text": "Autorisation fine via OPA (Open Policy Agent)", "status": "inProgress" }
+                                { "text": "Intégration à Polaris Catalog (Lakehouse connectivity)", "status": "complete" },
+                                { "text": "Autorisation fine via OPA (Open Policy Agent)", "status": "complete" }
                             ]
                         },
                         {
                             "name": "Polaris Catalog (Apache Iceberg)",
-                            "status": "inProgress",
+                            "status": "complete",
                             "features": [
                                 { "text": "Utilisation des Images & Charts Helm communautaires", "status": "complete" },
                                 { "text": "Intégration complète avec Trino", "status": "complete" },
                                 { "text": "Authentification OIDC native", "status": "complete" },
                                 { "text": "Intégration & Connectivité S3 (STS)", "status": "complete" },
-                                { "text": "Propagation d'identité depuis Trino vers Polaris", "status": "inProgress" },
-                                { "text": "Intégration fine avec OPA (Open Policy Agent)", "status": "inProgress" },
-                                { "text": "Rendre le support STS optionnel (flexibilité infrastructure)", "status": "todo" }
+                                { "text": "Propagation d'identité depuis Trino vers Polaris", "status": "complete" },
+                                { "text": "Intégration fine avec OPA (Open Policy Agent)", "status": "complete" },
+                                { "text": "Rendre le support STS optionnel (flexibilité infrastructure)", "status": "complete" }
                             ]
                         }
                     ]
@@ -269,11 +269,10 @@
                     "items": [
                         {
                             "name": "Apache Superset",
-                            "status": "inProgress",
+                            "status": "complete",
                             "features": [
                                 { "text": "Utilisation des Images & Charts Helm communautaires", "status": "complete" },
-                                { "text": "Authentification OIDC", "status": "complete" },
-                                { "text": "Propagation de token JWT ou Impersonification (Trino Auth)", "status": "inProgress" }
+                                { "text": "Authentification OIDC", "status": "complete" }
                             ]
                         }
                     ]
@@ -283,10 +282,10 @@
                     "items": [
                         {
                             "name": "Apache Airflow",
-                            "status": "inProgress",
+                            "status": "complete",
                             "features": [
                                 { "text": "Utilisation des Images & Charts Helm communautaires", "status": "complete" },
-                                { "text": "Authentification OIDC", "status": "inProgress" }
+                                { "text": "Authentification OIDC", "status": "complete" }
                             ]
                         }
                     ]
@@ -326,18 +325,18 @@
                         { "text": "Instanciation d'environnements JupyterHub", "status": "complete" },
                         { "text": "Déploiement d'instances Spark History Server", "status": "complete" },
                         { "text": "Gestion des Secrets projets (Vault via token seulement)", "status": "complete" },
-                        { "text": "Soumission d'applications via Spark Operator (UI et kubectl)", "status": "inProgress" },
-                        { "text": "Listing et monitoring des jobs en cours d'exécution", "status": "todo" },
-                        { "text": "Intégration Control Plane : Trino, Superset, Polaris et Airflow", "status": "todo" }
+                        { "text": "Soumission d'applications via Spark Operator (UI et kubectl)", "status": "complete" },
+                        { "text": "Listing et monitoring des jobs en cours d'exécution", "status": "inProgress" },
+                        { "text": "Intégration Control Plane : Trino, Superset, Polaris et Airflow", "status": "inProgress" }
                     ]
                 },
                 {
-                    "title": "Test Sandbox",
+                    "title": "Sandbox",
                     "features": [
                         { "text": "Sandbox locale (Kind + Flux) avec composants legacy", "status": "complete" },
                         { "text": "Sandbox Object Storage (SeaweedFS)", "status": "complete" },
                         { "text": "Migration Ingress / API Gateway", "status": "inProgress" },
-                        { "text": "Nouvelles versions okdp-server & okdp-ui", "status": "todo" },
+                        { "text": "Nouvelles versions okdp-server & okdp-ui", "status": "inProgress" },
                         { "text": "Nouveau composant okdp-operator", "status": "todo" }
                     ]
                 },
@@ -345,7 +344,7 @@
                     "title": "Installation & Guides",
                     "features": [
                         { "text": "Application Démo : Cas d'usage de bout en bout (Ingestion, Spark & Airflow)", "status": "complete" },
-                        { "text": "Chart Helm d'installation du Control Plane (okdp-platform)", "status": "todo" },
+                        { "text": "Chart Helm d'installation du Control Plane (okdp-platform)", "status": "inProgress" },
                         { "text": "Admin Guide : Déploiement & Configuration plateforme", "status": "todo" },
                         { "text": "User Guide : Utilisation des modules & services via la console", "status": "todo" }
                     ]

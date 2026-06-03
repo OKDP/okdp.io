@@ -241,25 +241,25 @@
                         },
                         {
                             "name": "Trino",
-                            "status": "inProgress",
+                            "status": "complete",
                             "features": [
                                 { "text": "Community Images & Helm Charts", "status": "complete" },
                                 { "text": "OIDC Authentication", "status": "complete" },
-                                { "text": "Polaris Catalog integration (Lakehouse connectivity)", "status": "inProgress" },
-                                { "text": "Fine-grained authorization via OPA (Open Policy Agent)", "status": "inProgress" }
+                                { "text": "Polaris Catalog integration (Lakehouse connectivity)", "status": "complete" },
+                                { "text": "Fine-grained authorization via OPA (Open Policy Agent)", "status": "complete" }
                             ]
                         },
                         {
                             "name": "Polaris Catalog (Apache Iceberg)",
-                            "status": "inProgress",
+                            "status": "complete",
                             "features": [
                                 { "text": "Community Images & Helm Charts", "status": "complete" },
                                 { "text": "Full integration with Trino", "status": "complete" },
                                 { "text": "Native OIDC authentication", "status": "complete" },
                                 { "text": "S3 Integration & Connectivity (STS)", "status": "complete" },
-                                { "text": "Identity propagation from Trino to Polaris", "status": "inProgress" },
-                                { "text": "Fine-grained OPA integration (Open Policy Agent)", "status": "inProgress" },
-                                { "text": "Make STS support optional (infrastructure flexibility)", "status": "todo" }
+                                { "text": "Identity propagation from Trino to Polaris", "status": "complete" },
+                                { "text": "Fine-grained OPA integration (Open Policy Agent)", "status": "complete" },
+                                { "text": "Make STS support optional (infrastructure flexibility)", "status": "complete" }
                             ]
                         }
                     ]
@@ -269,11 +269,10 @@
                     "items": [
                         {
                             "name": "Apache Superset",
-                            "status": "inProgress",
+                            "status": "complete",
                             "features": [
                                 { "text": "Community Images & Helm Charts", "status": "complete" },
-                                { "text": "OIDC Authentication", "status": "complete" },
-                                { "text": "JWT token propagation or Impersonation (Trino Auth)", "status": "inProgress" }
+                                { "text": "OIDC Authentication", "status": "complete" }
                             ]
                         }
                     ]
@@ -283,10 +282,10 @@
                     "items": [
                         {
                             "name": "Apache Airflow",
-                            "status": "inProgress",
+                            "status": "complete",
                             "features": [
                                 { "text": "Community Images & Helm Charts", "status": "complete" },
-                                { "text": "OIDC Authentication", "status": "inProgress" }
+                                { "text": "OIDC Authentication", "status": "complete" }
                             ]
                         }
                     ]
@@ -326,18 +325,18 @@
                         { "text": "JupyterHub environment provisioning", "status": "complete" },
                         { "text": "Spark History Server instance deployment", "status": "complete" },
                         { "text": "Project Secrets management (Vault via token only)", "status": "complete" },
-                        { "text": "Application submission via Spark Operator (UI and kubectl)", "status": "inProgress" },
-                        { "text": "Running jobs listing and monitoring", "status": "todo" },
-                        { "text": "Control Plane integration: Trino, Superset, Polaris and Airflow", "status": "todo" }
+                        { "text": "Application submission via Spark Operator (UI and kubectl)", "status": "complete" },
+                        { "text": "Running jobs listing and monitoring", "status": "inProgress" },
+                        { "text": "Control Plane integration: Trino, Superset, Polaris and Airflow", "status": "inProgress" }
                     ]
                 },
                 {
-                    "title": "Test Sandbox",
+                    "title": "Sandbox",
                     "features": [
                         { "text": "Local sandbox (Kind + Flux) with legacy components", "status": "complete" },
                         { "text": "Sandbox Object Storage (SeaweedFS)", "status": "complete" },
                         { "text": "Ingress / API Gateway migration", "status": "inProgress" },
-                        { "text": "New okdp-server & okdp-ui versions", "status": "todo" },
+                        { "text": "New okdp-server & okdp-ui versions", "status": "inProgress" },
                         { "text": "New okdp-operator component", "status": "todo" }
                     ]
                 },
@@ -345,7 +344,7 @@
                     "title": "Installation & Guides",
                     "features": [
                         { "text": "Demo Application: End-to-end use case (Ingestion, Spark & Airflow)", "status": "complete" },
-                        { "text": "Control Plane Helm chart (okdp-platform)", "status": "todo" },
+                        { "text": "Control Plane Helm chart (okdp-platform)", "status": "inProgress" },
                         { "text": "Admin Guide: Platform Deployment & Configuration", "status": "todo" },
                         { "text": "User Guide: Module & service usage via console", "status": "todo" }
                     ]
