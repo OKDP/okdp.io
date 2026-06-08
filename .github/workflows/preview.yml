@@ -1,26 +1,74 @@
-name: PR Preview
+name: Fork Pages Preview
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
+  push:
+    branches-ignore:
+      - master
+      - gh-pages
+  workflow_dispatch:
 
-concurrency: preview-${{ github.ref }}
+concurrency:
+  group: preview-${{ github.repository }}-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   preview:
+    if: github.repository != 'OKDP/okdp.io'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
         with:
           node-version: 18
           cache: "npm"
-      - run: npm install
-      - run: npm run build
-      - uses: rossjrw/pr-preview-action@v1
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Compute preview location
+        id: preview
+        env:
+          RAW_REF: ${{ github.ref_name }}
+        run: |
+          slug=$(printf '%s' "$RAW_REF" \
+            | tr '[:upper:]' '[:lower:]' \
+            | sed 's#[^a-z0-9._-]#-#g' \
+            | sed 's#-\{2,\}#-#g' \
+            | sed 's#^[-.]##; s#[-.]$##')
+
+          if [ -z "$slug" ]; then
+            slug="preview"
+          fi
+
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
+          echo "path=previews/$slug" >> "$GITHUB_OUTPUT"
+          echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/previews/$slug/" >> "$GITHUB_OUTPUT"
+
+      - name: Remove production custom domain
+        run: rm -f dist/CNAME
+
+      - name: Deploy preview to GitHub Pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          source-dir: ./dist/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          destination_dir: ${{ steps.preview.outputs.path }}
+          keep_files: true
+
+      - name: Publish workflow summary
+        run: |
+          echo "## Preview published" >> "$GITHUB_STEP_SUMMARY"
+          echo >> "$GITHUB_STEP_SUMMARY"
+          echo "- Branch: \`${{ github.ref_name }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Preview URL: ${{ steps.preview.outputs.url }}" >> "$GITHUB_STEP_SUMMARY"
+          echo >> "$GITHUB_STEP_SUMMARY"
+          echo "Make sure GitHub Pages is enabled in the fork and configured to serve from the \`gh-pages\` branch." >> "$GITHUB_STEP_SUMMARY"
