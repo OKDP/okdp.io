@@ -65,3 +65,45 @@ events:
   - date: "2026-06-04"
     title: TOSIT-Day
     location: Caisse des Dépôts et Consignations
+
+  - date: "2026-06-04"
+    title: "Bioproduction & transition écologique : enjeux et leviers pour agir"
+    description:
+      fr: Présentation d'OKDP lors de l'événément
+      en: OKDP presentation during the meeting
+    location: GINA, Nantes
+
+  - date: "2026-06-17"
+    title: Présentation d'OKDP à la Cour des comptes
+    location: remote
+
+  - date: "2026-06-24"
+    title: Présentation d'OKDP à la Caisse des Dépôts et de Consignation Informatique
+    location: remote
+
+  - date: "2026-06-25"
+    title: Présentation d'OKDP à Synaltic (et OW2)
+    location: remote
+
+  - date:
+      start: "2026-09-15"
+      end: "2026-09-16"
+    title:
+      fr: Big Data & AI Paris
+      en: Big Data & AI Paris
+    description:
+      fr: avec stand TOSIT
+      en: with TOSIT booth
+    location: Palais Expo Porte de Versailles, Paris
+
+  - date:
+      start: "2026-06-30"
+      end: "2026-07-01"
+    title:
+      fr: Salon Souveraineté Numérique
+      en: Digital Sovereignty Expo
+    location: Espace Champerret, Paris
+
+  - date: "2026-12-03"
+    title: InnovTech'
+    location: Carré Michelet, La Défense
