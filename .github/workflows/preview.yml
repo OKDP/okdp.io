@@ -25,14 +25,11 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: 22.12.0
           cache: "npm"
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Build
-        run: npm run build
 
       - name: Compute preview location
         id: preview
@@ -49,9 +46,23 @@ jobs:
             slug="preview"
           fi
 
+          site="https://${{ github.repository_owner }}.github.io"
+          base="/${{ github.event.repository.name }}/previews/$slug/"
+
           echo "slug=$slug" >> "$GITHUB_OUTPUT"
           echo "path=previews/$slug" >> "$GITHUB_OUTPUT"
-          echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/previews/$slug/" >> "$GITHUB_OUTPUT"
+          echo "site=$site" >> "$GITHUB_OUTPUT"
+          echo "base=$base" >> "$GITHUB_OUTPUT"
+          echo "url=$site$base" >> "$GITHUB_OUTPUT"
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Build
+        env:
+          ASTRO_SITE: ${{ steps.preview.outputs.site }}
+          ASTRO_BASE: ${{ steps.preview.outputs.base }}
+        run: npm run build
 
       - name: Remove production custom domain
         run: rm -f dist/CNAME

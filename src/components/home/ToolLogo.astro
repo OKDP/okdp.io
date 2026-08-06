@@ -1,0 +1,46 @@
+---
+import InlineSvg from "@/components/common/InlineSvg.astro";
+import airflowLogo from "@/assets/logos/airflow.svg?raw";
+import flinkLogo from "@/assets/logos/flink.svg?raw";
+import jupyterLogo from "@/assets/logos/jupyter.svg?raw";
+import kafkaLogo from "@/assets/logos/kafka.svg?raw";
+import kubeflowLogo from "@/assets/logos/kubeflow.svg?raw";
+import mlflowLogo from "@/assets/logos/mlflow.svg?raw";
+import nifiLogo from "@/assets/logos/nifi.svg?raw";
+import polarisLogo from "@/assets/logos/polaris.svg?raw";
+import sparkLogo from "@/assets/logos/spark.svg?raw";
+import supersetLogo from "@/assets/logos/superset.svg?raw";
+import trinoLogo from "@/assets/logos/trino.svg?raw";
+
+interface Props {
+  logo: string;
+  label: string;
+  class?: string;
+  invert?: boolean;
+}
+
+const { logo, label, class: className, invert = false } = Astro.props;
+const logos: Record<string, string> = {
+  "logos/airflow.svg": airflowLogo,
+  "logos/flink.svg": flinkLogo,
+  "logos/jupyter.svg": jupyterLogo,
+  "logos/kafka.svg": kafkaLogo,
+  "logos/kubeflow.svg": kubeflowLogo,
+  "logos/mlflow.svg": mlflowLogo,
+  "logos/nifi.svg": nifiLogo,
+  "logos/polaris.svg": polarisLogo,
+  "logos/spark.svg": sparkLogo,
+  "logos/superset.svg": supersetLogo,
+  "logos/trino.svg": trinoLogo,
+};
+---
+
+{
+  logos[logo] && (
+    <InlineSvg
+      source={logos[logo]}
+      label={label}
+      class={[className, invert && "invert"].filter(Boolean).join(" ")}
+    />
+  )
+}

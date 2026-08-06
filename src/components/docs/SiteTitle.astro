@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import OkdpLogo from "@/assets/logos/okdp-notext.svg";
+
+const { siteTitleHref } = Astro.locals.starlightRoute;
+---
+
+<a href={siteTitleHref} class="site-title sl-flex">
+  <Image src={OkdpLogo} alt="OKDP logo" class="site-logo" />
+  <span class="brand-name" translate="no">
+    <span>OKDP</span>
+    <span class="brand-accent">Docs</span>
+  </span>
+</a>
+
+<style>
+  @layer starlight.core {
+    .site-title {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      gap: var(--sl-nav-gap);
+      color: var(--sl-color-text);
+      font-size: var(--sl-text-h4);
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .site-logo {
+      width: auto;
+      height: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y));
+      max-width: 100%;
+      flex: none;
+      object-fit: contain;
+      object-position: 0 50%;
+    }
+
+    .brand-name {
+      display: inline-flex;
+      min-width: 0;
+      gap: 0.375rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-accent {
+      color: var(--sl-color-text-accent);
+    }
+  }
+</style>

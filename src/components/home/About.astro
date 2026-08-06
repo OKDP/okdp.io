@@ -1,0 +1,62 @@
+---
+import type { HomeTranslations } from "@/i18n/translations";
+
+interface Props {
+  content: HomeTranslations;
+}
+
+const { content } = Astro.props;
+---
+
+<section id="about" class="section bg-background">
+  <div class="container">
+    <div class="mx-auto max-w-4xl">
+      <div class="mb-16 text-center">
+        <h2 class="mb-6">{content.about.title}</h2>
+        <p
+          class="text-text-light mb-4 text-lg"
+          set:html={content.about.description1}
+        />
+        <p class="text-text-light">{content.about.description2}</p>
+      </div>
+
+      <div
+        class="border-accent mx-auto mb-16 grid max-w-2xl grid-cols-3 gap-8 border-y py-8"
+      >
+        <div class="text-center">
+          <div class="text-primary mb-1 text-3xl font-bold md:text-4xl">7+</div>
+          <div class="text-text-light text-sm">
+            {content.stats.contributors}
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="text-primary mb-1 text-3xl font-bold md:text-4xl">
+            ~20
+          </div>
+          <div class="text-text-light text-sm">{content.stats.downloads}</div>
+        </div>
+        <div class="text-center">
+          <div class="text-primary mb-1 text-3xl font-bold md:text-4xl">
+            2024
+          </div>
+          <div class="text-text-light text-sm">{content.stats.started}</div>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h3 class="mb-8 text-center text-2xl font-bold">{content.why.title}</h3>
+        <div class="grid gap-6 md:grid-cols-3">
+          {
+            content.why.cards.map((card) => (
+              <div class="card text-center">
+                <div class="mb-4 text-4xl">{card.icon}</div>
+                <h4 class="mb-3 font-semibold">{card.title}</h4>
+                <p class="text-text-light text-sm">{card.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

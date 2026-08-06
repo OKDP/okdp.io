@@ -1,0 +1,91 @@
+---
+import { defaultLocale, type Locale } from "@/i18n/config";
+import EventRow from "@/components/home/EventRow.astro";
+import type { HomeTranslations } from "@/i18n/translations";
+import { getLocalizedEvents } from "@/lib/events";
+
+interface Props {
+  content: HomeTranslations;
+}
+
+const { content } = Astro.props;
+const locale = (Astro.currentLocale ?? defaultLocale) as Locale;
+const eventsList = await getLocalizedEvents(locale);
+---
+
+<section id="events" class="bg-background py-20">
+  <div class="container max-w-5xl">
+    <div class="mb-12 text-center">
+      <h2 class="mb-4 text-4xl font-bold">{content.events.title}</h2>
+      <p class="text-text-light mx-auto max-w-3xl text-xl">
+        {content.events.subtitle}
+      </p>
+    </div>
+
+    {
+      eventsList.upcoming.length > 0 || eventsList.pastGrouped.length > 0 ? (
+        <>
+          {eventsList.upcoming.length > 0 ? (
+            <>
+              <div class="text-text-light mb-3 px-4 font-mono text-[11px] tracking-widest uppercase">
+                {content.events.upcoming}
+              </div>
+              <div class="border-accent bg-background mb-8 rounded-lg border">
+                {eventsList.upcoming.map((event) => (
+                  <EventRow event={event} />
+                ))}
+              </div>
+            </>
+          ) : (
+            <>
+              <div class="text-text-light mb-3 px-4 font-mono text-[11px] tracking-widest uppercase">
+                {content.events.upcoming}
+              </div>
+              <div class="border-accent bg-background mb-8 rounded-lg border">
+                <div class="text-text-light px-4 py-6 text-sm italic">
+                  {content.events.noUpcoming}
+                </div>
+              </div>
+            </>
+          )}
+
+          {eventsList.pastGrouped.length > 0 && (
+            <details class="group">
+              <summary class="text-text-light hover:text-primary flex cursor-pointer list-none items-center gap-2 text-sm transition-colors select-none">
+                <svg
+                  class="h-4 w-4 transition-transform group-open:rotate-90"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path d="M7 5l6 5-6 5V5z" />
+                </svg>
+                <span class="font-mono text-[11px] tracking-widest uppercase">
+                  {content.events.past} ({eventsList.past.length})
+                </span>
+              </summary>
+              <div class="border-accent bg-background mt-4 rounded-lg border">
+                {eventsList.pastGrouped.map((group) => (
+                  <>
+                    <div class="bg-background-alt border-accent flex items-center gap-3 border-b px-4 py-2">
+                      <span class="text-text-light font-mono text-[11px] tracking-widest whitespace-nowrap uppercase">
+                        ── {group.year}
+                      </span>
+                      <span class="border-text-light/30 flex-1 border-t border-dotted" />
+                    </div>
+                    {group.items.map((event) => (
+                      <EventRow event={event} past />
+                    ))}
+                  </>
+                ))}
+              </div>
+            </details>
+          )}
+        </>
+      ) : (
+        <div class="text-text-light py-12 text-center">
+          <p>{content.events.noEvents}</p>
+        </div>
+      )
+    }
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+interface Props {
+  source: string;
+  class?: string;
+  label?: string;
+}
+
+const { source, class: className = "", label } = Astro.props;
+const escapeAttribute = (value: string) =>
+  value
+    .replaceAll("&", "&amp;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+const attributes = [
+  className && `class="${escapeAttribute(className)}"`,
+  label
+    ? `role="img" aria-label="${escapeAttribute(label)}"`
+    : 'aria-hidden="true"',
+]
+  .filter(Boolean)
+  .join(" ");
+const svg = source
+  .replace(/^<\?xml[^>]*>\s*/i, "")
+  .replace(/^<!DOCTYPE[^>]*>\s*/i, "")
+  .replace(/<svg(?=[\s>])/, `<svg ${attributes}`);
+---
+
+<span class="contents" set:html={svg} />

@@ -1,0 +1,126 @@
+- id: osxp-2025
+  date:
+    start: "2025-12-10"
+    end: "2025-12-11"
+  title: OSXP (Open Source eXPérience)
+  location: Cité des Sciences et de l'Industrie, Paris
+
+- id: cloud-native-days-france-2026
+  date: "2026-02-03"
+  title:
+    fr: Cloud Native Days France 2026
+    en: Cloud Native Days France 2026
+  description:
+    fr: avec stand TOSIT
+    en: with TOSIT booth
+  location: CENTQUATRE-PARIS, Paris
+
+- id: okdp-wescale-2026
+  date: "2026-02-12"
+  title:
+    fr: Présentation d'OKDP à Wescale (ESN)
+    en: OKDP presentation at Wescale
+  location: remote
+
+- id: okdp-tasmane-agirc-arrco-2026
+  date: "2026-02-18"
+  title:
+    fr: Présentation d'OKDP à Tasmane / Agirc-Arrco
+    en: OKDP presentation at Tasmane / Agirc-Arrco
+  location: remote
+
+- id: okdp-kiira-2026
+  date: "2026-03-27"
+  title:
+    fr: Présentation d'OKDP à Kiira
+    en: OKDP presentation at Kiira
+  location: remote
+
+- id: okdp-arkea-2026
+  date: "2026-04-03"
+  title:
+    fr: Présentation d'OKDP à Arkéa
+    en: OKDP presentation at Arkéa
+  location: remote
+
+- id: okdp-ineris-2026
+  date: "2026-04-21"
+  title:
+    fr: Présentation d'OKDP à l'INERIS
+    en: OKDP presentation at INERIS
+  location: remote
+
+- id: okdp-devoxx-paris-2026
+  date: "2026-04-22"
+  title:
+    fr: Présentation d'OKDP à Devoxx Paris
+    en: OKDP presentation at Devoxx Paris
+  location: Palais des Congrès, Paris
+
+- id: okdp-ministere-agriculture-2026
+  date: "2026-05-05"
+  title:
+    fr: Présentation d'OKDP au Ministère de l'Agriculture, de l'Agro-alimentaire et de la Souveraineté alimentaire
+    en: OKDP presentation at the French Ministry of Agriculture and Food Sovereignty
+  location: remote
+
+- id: okdp-docaposte-2026
+  date: "2026-05-07"
+  title:
+    fr: Présentation d'OKDP à Docaposte
+    en: OKDP presentation at Docaposte
+  location: remote
+
+- id: tosit-day-2026
+  date: "2026-06-04"
+  title: TOSIT-Day
+  location: Caisse des Dépôts et Consignations
+
+- id: bioproduction-transition-ecologique-2026
+  date: "2026-06-04"
+  title: "Bioproduction & transition écologique : enjeux et leviers pour agir"
+  description:
+    fr: Présentation d'OKDP lors de l'événément
+    en: OKDP presentation during the meeting
+  location: GINA, Nantes
+
+- id: okdp-cour-des-comptes-2026
+  date: "2026-06-17"
+  title: Présentation d'OKDP à la Cour des comptes
+  location: remote
+
+- id: okdp-caisse-depots-informatique-2026
+  date: "2026-06-24"
+  title: Présentation d'OKDP à la Caisse des Dépôts et de Consignation Informatique
+  location: remote
+
+- id: okdp-synaltic-ow2-2026
+  date: "2026-06-25"
+  title: Présentation d'OKDP à Synaltic (et OW2)
+  location: remote
+
+- id: big-data-ai-paris-2026
+  date:
+    start: "2026-09-15"
+    end: "2026-09-16"
+  title:
+    fr: Big Data & AI Paris
+    en: Big Data & AI Paris
+  description:
+    fr: avec stand TOSIT
+    en: with TOSIT booth
+  location: Palais Expo Porte de Versailles, Paris
+
+- id: salon-souverainete-numerique-2026
+  date:
+    start: "2026-06-30"
+    end: "2026-07-01"
+  title:
+    fr: Salon Souveraineté Numérique
+    en: Digital Sovereignty Expo
+  location: Espace Champerret, Paris
+
+- id: innovtech-2026
+  date: "2026-12-03"
+  title: InnovTech'
+  location: Carré Michelet, La Défense

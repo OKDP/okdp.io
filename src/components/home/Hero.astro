@@ -1,0 +1,38 @@
+---
+import Countdown from "@/components/home/Countdown.astro";
+import type { HomeTranslations } from "@/i18n/translations";
+
+interface Props {
+  content: HomeTranslations;
+}
+
+const { content } = Astro.props;
+---
+
+<section class="from-accent to-background bg-linear-to-b pt-48 pb-20">
+  <div class="container">
+    <div class="animate-fade-in mx-auto max-w-3xl text-center">
+      <div class="bg-primary/10 mb-6 inline-block rounded-full px-4 py-2">
+        <span class="text-primary text-sm font-semibold">
+          {content.hero.badge}
+        </span>
+      </div>
+      <h1 class="text-gradient mb-6">{content.hero.title}</h1>
+      <p class="text-text-light mb-8 text-xl">{content.hero.subtitle}</p>
+      <div class="mb-12 flex flex-col justify-center gap-4 sm:flex-row">
+        <a href="https://github.com/OKDP/" class="btn btn-primary">
+          {content.hero.ctaPrimary}
+        </a>
+        <a
+          href="#community"
+          class="btn bg-background hover:bg-background-alt text-text"
+        >
+          {content.hero.ctaSecondary}
+        </a>
+      </div>
+
+      <!-- v1.0.0 Release Countdown -->
+      <Countdown content={content} />
+    </div>
+  </div>
+</section>
