@@ -1,0 +1,42 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { defaultLocale, type Locale } from "@/i18n/config";
+import type { HomeTranslations } from "@/i18n/translations";
+
+interface Props {
+  content: HomeTranslations;
+}
+
+const { content } = Astro.props;
+const locale = (Astro.currentLocale ?? defaultLocale) as Locale;
+---
+
+<section id="roadmap" class="section bg-accent">
+  <div class="container">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="mb-6">{content.roadmap.title}</h2>
+      <p
+        class="text-text-light mb-8 text-lg"
+        set:html={content.roadmap.teaser}
+      />
+      <a
+        href={getRelativeLocaleUrl(locale, "/roadmap")}
+        class="btn btn-primary"
+      >
+        {content.roadmap.cta}
+        <svg
+          class="ml-2 inline-block h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

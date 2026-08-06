@@ -1,0 +1,53 @@
+---
+import Footer from "@/components/common/Footer.astro";
+import Header from "@/components/common/Header.astro";
+import { defaultLocale, type Locale } from "@/i18n/config";
+import type { HomeTranslations } from "@/i18n/translations";
+import "@/styles/global.css";
+
+interface Props {
+  content: HomeTranslations;
+  title?: string;
+  description?: string;
+  locale?: Locale;
+  canonical?: string;
+}
+
+const {
+  content,
+  title = content.meta.title,
+  description = content.meta.description,
+  locale = (Astro.currentLocale as Locale | undefined) ?? defaultLocale,
+  canonical = Astro.url.href,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={locale} data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={`${import.meta.env.BASE_URL}okdp-notext.svg`}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={content.meta.keywords} />
+    <!-- SEO: identifies the preferred URL; ideally /fr/ would be removed and HTTP 301-redirected to / server-side. -->
+    <link rel="canonical" href={canonical} />
+  </head>
+
+  <body>
+    <Header content={content} />
+    <slot />
+    <Footer content={content} />
+  </body>
+</html>

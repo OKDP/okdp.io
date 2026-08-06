@@ -1,0 +1,35 @@
+---
+import About from "@/components/home/About.astro";
+import Architecture from "@/components/home/Architecture.astro";
+import Community from "@/components/home/Community.astro";
+import Events from "@/components/home/Events.astro";
+import Hero from "@/components/home/Hero.astro";
+import RoadmapTeaser from "@/components/home/RoadmapTeaser.astro";
+import Tosit from "@/components/home/Tosit.astro";
+import MarketingLayout from "@/layouts/MarketingLayout.astro";
+import { defaultLocale, type Locale } from "@/i18n/config";
+import type { HomeTranslations } from "@/i18n/translations";
+
+interface Props {
+  content: HomeTranslations;
+  locale: Locale;
+}
+
+const { content, locale } = Astro.props;
+const basePath = import.meta.env.BASE_URL;
+const canonicalPath =
+  locale === defaultLocale ? basePath : `${basePath}${locale}/`;
+const canonicalUrl = new URL(canonicalPath, Astro.site ?? Astro.url).toString();
+---
+
+<MarketingLayout content={content} locale={locale} canonical={canonicalUrl}>
+  <main>
+    <Hero content={content} />
+    <About content={content} />
+    <Architecture content={content} />
+    <RoadmapTeaser content={content} />
+    <Community content={content} />
+    <Events content={content} />
+    <Tosit content={content} />
+  </main>
+</MarketingLayout>

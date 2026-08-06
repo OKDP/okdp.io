@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@source "../**/*.{astro,html,js,ts,jsx,tsx}";
+
+@theme {
+  --color-primary-light: rgb(84 173 170);
+  --color-primary: rgb(65 144 141);
+  --color-primary-dark: rgb(52 115 113);
+  --color-background: var(--sl-color-bg, #ffffff);
+  --color-background-alt: var(--sl-color-bg-nav, #f8f9fa);
+  --color-text: var(--sl-color-text, #1a1a1a);
+  --color-text-light: var(--sl-color-gray-3, #4a4a4a);
+  --color-accent: var(--sl-color-gray-6, #f0f4f8);
+  --color-accent-alt: var(--sl-color-gray-5, #f5f3ff);
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --shadow-soft:
+    0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --color-primary: rgb(65 144 141);
+    --color-primary-dark: rgb(52 115 113);
+    --color-primary-light: rgb(84 173 170);
+    --color-background: var(--sl-color-bg, #ffffff);
+    --color-background-alt: var(--sl-color-bg-nav, #f8f9fa);
+    --color-text: var(--sl-color-text, #1a1a1a);
+    --color-text-light: var(--sl-color-gray-3, #4a4a4a);
+    --color-accent: var(--sl-color-gray-6, #f0f4f8);
+    --color-accent-alt: var(--sl-color-gray-5, #f5f3ff);
+  }
+
+  :root[data-theme="light"] {
+    color-scheme: light;
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-text font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  p {
+    @apply text-lg leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-medium transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-background rounded-xl p-6 shadow-sm transition-all duration-300 hover:shadow-md;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply from-primary to-primary-dark bg-linear-to-r bg-clip-text text-transparent;
+  }
+}

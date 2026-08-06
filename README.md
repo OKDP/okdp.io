@@ -12,27 +12,24 @@
 
 ## About the Site
 
-This repository contains the source of the **okdp.io** marketing website, a bilingual (FR/EN) static site showcasing the OKDP platform, its architecture, modules, and roadmap.
+This repository contains the source of the **okdp.io** website, featuring:
+
+- Marketing landing page;
+- Documentation;
+- i18n (FR/EN) support.
 
 ## Development
 
 ```bash
-# Install dependencies
 npm install
-
-# Generate HTML from templates, then start the dev server
 npm run dev
 ```
-
-`npm run dev` runs two steps in sequence:
-1. `npm run generate`: compiles Handlebars templates with locale data from `src/locales`
-2. `vite`: starts the dev server with hot reload
 
 ## Build
 
 ```bash
-npm run build   # generate + vite build -> outputs to dist/
-npm run preview # preview the production build locally
+npm run build
+npm run preview
 ```
 
 ## Preview deployments from forks

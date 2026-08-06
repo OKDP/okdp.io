@@ -1,0 +1,77 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { defaultLocale, type Locale } from "@/i18n/config";
+import type { HomeTranslations } from "@/i18n/translations";
+
+interface Props {
+  content: HomeTranslations;
+  desktop?: boolean;
+  mobile?: boolean;
+}
+
+const { content, desktop = false, mobile = false } = Astro.props;
+const locale = (Astro.currentLocale ?? defaultLocale) as Locale;
+const homeUrl = getRelativeLocaleUrl(locale, "/");
+const docsUrl = getRelativeLocaleUrl(locale, "/guides/example");
+const isHome =
+  Astro.url.pathname === "/" ||
+  Astro.url.pathname === homeUrl ||
+  Astro.url.pathname === homeUrl.replace(/\/$/, "");
+const homeSectionUrl = (section: string) =>
+  isHome ? `#${section}` : `${homeUrl}#${section}`;
+---
+
+<nav
+  class:list={["site-nav", desktop && "hidden lg:block", mobile && "block"]}
+  aria-label={content.nav.label}
+>
+  <ul
+    class:list={[
+      "m-0 flex list-none items-center gap-1 p-0",
+      mobile && "flex-col items-stretch gap-1",
+    ]}
+  >
+    <li>
+      <a
+        href={homeSectionUrl("about")}
+        class="hover:text-primary focus-visible:text-primary block rounded-lg px-3 py-2 whitespace-nowrap text-inherit no-underline transition-colors duration-200 hover:bg-current/8 focus-visible:bg-current/8"
+      >
+        {content.nav.about}
+      </a>
+    </li>
+    <li>
+      <a
+        href={homeSectionUrl("architecture")}
+        class="hover:text-primary focus-visible:text-primary block rounded-lg px-3 py-2 whitespace-nowrap text-inherit no-underline transition-colors duration-200 hover:bg-current/8 focus-visible:bg-current/8"
+      >
+        {content.nav.architecture}
+      </a>
+    </li>
+    <li>
+      <a
+        href={homeSectionUrl("roadmap")}
+        class="hover:text-primary focus-visible:text-primary block rounded-lg px-3 py-2 whitespace-nowrap text-inherit no-underline transition-colors duration-200 hover:bg-current/8 focus-visible:bg-current/8"
+      >
+        {content.nav.roadmap}
+      </a>
+    </li>
+
+    <li>
+      <a
+        href={homeSectionUrl("community")}
+        class="hover:text-primary focus-visible:text-primary block rounded-lg px-3 py-2 whitespace-nowrap text-inherit no-underline transition-colors duration-200 hover:bg-current/8 focus-visible:bg-current/8"
+      >
+        {content.nav.community}
+      </a>
+    </li>
+    <!-- TODO: Documentation nav link, to uncomment when we'll be ready to release the docs. -->
+    <!-- <li class="ms-auto">
+      <a
+        href={docsUrl}
+        class="bg-primary shadow-primary/20 hover:bg-primary-dark block rounded-lg px-3 py-2 whitespace-nowrap text-white no-underline shadow-lg hover:text-white"
+      >
+        {content.nav.documentation}
+      </a>
+    </li> -->
+  </ul>
+</nav>

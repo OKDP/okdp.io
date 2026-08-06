@@ -1,0 +1,108 @@
+---
+import ToolLogo from "@/components/home/ToolLogo.astro";
+import type { HomeTranslations } from "@/i18n/translations";
+
+interface Props {
+  content: HomeTranslations;
+}
+
+const { content } = Astro.props;
+---
+
+<section class="section bg-background-alt" id="architecture">
+  <div class="container">
+    <h2 class="mb-4 text-center text-3xl font-bold md:text-4xl">
+      {content.architecture.title}
+    </h2>
+    <p class="text-text-light mx-auto mb-16 max-w-3xl text-center">
+      {content.architecture.subtitle}
+    </p>
+
+    <div class="mb-16">
+      <div class="mb-8 text-center">
+        <h3 class="mb-2 text-2xl font-bold">
+          {content.architecture.modulesTitle}
+        </h3>
+        <p class="text-text-light mx-auto max-w-2xl text-sm">
+          {content.architecture.modulesSubtitle}
+        </p>
+      </div>
+      <div
+        class="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+      >
+        {
+          content.architecture.modules.map((module) => (
+            <div
+              class:list={[
+                "bg-background border-accent flex flex-col rounded-lg border p-6 shadow-sm transition-shadow hover:shadow-md",
+                module.future && "opacity-60",
+              ]}
+            >
+              <div class="mb-1 flex items-center gap-2">
+                <h4 class="text-text font-semibold">{module.title}</h4>
+                {module.future && (
+                  <span class="bg-primary/10 text-primary ml-auto rounded-full px-2 py-0.5 text-xs">
+                    Future
+                  </span>
+                )}
+              </div>
+              <p class="text-text-light mb-5 text-sm">{module.desc}</p>
+              <div class="mt-auto flex items-center justify-center gap-5">
+                {module.tools.map((tool) =>
+                  tool.logo ? (
+                    <a
+                      href={tool.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="shrink-0 transition-opacity hover:opacity-70"
+                      title={tool.name}
+                    >
+                      <ToolLogo
+                        logo={tool.logo}
+                        label={tool.name}
+                        class="h-7 w-auto object-contain"
+                        invert={tool.invertLogo}
+                      />
+                    </a>
+                  ) : (
+                    <span class="text-text-light shrink-0 text-xs font-medium">
+                      {tool.name}
+                    </span>
+                  ),
+                )}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="mb-16">
+      <div class="mb-8 text-center">
+        <h3 class="mb-2 text-2xl font-bold">
+          {content.architecture.controlPlaneTitle}
+        </h3>
+        <p class="text-text-light mx-auto max-w-2xl text-sm">
+          {content.architecture.controlPlaneSubtitle}
+        </p>
+      </div>
+      <div
+        class="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
+      >
+        {
+          content.architecture.controlPlane.map((item) => (
+            <div class="bg-background border-primary/20 flex flex-col items-center rounded-lg border p-6 text-center shadow-sm transition-shadow hover:shadow-md">
+              <span class="mb-3 text-3xl">{item.icon}</span>
+              <h4 class="text-text mb-2 font-semibold">{item.title}</h4>
+              <p class="text-text-light text-xs">{item.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <p class="text-text-light mt-8 text-center text-sm italic">
+      {content.architecture.k8s.desc}
+    </p>
+  </div>
+</section>

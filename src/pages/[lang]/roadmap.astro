@@ -1,0 +1,307 @@
+---
+import type { GetStaticPaths } from "astro";
+
+import MarketingLayout from "@/layouts/MarketingLayout.astro";
+import { localeCodes, type Locale } from "@/i18n/config";
+import { getTranslations } from "@/i18n/translations";
+
+export const getStaticPaths = (() => {
+  return localeCodes.map((lang) => ({
+    params: { lang },
+  }));
+}) satisfies GetStaticPaths;
+
+type Status = "complete" | "inProgress" | "todo";
+
+const statusClasses: Record<Status, string> = {
+  complete: "bg-green-100 text-green-600",
+  inProgress: "bg-blue-100 text-blue-600",
+  todo: "bg-gray-100 text-gray-400",
+};
+
+const statusSymbols: Record<Status, string> = {
+  complete: "✓",
+  inProgress: "↻",
+  todo: "○",
+};
+
+function getStatus(status: string): Status {
+  if (status === "complete" || status === "inProgress") return status;
+  return "todo";
+}
+
+function computeStatus(features: Array<{ status: string }>): Status {
+  if (
+    features.length > 0 &&
+    features.every((feature) => getStatus(feature.status) === "complete")
+  ) {
+    return "complete";
+  }
+  if (features.some((feature) => getStatus(feature.status) === "inProgress")) {
+    return "inProgress";
+  }
+  return "todo";
+}
+
+const locale = Astro.currentLocale as Locale;
+const content = getTranslations(locale);
+const roadmap = content.roadmapPage;
+---
+
+<MarketingLayout
+  content={content}
+  title={roadmap.meta.title}
+  description={roadmap.meta.description}
+>
+  <main>
+    <section class="from-accent to-background bg-linear-to-b pt-36 pb-8">
+      <div class="container">
+        <div class="mx-auto max-w-3xl text-center">
+          <h1 class="text-gradient mb-3">{roadmap.title}</h1>
+          <p class="text-text-light mb-6">{roadmap.subtitle}</p>
+          <div
+            class="text-text-light flex flex-wrap justify-center gap-5 text-xs"
+            role="list"
+            aria-label={roadmap.legend.title}
+          >
+            <div class="flex items-center gap-1.5" role="listitem">
+              <span
+                class:list={[
+                  "mt-0.5 flex h-4 w-4 items-center justify-center rounded-full text-[10px]",
+                  statusClasses.complete,
+                ]}
+                aria-hidden="true">{statusSymbols.complete}</span
+              >
+              {roadmap.legend.complete}
+            </div>
+            <div class="flex items-center gap-1.5" role="listitem">
+              <span
+                class:list={[
+                  "mt-0.5 flex h-4 w-4 items-center justify-center rounded-full text-[10px]",
+                  statusClasses.inProgress,
+                ]}
+                aria-hidden="true">{statusSymbols.inProgress}</span
+              >
+              {roadmap.legend.inProgress}
+            </div>
+            <div class="flex items-center gap-1.5" role="listitem">
+              <span
+                class:list={[
+                  "mt-0.5 flex h-4 w-4 items-center justify-center rounded-full text-[10px]",
+                  statusClasses.todo,
+                ]}
+                aria-hidden="true">{statusSymbols.todo}</span
+              >
+              {roadmap.legend.todo}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-background">
+      <div class="container">
+        <div class="mx-auto max-w-5xl">
+          <div class="mb-10 flex flex-wrap items-center gap-4">
+            <h2 class="text-3xl font-bold">{roadmap.v1.title}</h2>
+            <span
+              class="bg-primary/10 text-primary rounded-full px-4 py-1.5 text-sm font-semibold"
+            >
+              {roadmap.v1.date}
+            </span>
+          </div>
+
+          <div class="mb-14">
+            <h3 class="mb-2 text-2xl font-bold">{roadmap.v1.modulesTitle}</h3>
+            <p class="text-text-light mb-6 text-sm">
+              {roadmap.v1.modulesSubtitle}
+            </p>
+
+            {
+              roadmap.v1.categories.map((category) => (
+                <div class="mb-8">
+                  <h4 class="text-primary mb-3 text-lg font-semibold">
+                    {category.title}
+                  </h4>
+                  {category.items.map((item) => (
+                    <div class="bg-background border-accent mb-4 overflow-hidden rounded-lg border">
+                      <div class="bg-background-alt border-accent flex items-center gap-3 border-b px-5 py-3">
+                        <h5 class="text-sm font-semibold">{item.name}</h5>
+                        <span
+                          class:list={[
+                            "mt-0.5 ml-auto flex h-4 w-4 items-center justify-center rounded-full text-[10px]",
+                            statusClasses[getStatus(item.status)],
+                          ]}
+                          aria-label={getStatus(item.status)}
+                        >
+                          {statusSymbols[getStatus(item.status)]}
+                        </span>
+                      </div>
+                      <ul class="space-y-1.5 px-5 py-3">
+                        {item.features.map((feature) => (
+                          <li class="flex items-start gap-2.5 text-sm">
+                            <span
+                              class:list={[
+                                "mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-[10px]",
+                                statusClasses[getStatus(feature.status)],
+                              ]}
+                              aria-label={getStatus(feature.status)}
+                            >
+                              {statusSymbols[getStatus(feature.status)]}
+                            </span>
+                            <span class="text-text-light">{feature.text}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+
+          <div>
+            <h3 class="mb-2 text-2xl font-bold">
+              {roadmap.v1.controlPlaneTitle}
+            </h3>
+            <p class="text-text-light mb-6 text-sm">
+              {roadmap.v1.controlPlaneSubtitle}
+            </p>
+
+            <div class="grid gap-4 md:grid-cols-2">
+              {
+                roadmap.v1.controlPlane.map((module) => (
+                  <div class="bg-background border-accent overflow-hidden rounded-lg border">
+                    <div class="bg-background-alt border-accent flex items-center gap-3 border-b px-5 py-3">
+                      <h4 class="text-sm font-semibold">{module.title}</h4>
+                      <span
+                        class:list={[
+                          "mt-0.5 ml-auto flex h-4 w-4 items-center justify-center rounded-full text-[10px]",
+                          statusClasses[computeStatus(module.features)],
+                        ]}
+                        aria-label={computeStatus(module.features)}
+                      >
+                        {statusSymbols[computeStatus(module.features)]}
+                      </span>
+                    </div>
+                    <ul class="space-y-1.5 px-5 py-3">
+                      {module.features.map((feature) => (
+                        <li class="flex items-start gap-2.5 text-sm">
+                          <span
+                            class:list={[
+                              "mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-[10px]",
+                              statusClasses[getStatus(feature.status)],
+                            ]}
+                            aria-label={getStatus(feature.status)}
+                          >
+                            {statusSymbols[getStatus(feature.status)]}
+                          </span>
+                          <span class="text-text-light">{feature.text}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <hr class="border-accent mx-auto max-w-5xl" />
+    </div>
+
+    <section class="section bg-background-alt">
+      <div class="container">
+        <div class="mx-auto max-w-5xl">
+          <h2 class="mb-2 text-3xl font-bold">{roadmap.future.title}</h2>
+          <p class="text-text-light mb-10">{roadmap.future.subtitle}</p>
+
+          <div class="mb-14">
+            <h3 class="mb-6 text-2xl font-bold">{roadmap.v1.modulesTitle}</h3>
+            <div class="grid gap-4 md:grid-cols-2">
+              {
+                roadmap.future.modules.map((module) => (
+                  <div class="bg-background border-accent overflow-hidden rounded-lg border">
+                    <div class="bg-background-alt border-accent flex items-center gap-3 border-b px-5 py-3">
+                      <h4 class="text-sm font-semibold">{module.title}</h4>
+                      <span
+                        class:list={[
+                          "mt-0.5 ml-auto flex h-4 w-4 items-center justify-center rounded-full text-[10px]",
+                          statusClasses[computeStatus(module.features)],
+                        ]}
+                        aria-label={computeStatus(module.features)}
+                      >
+                        {statusSymbols[computeStatus(module.features)]}
+                      </span>
+                    </div>
+                    <ul class="space-y-1.5 px-5 py-3">
+                      {module.features.map((feature) => (
+                        <li class="flex items-start gap-2.5 text-sm">
+                          <span
+                            class:list={[
+                              "mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-[10px]",
+                              statusClasses[getStatus(feature.status)],
+                            ]}
+                            aria-label={getStatus(feature.status)}
+                          >
+                            {statusSymbols[getStatus(feature.status)]}
+                          </span>
+                          <span class="text-text-light">{feature.text}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+
+          <div>
+            <h3 class="mb-6 text-2xl font-bold">
+              {roadmap.future.controlPlaneTitle}
+            </h3>
+            <div class="grid gap-4 md:grid-cols-2">
+              {
+                roadmap.future.controlPlane.map((module) => (
+                  <div class="bg-background border-accent overflow-hidden rounded-lg border">
+                    <div class="bg-background-alt border-accent flex items-center gap-3 border-b px-5 py-3">
+                      <h4 class="text-sm font-semibold">{module.title}</h4>
+                      <span
+                        class:list={[
+                          "mt-0.5 ml-auto flex h-4 w-4 items-center justify-center rounded-full text-[10px]",
+                          statusClasses[computeStatus(module.features)],
+                        ]}
+                        aria-label={computeStatus(module.features)}
+                      >
+                        {statusSymbols[computeStatus(module.features)]}
+                      </span>
+                    </div>
+                    <ul class="space-y-1.5 px-5 py-3">
+                      {module.features.map((feature) => (
+                        <li class="flex items-start gap-2.5 text-sm">
+                          <span
+                            class:list={[
+                              "mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-[10px]",
+                              statusClasses[getStatus(feature.status)],
+                            ]}
+                            aria-label={getStatus(feature.status)}
+                          >
+                            {statusSymbols[getStatus(feature.status)]}
+                          </span>
+                          <span class="text-text-light">{feature.text}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</MarketingLayout>

@@ -1,0 +1,45 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import InlineSvg from "@/components/common/InlineSvg.astro";
+import FrFlag from "@/assets/flags/fr.svg?raw";
+import GbFlag from "@/assets/flags/gb.svg?raw";
+import { defaultLocale, type Locale } from "@/i18n/config";
+
+interface Props {
+  label: string;
+}
+
+const { label } = Astro.props;
+const locale = (Astro.currentLocale ?? defaultLocale) as Locale;
+const otherLocale: Locale = locale === "fr" ? "en" : "fr";
+const currentLocaleUrl = getRelativeLocaleUrl(locale, "/");
+const otherLocaleUrl = getRelativeLocaleUrl(otherLocale, "/");
+---
+
+<div
+  class="flex shrink-0 items-center gap-1 rounded-full border border-current/15 bg-current/5 p-1"
+  aria-label={label}
+>
+  <a
+    href={locale === "fr" ? currentLocaleUrl : otherLocaleUrl}
+    class:list={[
+      "flex size-7 items-center justify-center overflow-hidden rounded-full opacity-50 transition-opacity duration-200 hover:opacity-100 focus-visible:opacity-100",
+      locale === "fr" && "ring-primary opacity-100 ring-2",
+    ]}
+    aria-label="Français"
+    aria-current={locale === "fr" ? "page" : undefined}
+  >
+    <InlineSvg source={FrFlag} class="size-full object-cover" label="FR" />
+  </a>
+  <a
+    href={locale === "en" ? currentLocaleUrl : otherLocaleUrl}
+    class:list={[
+      "flex size-7 items-center justify-center overflow-hidden rounded-full opacity-50 transition-opacity duration-200 hover:opacity-100 focus-visible:opacity-100",
+      locale === "en" && "ring-primary opacity-100 ring-2",
+    ]}
+    aria-label="English"
+    aria-current={locale === "en" ? "page" : undefined}
+  >
+    <InlineSvg source={GbFlag} class="size-full object-cover" label="EN" />
+  </a>
+</div>
