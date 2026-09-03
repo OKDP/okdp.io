@@ -454,11 +454,11 @@
             },
             {
               "text": "Running jobs listing and monitoring",
-              "status": "inProgress"
+              "status": "complete"
             },
             {
               "text": "Control Plane integration: Trino, Superset, Polaris and Airflow",
-              "status": "inProgress"
+              "status": "complete"
             }
           ]
         },
@@ -474,14 +474,9 @@
               "status": "complete"
             },
             {
-              "text": "Ingress / API Gateway migration",
-              "status": "inProgress"
-            },
-            {
               "text": "New okdp-server & okdp-ui versions",
-              "status": "inProgress"
-            },
-            { "text": "New okdp-operator component", "status": "todo" }
+              "status": "complete"
+            }
           ]
         },
         {
@@ -497,11 +492,11 @@
             },
             {
               "text": "Admin Guide: Platform Deployment & Configuration",
-              "status": "todo"
+              "status": "inProgress"
             },
             {
               "text": "User Guide: Module & service usage via console",
-              "status": "todo"
+              "status": "inProgress"
             }
           ]
         }
@@ -580,6 +575,10 @@
             },
             {
               "text": "Full GitOps Mode — Support for full GitOps deployment mode",
+              "status": "todo"
+            },
+            {
+              "text": "Ingress / API Gateway migration",
               "status": "todo"
             }
           ]
