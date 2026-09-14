@@ -1,0 +1,257 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { defaultLocale, type Locale } from "@/i18n/config";
+import type { HomeTranslations } from "@/i18n/translations";
+import { getStackEntries } from "@/lib/stack";
+
+interface Props {
+  content: HomeTranslations;
+}
+
+// The moment the next release goes public. This is the only line to change for
+// the next one: set it to the new date to bring the countdown back, and the
+// banner returns to its released state on its own once the date passes.
+//
+// Keep the offset. Without it the string is parsed as the *visitor's* local
+// time, so the switch would happen at a different absolute moment per timezone.
+const RELEASE_AT = "2026-09-14T10:00:00+02:00";
+
+const { content } = Astro.props;
+const locale = (Astro.currentLocale ?? defaultLocale) as Locale;
+const { release, countdown } = content.hero;
+
+// The site is built statically and redeployed only on push to master, so this
+// is the state at *build* time, not at visit time. That is enough for the
+// released state, which is terminal. While a release is still pending the
+// countdown script below owns the switch, because no build is guaranteed to
+// run at the moment the timer reaches zero.
+const target = Date.parse(RELEASE_AT);
+const isPending = Date.now() < target;
+
+// The inventory of the newest shipped stack. getStackEntries sorts newest
+// first, so the banner follows the release without another hardcoded version.
+const [latestStack] = await getStackEntries();
+const stackUrl = getRelativeLocaleUrl(locale, `/stack/${latestStack.id}`);
+const roadmapUrl = getRelativeLocaleUrl(locale, "/roadmap");
+
+const units = [
+  { key: "days", label: countdown.days },
+  { key: "hours", label: countdown.hours },
+  { key: "minutes", label: countdown.minutes },
+  { key: "seconds", label: countdown.seconds },
+] as const;
+---
+
+<div class="group relative mx-auto mb-12 max-w-2xl" data-release-banner>
+  <span
+    class="from-primary/30 via-primary-light/20 to-accent-alt/60 absolute -inset-6 rounded-[2.5rem] bg-linear-to-br blur-3xl"
+  ></span>
+  <span
+    class="from-primary via-primary-light to-primary-dark absolute -inset-0.5 rounded-[1.8rem] bg-linear-to-r opacity-95"
+  ></span>
+  <div
+    class="bg-background/92 ring-background/90 relative overflow-hidden rounded-[1.7rem] px-5 py-8 shadow-[0_30px_90px_-38px_rgba(65,144,141,0.95)] ring-1 backdrop-blur sm:px-8 sm:py-10"
+  >
+    <div
+      class="from-background/95 via-background/80 to-background-alt absolute inset-0 bg-linear-to-br"
+    >
+    </div>
+    <div
+      class="via-background absolute inset-x-10 top-0 h-px bg-linear-to-r from-transparent to-transparent opacity-90"
+    >
+    </div>
+    <div
+      class="bg-primary/10 absolute inset-x-8 -bottom-12 h-20 rounded-full blur-2xl"
+    >
+    </div>
+
+    {
+      /* Pending: only emitted while a release is still ahead, so a shipped
+         site carries neither this markup nor the script at the bottom. */
+    }
+    {
+      isPending && (
+        <div
+          class="relative flex flex-col items-center gap-5"
+          data-release-pending
+          data-release-at={RELEASE_AT}
+        >
+          <div class="border-primary/15 bg-background/90 ring-background/70 inline-flex items-center gap-2.5 rounded-full border px-4 py-2.5 shadow-sm ring-1">
+            <span class="bg-primary relative inline-flex h-2.5 w-2.5 shrink-0 rounded-full" />
+            <span class="text-primary-dark text-sm font-bold tracking-[0.01em] sm:text-[0.95rem]">
+              {countdown.label}
+            </span>
+          </div>
+
+          <div class="grid w-full grid-cols-4 gap-2 sm:gap-3">
+            {units.map((unit) => (
+              <div class="border-primary/10 bg-background/80 rounded-2xl border px-2 py-4 shadow-sm sm:px-3">
+                <span
+                  class:list={[
+                    "block text-4xl leading-none font-black tracking-tight tabular-nums sm:text-5xl",
+                    unit.key === "seconds" ? "text-primary" : "text-text",
+                  ]}
+                  data-cd={unit.key}
+                >
+                  --
+                </span>
+                <span class="text-text-light mt-2 block text-[10px] font-bold tracking-[0.22em] uppercase">
+                  {unit.label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <a
+            href={roadmapUrl}
+            class="group/button from-primary to-primary-dark shadow-primary/20 focus:ring-primary/40 inline-flex items-center justify-center gap-2 rounded-full bg-linear-to-r px-5 py-3 text-sm font-bold text-white shadow-md transition-all duration-200 focus:ring-2 focus:ring-offset-2 focus:outline-none"
+            aria-label={countdown.cta}
+          >
+            <span>{countdown.cta}</span>
+            <svg
+              class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1 group-hover/button:translate-x-1 hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+        </div>
+      )
+    }
+
+    {
+      /* Released. Rendered hidden alongside the countdown while one is pending,
+         so the swap at zero needs no network round trip. */
+    }
+    <div
+      class:list={[
+        "relative flex-col items-center gap-5 text-center",
+        isPending ? "hidden" : "flex",
+      ]}
+      data-release-live
+    >
+      <div
+        class="border-primary/15 bg-background/90 ring-background/70 inline-flex items-center gap-2.5 rounded-full border px-4 py-2.5 shadow-sm ring-1"
+      >
+        <span
+          class="bg-primary relative inline-flex h-2.5 w-2.5 shrink-0 rounded-full"
+        >
+          <span
+            class="bg-primary absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"
+          ></span>
+        </span>
+        <span
+          class="text-primary-dark text-sm font-bold tracking-[0.01em] sm:text-[0.95rem]"
+        >
+          {release.badge}
+        </span>
+      </div>
+
+      <p
+        class="text-text text-4xl leading-none font-black tracking-tight sm:text-5xl"
+      >
+        {release.title}
+      </p>
+
+      <p class="text-text-light max-w-md text-base sm:text-lg">
+        {release.subtitle}
+      </p>
+
+      <a
+        href={stackUrl}
+        class="group/button from-primary to-primary-dark shadow-primary/20 focus:ring-primary/40 inline-flex items-center justify-center gap-2 rounded-full bg-linear-to-r px-5 py-3 text-sm font-bold text-white shadow-md transition-all duration-200 focus:ring-2 focus:ring-offset-2 focus:outline-none"
+        aria-label={release.cta}
+      >
+        <span>{release.cta}</span>
+        <svg
+          class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1 group-hover/button:translate-x-1 hover:translate-x-1"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+
+      <a
+        href={roadmapUrl}
+        class="text-text-light hover:text-primary-dark text-sm font-semibold underline underline-offset-4 transition-colors duration-200"
+      >
+        {release.roadmapCta}
+      </a>
+    </div>
+  </div>
+</div>
+
+<!--
+  Drives the switch while a release is still pending. It is a no-op on a shipped
+  site: the pending block is not rendered, the query returns null and it exits.
+
+  The build-time check above cannot own this on its own. The site is static and
+  only rebuilt on push to master, so nothing is guaranteed to run at the moment
+  the timer reaches zero.
+-->
+<script>
+  const pending = document.querySelector<HTMLElement>("[data-release-pending]");
+  const live = document.querySelector<HTMLElement>("[data-release-live]");
+
+  if (pending && live) {
+    const reveal = () => {
+      pending.classList.add("hidden");
+      live.classList.remove("hidden");
+      live.classList.add("flex");
+    };
+
+    const target = Date.parse(pending.dataset.releaseAt ?? "");
+    const cells = {
+      days: pending.querySelector<HTMLElement>('[data-cd="days"]'),
+      hours: pending.querySelector<HTMLElement>('[data-cd="hours"]'),
+      minutes: pending.querySelector<HTMLElement>('[data-cd="minutes"]'),
+      seconds: pending.querySelector<HTMLElement>('[data-cd="seconds"]'),
+    };
+
+    // A malformed date must not leave four dashes on screen forever. Falling
+    // back to the released state is the safer of the two failures.
+    if (
+      !Number.isFinite(target) ||
+      !cells.days ||
+      !cells.hours ||
+      !cells.minutes ||
+      !cells.seconds
+    ) {
+      reveal();
+    } else {
+      const pad = (value: number) => String(value).padStart(2, "0");
+      let timer: number | undefined;
+
+      const tick = () => {
+        const remaining = Math.floor((target - Date.now()) / 1000);
+
+        if (remaining <= 0) {
+          if (timer !== undefined) window.clearInterval(timer);
+          reveal();
+          return false;
+        }
+
+        cells.days!.textContent = String(Math.floor(remaining / 86400));
+        cells.hours!.textContent = pad(Math.floor((remaining % 86400) / 3600));
+        cells.minutes!.textContent = pad(Math.floor((remaining % 3600) / 60));
+        cells.seconds!.textContent = pad(remaining % 60);
+        return true;
+      };
+
+      if (tick()) timer = window.setInterval(tick, 1000);
+    }
+  }
+</script>
