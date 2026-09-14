@@ -1,0 +1,100 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { defaultLocale, type Locale } from "@/i18n/config";
+import type { HomeTranslations } from "@/i18n/translations";
+import { getStackEntries } from "@/lib/stack";
+
+interface Props {
+  content: HomeTranslations;
+}
+
+const { content } = Astro.props;
+const locale = (Astro.currentLocale ?? defaultLocale) as Locale;
+const { release } = content.hero;
+
+// The inventory of the newest shipped stack. getStackEntries sorts newest
+// first, so the banner follows the release without another hardcoded version.
+const [latestStack] = await getStackEntries();
+const stackUrl = getRelativeLocaleUrl(locale, `/stack/${latestStack.id}`);
+const roadmapUrl = getRelativeLocaleUrl(locale, "/roadmap");
+---
+
+<div class="group relative mx-auto mb-12 max-w-2xl">
+  <span
+    class="from-primary/30 via-primary-light/20 to-accent-alt/60 absolute -inset-6 rounded-[2.5rem] bg-linear-to-br blur-3xl"
+  ></span>
+  <span
+    class="from-primary via-primary-light to-primary-dark absolute -inset-0.5 rounded-[1.8rem] bg-linear-to-r opacity-95"
+  ></span>
+  <div
+    class="bg-background/92 ring-background/90 relative overflow-hidden rounded-[1.7rem] px-5 py-8 shadow-[0_30px_90px_-38px_rgba(65,144,141,0.95)] ring-1 backdrop-blur sm:px-8 sm:py-10"
+  >
+    <div
+      class="from-background/95 via-background/80 to-background-alt absolute inset-0 bg-linear-to-br"
+    >
+    </div>
+    <div
+      class="via-background absolute inset-x-10 top-0 h-px bg-linear-to-r from-transparent to-transparent opacity-90"
+    >
+    </div>
+    <div
+      class="bg-primary/10 absolute inset-x-8 -bottom-12 h-20 rounded-full blur-2xl"
+    >
+    </div>
+    <div class="relative flex flex-col items-center gap-5 text-center">
+      <div
+        class="border-primary/15 bg-background/90 ring-background/70 inline-flex items-center gap-2.5 rounded-full border px-4 py-2.5 shadow-sm ring-1"
+      >
+        <span
+          class="bg-primary relative inline-flex h-2.5 w-2.5 shrink-0 rounded-full"
+        >
+          <span
+            class="bg-primary absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"
+          ></span>
+        </span>
+        <span
+          class="text-primary-dark text-sm font-bold tracking-[0.01em] sm:text-[0.95rem]"
+        >
+          {release.badge}
+        </span>
+      </div>
+
+      <p
+        class="text-text text-4xl leading-none font-black tracking-tight sm:text-5xl"
+      >
+        {release.title}
+      </p>
+
+      <p class="text-text-light max-w-md text-base sm:text-lg">
+        {release.subtitle}
+      </p>
+
+      <a
+        href={stackUrl}
+        class="group/button from-primary to-primary-dark shadow-primary/20 focus:ring-primary/40 inline-flex items-center justify-center gap-2 rounded-full bg-linear-to-r px-5 py-3 text-sm font-bold text-white shadow-md transition-all duration-200 focus:ring-2 focus:ring-offset-2 focus:outline-none"
+        aria-label={release.cta}
+      >
+        <span>{release.cta}</span>
+        <svg
+          class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1 group-hover/button:translate-x-1 hover:translate-x-1"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+
+      <a
+        href={roadmapUrl}
+        class="text-text-light hover:text-primary-dark text-sm font-semibold underline underline-offset-4 transition-colors duration-200"
+      >
+        {release.roadmapCta}
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
-import Countdown from "@/components/home/Countdown.astro";
+import ReleaseBanner from "@/components/home/ReleaseBanner.astro";
 import { defaultLocale, type Locale } from "@/i18n/config";
 import type { HomeTranslations } from "@/i18n/translations";
 
@@ -35,8 +35,8 @@ const docsUrl = getRelativeLocaleUrl(locale, "/installation-requirements");
         </a>
       </div>
 
-      <!-- v1.0.0 Release Countdown -->
-      <Countdown content={content} />
+      <!-- v1.0.0 release announcement -->
+      <ReleaseBanner content={content} />
     </div>
   </div>
 </section>
