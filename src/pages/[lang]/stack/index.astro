@@ -6,6 +6,7 @@ import MarketingLayout from "@/layouts/MarketingLayout.astro";
 import { localeCodes, type Locale } from "@/i18n/config";
 import { getTranslations } from "@/i18n/translations";
 import { getStackEntries } from "@/lib/stack";
+import { getCurrentRelease } from "@/lib/release";
 
 export const getStaticPaths = (() => {
   return localeCodes.map((lang) => ({ params: { lang } }));
@@ -15,8 +16,9 @@ const locale = Astro.currentLocale as Locale;
 const content = getTranslations(locale);
 const copy = content.stackPage.index;
 
-// Sorted newest first by getStackEntries, so the first entry is the current one.
+// Inventory order does not determine which release is featured.
 const entries = await getStackEntries();
+const release = await getCurrentRelease();
 ---
 
 <MarketingLayout
@@ -38,7 +40,7 @@ const entries = await getStackEntries();
       <div class="container">
         <div class="mx-auto grid max-w-4xl gap-4 md:grid-cols-2">
           {
-            entries.map((entry, index) => (
+            entries.map((entry) => (
               <a
                 href={getRelativeLocaleUrl(locale, `/stack/${entry.id}`)}
                 class="bg-background border-accent hover:border-primary group block rounded-lg border p-6 no-underline transition-colors"
@@ -47,7 +49,7 @@ const entries = await getStackEntries();
                   <h2 class="group-hover:text-primary text-xl font-bold transition-colors">
                     OKDP {entry.data.stack}
                   </h2>
-                  {index === 0 && (
+                  {entry.id === release.stackId && (
                     <span class="bg-primary/10 text-primary rounded-full px-3 py-0.5 text-xs font-semibold">
                       {copy.current}
                     </span>
