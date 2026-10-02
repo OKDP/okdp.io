@@ -21,19 +21,10 @@
     "ctaPrimary": "Get started",
     "ctaSecondary": "Join Community",
     "release": {
-      "badge": "v1.0.0 available",
-      "title": "OKDP v1.0.0 is here 🎉",
-      "subtitle": "The first release of the sandbox, published on 14 September 2026.",
-      "cta": "See what ships in 1.0",
-      "roadmapCta": "What comes next"
-    },
-    "countdown": {
-      "label": "Release v1.0.0 — 14 September 2026",
-      "days": "Days",
-      "hours": "Hours",
-      "minutes": "Minutes",
-      "seconds": "Seconds",
-      "cta": "Discover the roadmap"
+      "label": "Latest stable release",
+      "published": "Released on",
+      "notesCta": "Release notes",
+      "stackCta": "Explore the stack"
     }
   },
   "stats": {
@@ -230,7 +221,7 @@
   },
   "roadmap": {
     "title": "Roadmap",
-    "teaser": "First release <strong class=\"text-text\">v1.0.0</strong> shipped on <strong class=\"text-text\">the 14th September 2026</strong>.",
+    "teaser": "Explore the project milestones and development priorities.",
     "cta": "View the full roadmap"
   },
   "community": {
