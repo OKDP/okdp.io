@@ -19,13 +19,7 @@
     "title": "Open Kubernetes Data Platform",
     "subtitle": "A free, open-source and cloud-native data platform built on Kubernetes. Modular, sovereign, and community-driven.",
     "ctaPrimary": "Get started",
-    "ctaSecondary": "Join Community",
-    "release": {
-      "label": "Latest stable release",
-      "published": "Released on",
-      "notesCta": "Release notes",
-      "stackCta": "Explore the stack"
-    }
+    "ctaSecondary": "Join Community"
   },
   "stats": {
     "contributors": "Contributors",
