@@ -1,6 +1,5 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
-import ReleaseBanner from "@/components/home/ReleaseBanner.astro";
 import { defaultLocale, type Locale } from "@/i18n/config";
 import type { HomeTranslations } from "@/i18n/translations";
 
@@ -23,7 +22,7 @@ const docsUrl = getRelativeLocaleUrl(locale, "/installation-requirements");
       </div>
       <h1 class="text-gradient mb-6">{content.hero.title}</h1>
       <p class="text-text-light mb-8 text-xl">{content.hero.subtitle}</p>
-      <div class="mb-12 flex flex-col justify-center gap-4 sm:flex-row">
+      <div class="flex flex-col justify-center gap-4 sm:flex-row">
         <a href={docsUrl} class="btn btn-primary">
           {content.hero.ctaPrimary}
         </a>
@@ -34,9 +33,6 @@ const docsUrl = getRelativeLocaleUrl(locale, "/installation-requirements");
           {content.hero.ctaSecondary}
         </a>
       </div>
-
-      <!-- Current release selected by the maintainers -->
-      <ReleaseBanner content={content} />
     </div>
   </div>
 </section>

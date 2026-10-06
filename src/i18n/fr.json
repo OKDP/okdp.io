@@ -19,13 +19,7 @@
     "title": "Open Kubernetes Data Platform",
     "subtitle": "Une plateforme de données cloud-native, libre et 100% open source. Modulaire, souveraine et propulsée par la communauté.",
     "ctaPrimary": "Démarrer",
-    "ctaSecondary": "Rejoindre la communauté",
-    "release": {
-      "label": "Dernière version stable",
-      "published": "Publiée le",
-      "notesCta": "Notes de version",
-      "stackCta": "Découvrir la stack"
-    }
+    "ctaSecondary": "Rejoindre la communauté"
   },
   "stats": {
     "contributors": "Contributeurs",
